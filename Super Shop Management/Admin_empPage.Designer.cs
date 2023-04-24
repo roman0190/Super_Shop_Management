@@ -46,8 +46,8 @@ namespace Super_Shop_Management
             this.ITEM = new System.Windows.Forms.Label();
             this.button_logoutAdmin = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_emp)).BeginInit();
             this.panel2.SuspendLayout();
@@ -59,8 +59,9 @@ namespace Super_Shop_Management
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::Super_Shop_Management.Properties.Resources.MAAR_ket;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 309);
+            this.pictureBox1.Size = new System.Drawing.Size(446, 475);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -71,7 +72,7 @@ namespace Super_Shop_Management
             this.button_emp_update.AutoRoundedCorners = true;
             this.button_emp_update.BackColor = System.Drawing.Color.Transparent;
             this.button_emp_update.BorderColor = System.Drawing.Color.Snow;
-            this.button_emp_update.BorderRadius = 14;
+            this.button_emp_update.BorderRadius = 22;
             this.button_emp_update.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.button_emp_update.BorderThickness = 1;
             this.button_emp_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -81,9 +82,10 @@ namespace Super_Shop_Management
             this.button_emp_update.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button_emp_update.Font = new System.Drawing.Font("MS UI Gothic", 9.75F);
             this.button_emp_update.ForeColor = System.Drawing.Color.White;
-            this.button_emp_update.Location = new System.Drawing.Point(263, 215);
+            this.button_emp_update.Location = new System.Drawing.Point(164, 412);
+            this.button_emp_update.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_emp_update.Name = "button_emp_update";
-            this.button_emp_update.Size = new System.Drawing.Size(91, 30);
+            this.button_emp_update.Size = new System.Drawing.Size(136, 46);
             this.button_emp_update.TabIndex = 4;
             this.button_emp_update.Text = "UPDATE";
             // 
@@ -93,7 +95,7 @@ namespace Super_Shop_Management
             this.button_emp_delete.AutoRoundedCorners = true;
             this.button_emp_delete.BackColor = System.Drawing.Color.Transparent;
             this.button_emp_delete.BorderColor = System.Drawing.Color.White;
-            this.button_emp_delete.BorderRadius = 14;
+            this.button_emp_delete.BorderRadius = 22;
             this.button_emp_delete.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.button_emp_delete.BorderThickness = 1;
             this.button_emp_delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -103,9 +105,10 @@ namespace Super_Shop_Management
             this.button_emp_delete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button_emp_delete.Font = new System.Drawing.Font("MS UI Gothic", 9.75F);
             this.button_emp_delete.ForeColor = System.Drawing.Color.White;
-            this.button_emp_delete.Location = new System.Drawing.Point(153, 215);
+            this.button_emp_delete.Location = new System.Drawing.Point(230, 331);
+            this.button_emp_delete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_emp_delete.Name = "button_emp_delete";
-            this.button_emp_delete.Size = new System.Drawing.Size(91, 30);
+            this.button_emp_delete.Size = new System.Drawing.Size(136, 46);
             this.button_emp_delete.TabIndex = 4;
             this.button_emp_delete.Text = "DELETE";
             // 
@@ -115,7 +118,7 @@ namespace Super_Shop_Management
             this.button_emp_insert.AutoRoundedCorners = true;
             this.button_emp_insert.BackColor = System.Drawing.Color.Transparent;
             this.button_emp_insert.BorderColor = System.Drawing.Color.White;
-            this.button_emp_insert.BorderRadius = 14;
+            this.button_emp_insert.BorderRadius = 22;
             this.button_emp_insert.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.button_emp_insert.BorderThickness = 1;
             this.button_emp_insert.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -125,39 +128,45 @@ namespace Super_Shop_Management
             this.button_emp_insert.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button_emp_insert.Font = new System.Drawing.Font("MS Gothic", 9.75F);
             this.button_emp_insert.ForeColor = System.Drawing.Color.White;
-            this.button_emp_insert.Location = new System.Drawing.Point(44, 215);
+            this.button_emp_insert.Location = new System.Drawing.Point(66, 331);
+            this.button_emp_insert.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_emp_insert.Name = "button_emp_insert";
-            this.button_emp_insert.Size = new System.Drawing.Size(91, 30);
+            this.button_emp_insert.Size = new System.Drawing.Size(136, 46);
             this.button_emp_insert.TabIndex = 4;
             this.button_emp_insert.Text = "INSERT";
             // 
             // dataGridView_emp
             // 
             this.dataGridView_emp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_emp.Location = new System.Drawing.Point(368, 54);
+            this.dataGridView_emp.Location = new System.Drawing.Point(552, 83);
+            this.dataGridView_emp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView_emp.Name = "dataGridView_emp";
-            this.dataGridView_emp.Size = new System.Drawing.Size(489, 479);
+            this.dataGridView_emp.RowHeadersWidth = 62;
+            this.dataGridView_emp.Size = new System.Drawing.Size(734, 737);
             this.dataGridView_emp.TabIndex = 2;
             // 
             // textBox_emp_name
             // 
-            this.textBox_emp_name.Location = new System.Drawing.Point(109, 144);
+            this.textBox_emp_name.Location = new System.Drawing.Point(164, 222);
+            this.textBox_emp_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_emp_name.Name = "textBox_emp_name";
-            this.textBox_emp_name.Size = new System.Drawing.Size(244, 20);
+            this.textBox_emp_name.Size = new System.Drawing.Size(364, 26);
             this.textBox_emp_name.TabIndex = 1;
             // 
             // textBox_search
             // 
-            this.textBox_search.Location = new System.Drawing.Point(610, 28);
+            this.textBox_search.Location = new System.Drawing.Point(915, 43);
+            this.textBox_search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_search.Name = "textBox_search";
-            this.textBox_search.Size = new System.Drawing.Size(244, 20);
+            this.textBox_search.Size = new System.Drawing.Size(364, 26);
             this.textBox_search.TabIndex = 1;
             // 
             // textBox_emp_id
             // 
-            this.textBox_emp_id.Location = new System.Drawing.Point(109, 112);
+            this.textBox_emp_id.Location = new System.Drawing.Point(164, 172);
+            this.textBox_emp_id.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_emp_id.Name = "textBox_emp_id";
-            this.textBox_emp_id.Size = new System.Drawing.Size(244, 20);
+            this.textBox_emp_id.Size = new System.Drawing.Size(364, 26);
             this.textBox_emp_id.TabIndex = 1;
             // 
             // label_emp_R
@@ -165,9 +174,10 @@ namespace Super_Shop_Management
             this.label_emp_R.AutoSize = true;
             this.label_emp_R.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_emp_R.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_emp_R.Location = new System.Drawing.Point(22, 176);
+            this.label_emp_R.Location = new System.Drawing.Point(33, 271);
+            this.label_emp_R.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_emp_R.Name = "label_emp_R";
-            this.label_emp_R.Size = new System.Drawing.Size(46, 20);
+            this.label_emp_R.Size = new System.Drawing.Size(68, 29);
             this.label_emp_R.TabIndex = 0;
             this.label_emp_R.Text = "Role";
             // 
@@ -176,9 +186,10 @@ namespace Super_Shop_Management
             this.label_item_name.AutoSize = true;
             this.label_item_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_item_name.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_item_name.Location = new System.Drawing.Point(22, 145);
+            this.label_item_name.Location = new System.Drawing.Point(33, 223);
+            this.label_item_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_item_name.Name = "label_item_name";
-            this.label_item_name.Size = new System.Drawing.Size(55, 20);
+            this.label_item_name.Size = new System.Drawing.Size(82, 29);
             this.label_item_name.TabIndex = 0;
             this.label_item_name.Text = "Name";
             // 
@@ -187,9 +198,10 @@ namespace Super_Shop_Management
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(538, 28);
+            this.label1.Location = new System.Drawing.Point(807, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
+            this.label1.Size = new System.Drawing.Size(95, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Search";
             // 
@@ -198,9 +210,10 @@ namespace Super_Shop_Management
             this.label_item_id.AutoSize = true;
             this.label_item_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_item_id.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_item_id.Location = new System.Drawing.Point(22, 112);
+            this.label_item_id.Location = new System.Drawing.Point(33, 172);
+            this.label_item_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_item_id.Name = "label_item_id";
-            this.label_item_id.Size = new System.Drawing.Size(28, 20);
+            this.label_item_id.Size = new System.Drawing.Size(38, 29);
             this.label_item_id.TabIndex = 0;
             this.label_item_id.Text = "ID";
             // 
@@ -211,9 +224,10 @@ namespace Super_Shop_Management
             this.button_ItemInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_ItemInfo.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_ItemInfo.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_ItemInfo.Location = new System.Drawing.Point(51, 375);
+            this.button_ItemInfo.Location = new System.Drawing.Point(76, 577);
+            this.button_ItemInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_ItemInfo.Name = "button_ItemInfo";
-            this.button_ItemInfo.Size = new System.Drawing.Size(210, 37);
+            this.button_ItemInfo.Size = new System.Drawing.Size(315, 57);
             this.button_ItemInfo.TabIndex = 7;
             this.button_ItemInfo.Text = "Item Information";
             this.button_ItemInfo.UseVisualStyleBackColor = false;
@@ -226,9 +240,10 @@ namespace Super_Shop_Management
             this.button_empInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_empInfo.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_empInfo.ForeColor = System.Drawing.Color.White;
-            this.button_empInfo.Location = new System.Drawing.Point(39, 327);
+            this.button_empInfo.Location = new System.Drawing.Point(58, 503);
+            this.button_empInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_empInfo.Name = "button_empInfo";
-            this.button_empInfo.Size = new System.Drawing.Size(233, 37);
+            this.button_empInfo.Size = new System.Drawing.Size(350, 57);
             this.button_empInfo.TabIndex = 8;
             this.button_empInfo.Text = "Employee Information";
             this.button_empInfo.UseVisualStyleBackColor = false;
@@ -238,9 +253,10 @@ namespace Super_Shop_Management
             this.ITEM.AutoSize = true;
             this.ITEM.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ITEM.ForeColor = System.Drawing.SystemColors.Control;
-            this.ITEM.Location = new System.Drawing.Point(327, 6);
+            this.ITEM.Location = new System.Drawing.Point(490, 9);
+            this.ITEM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ITEM.Name = "ITEM";
-            this.ITEM.Size = new System.Drawing.Size(137, 25);
+            this.ITEM.Size = new System.Drawing.Size(200, 37);
             this.ITEM.TabIndex = 0;
             this.ITEM.Text = "EMPLOYEE";
             // 
@@ -251,9 +267,10 @@ namespace Super_Shop_Management
             this.button_logoutAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_logoutAdmin.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_logoutAdmin.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_logoutAdmin.Location = new System.Drawing.Point(2, 526);
+            this.button_logoutAdmin.Location = new System.Drawing.Point(3, 809);
+            this.button_logoutAdmin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_logoutAdmin.Name = "button_logoutAdmin";
-            this.button_logoutAdmin.Size = new System.Drawing.Size(87, 33);
+            this.button_logoutAdmin.Size = new System.Drawing.Size(130, 51);
             this.button_logoutAdmin.TabIndex = 9;
             this.button_logoutAdmin.Text = "Logout";
             this.button_logoutAdmin.UseVisualStyleBackColor = false;
@@ -274,42 +291,46 @@ namespace Super_Shop_Management
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label_item_id);
             this.panel2.Controls.Add(this.ITEM);
-            this.panel2.Location = new System.Drawing.Point(315, 12);
+            this.panel2.Location = new System.Drawing.Point(472, 18);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(857, 536);
+            this.panel2.Size = new System.Drawing.Size(1286, 825);
             this.panel2.TabIndex = 6;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(297, 309);
-            this.panel1.TabIndex = 5;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Employee"});
-            this.comboBox1.Location = new System.Drawing.Point(109, 178);
+            this.comboBox1.Location = new System.Drawing.Point(164, 274);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(244, 21);
+            this.comboBox1.Size = new System.Drawing.Size(364, 28);
             this.comboBox1.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(18, 18);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(446, 475);
+            this.panel1.TabIndex = 5;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Admin_empPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.ClientSize = new System.Drawing.Size(1776, 863);
             this.Controls.Add(this.button_ItemInfo);
             this.Controls.Add(this.button_empInfo);
             this.Controls.Add(this.button_logoutAdmin);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(1200, 600);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(1789, 893);
             this.Name = "Admin_empPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
