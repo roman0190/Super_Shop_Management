@@ -33,7 +33,7 @@ namespace Super_Shop_Management
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Login_txt = new System.Windows.Forms.Label();
-            this.textBox1_lgin = new System.Windows.Forms.TextBox();
+            this.textBox1_uname = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -95,23 +95,23 @@ namespace Super_Shop_Management
             this.Login_txt.TabIndex = 0;
             this.Login_txt.Text = "Login";
             // 
-            // textBox1_lgin
+            // textBox1_uname
             // 
-            this.textBox1_lgin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.textBox1_lgin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1_lgin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1_lgin.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1_lgin.Location = new System.Drawing.Point(3, 11);
-            this.textBox1_lgin.Name = "textBox1_lgin";
-            this.textBox1_lgin.Size = new System.Drawing.Size(578, 23);
-            this.textBox1_lgin.TabIndex = 2;
-            this.textBox1_lgin.Click += new System.EventHandler(this.username_click);
-            this.textBox1_lgin.TextChanged += new System.EventHandler(this.textBox1_lgin_TextChanged);
+            this.textBox1_uname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.textBox1_uname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1_uname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1_uname.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox1_uname.Location = new System.Drawing.Point(3, 11);
+            this.textBox1_uname.Name = "textBox1_uname";
+            this.textBox1_uname.Size = new System.Drawing.Size(578, 23);
+            this.textBox1_uname.TabIndex = 2;
+            this.textBox1_uname.Click += new System.EventHandler(this.username_click);
+            this.textBox1_uname.TextChanged += new System.EventHandler(this.textBox1_lgin_TextChanged);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.textBox1_lgin);
+            this.panel3.Controls.Add(this.textBox1_uname);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -346,7 +346,7 @@ namespace Super_Shop_Management
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Login_txt;
-        private System.Windows.Forms.TextBox textBox1_lgin;
+        private System.Windows.Forms.TextBox textBox1_uname;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;

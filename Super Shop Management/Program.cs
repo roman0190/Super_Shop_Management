@@ -16,8 +16,8 @@ namespace Super_Shop_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new splash());
-            Application.Run(new Login_page());
+            Application.Run(new splash());
+            //Application.Run(new Login_page());
             //Application.Run(new Admin_itemPage());
            // Application.Run(new Admin_empPage());
 

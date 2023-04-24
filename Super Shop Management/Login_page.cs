@@ -37,7 +37,7 @@ namespace Super_Shop_Management
 
         private void username_click(object sender, EventArgs e)
         {
-            textBox1_lgin.Clear();
+            textBox1_uname.Clear();
         }
 
         private void pass_click(object sender, EventArgs e)
@@ -58,33 +58,41 @@ namespace Super_Shop_Management
 
         private void button1_login_Click(object sender, EventArgs e)
         {
-            string q1 = "select * from login where username ='" + textBox1_lgin + "' and password = '" + textBox2_pass + "'";
-            SqlDataAdapter sda = new SqlDataAdapter(q1,conn);
+
+
+            string q1 = "select type from login_table where username ='" + textBox1_uname.Text + "' and password = '" + textBox2_pass.Text + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(q1, conn);
 
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            if(dt.Rows.Count==1)
+            if (dt.Rows.Count == 1)
             {
-                Admin_itemPage ad = new Admin_itemPage();
-                ad.Show();
-                this.Hide();
+             
+                if (dt.Rows[0][0].ToString()=="admin") //admin
+                {
+                    Admin_itemPage ad = new Admin_itemPage();
+                    ad.Show();
+                    this.Hide();
+                }
+                else if (dt.Rows[0][0].ToString() == "emp") //emp 
+                {
+                    Admin_empPage emp = new Admin_empPage();
+                    emp.Show();
+                    this.Hide();
+                }
+                else if (dt.Rows[0][0].ToString() == "") //customer after active
+                {
+                   this.Close();
+                }
             }
             else
             {
-                MessageBox.Show("invalid");
+                DialogResult result = MessageBox.Show("Invalid. Do you want to try again?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (result == DialogResult.No)
+                {
+                    this.Close();
+                }
             }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             /*if (textBox1_lgin.Text != "admin") //any condition
