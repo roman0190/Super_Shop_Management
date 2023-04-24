@@ -125,7 +125,9 @@ namespace Super_Shop_Management
 
         private void linkLabel_creatAcc_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Registration_Form reg = new Registration_Form();
+            this.Hide();
+            reg.Show();
         }
     }
 }
