@@ -1,7 +1,7 @@
 ﻿
 namespace Super_Shop_Management
 {
-    partial class Admin_itemPage
+    partial class Admin_itemInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@ namespace Super_Shop_Management
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_itemInfo));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button_item_update = new Guna.UI2.WinForms.Guna2Button();
@@ -52,30 +52,22 @@ namespace Super_Shop_Management
             this.button_empInfo = new System.Windows.Forms.Button();
             this.button_ItemInfo = new System.Windows.Forms.Button();
             this.button_logoutAdmin = new System.Windows.Forms.Button();
+            this.Employee = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_item)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Employee);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(12, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(297, 309);
+            this.panel1.Size = new System.Drawing.Size(297, 324);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Super_Shop_Management.Properties.Resources.MAAR_ket;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 309);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -130,7 +122,7 @@ namespace Super_Shop_Management
             this.button_item_update.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button_item_update.Font = new System.Drawing.Font("MS UI Gothic", 9.75F);
             this.button_item_update.ForeColor = System.Drawing.Color.White;
-            this.button_item_update.Location = new System.Drawing.Point(262, 279);
+            this.button_item_update.Location = new System.Drawing.Point(187, 322);
             this.button_item_update.Name = "button_item_update";
             this.button_item_update.Size = new System.Drawing.Size(91, 30);
             this.button_item_update.TabIndex = 4;
@@ -153,7 +145,7 @@ namespace Super_Shop_Management
             this.button_item_delete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button_item_delete.Font = new System.Drawing.Font("MS UI Gothic", 9.75F);
             this.button_item_delete.ForeColor = System.Drawing.Color.White;
-            this.button_item_delete.Location = new System.Drawing.Point(152, 279);
+            this.button_item_delete.Location = new System.Drawing.Point(240, 279);
             this.button_item_delete.Name = "button_item_delete";
             this.button_item_delete.Size = new System.Drawing.Size(91, 30);
             this.button_item_delete.TabIndex = 4;
@@ -176,7 +168,7 @@ namespace Super_Shop_Management
             this.button_item_insert.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button_item_insert.Font = new System.Drawing.Font("MS Gothic", 9.75F);
             this.button_item_insert.ForeColor = System.Drawing.Color.White;
-            this.button_item_insert.Location = new System.Drawing.Point(43, 279);
+            this.button_item_insert.Location = new System.Drawing.Point(131, 279);
             this.button_item_insert.Name = "button_item_insert";
             this.button_item_insert.Size = new System.Drawing.Size(91, 30);
             this.button_item_insert.TabIndex = 4;
@@ -310,7 +302,7 @@ namespace Super_Shop_Management
             this.button_empInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_empInfo.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_empInfo.ForeColor = System.Drawing.Color.White;
-            this.button_empInfo.Location = new System.Drawing.Point(39, 328);
+            this.button_empInfo.Location = new System.Drawing.Point(39, 369);
             this.button_empInfo.Name = "button_empInfo";
             this.button_empInfo.Size = new System.Drawing.Size(233, 37);
             this.button_empInfo.TabIndex = 3;
@@ -327,7 +319,7 @@ namespace Super_Shop_Management
             this.button_ItemInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_ItemInfo.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_ItemInfo.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_ItemInfo.Location = new System.Drawing.Point(51, 376);
+            this.button_ItemInfo.Location = new System.Drawing.Point(51, 407);
             this.button_ItemInfo.Name = "button_ItemInfo";
             this.button_ItemInfo.Size = new System.Drawing.Size(210, 37);
             this.button_ItemInfo.TabIndex = 3;
@@ -354,7 +346,29 @@ namespace Super_Shop_Management
             this.button_logoutAdmin.MouseEnter += new System.EventHandler(this.button_logoutAdmin_MouseEnter_1);
             this.button_logoutAdmin.MouseLeave += new System.EventHandler(this.button_logoutAdmin_MouseLeave);
             // 
-            // Admin_itemPage
+            // Employee
+            // 
+            this.Employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Employee.Font = new System.Drawing.Font("Romantic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Employee.ForeColor = System.Drawing.Color.White;
+            this.Employee.Location = new System.Drawing.Point(43, 24);
+            this.Employee.Name = "Employee";
+            this.Employee.Size = new System.Drawing.Size(213, 23);
+            this.Employee.TabIndex = 12;
+            this.Employee.Text = "Admin Control Panel";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Super_Shop_Management.Properties.Resources.MAAR_ket2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(297, 324);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Admin_itemInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -366,15 +380,16 @@ namespace Super_Shop_Management
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Admin_itemPage";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Admin_itemInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin Panel";
+            this.Text = "Item Information";
             this.Load += new System.EventHandler(this.Admin_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_item)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -404,5 +419,6 @@ namespace Super_Shop_Management
         private Guna.UI2.WinForms.Guna2Button button_item_update;
         private Guna.UI2.WinForms.Guna2Button button_item_delete;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label Employee;
     }
 }

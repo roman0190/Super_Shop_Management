@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Super_Shop_Management
 {
-    public partial class Admin_itemPage : Form
+    public partial class Admin_itemInfo : Form
     {
-        public Admin_itemPage()
+        public Admin_itemInfo()
         {
             InitializeComponent();
         }
@@ -67,7 +67,7 @@ namespace Super_Shop_Management
 
         private void button_empInfo_Click(object sender, EventArgs e)
         {
-            Admin_empPage emp = new Admin_empPage();
+            Admin_empInfo emp = new Admin_empInfo();
                 emp.Show();
                 this.Hide();
 

@@ -58,17 +58,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin_itemPage.cs">
+    <Compile Include="Admin_itemInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_itemPage.Designer.cs">
-      <DependentUpon>Admin_itemPage.cs</DependentUpon>
+    <Compile Include="Admin_itemInfo.Designer.cs">
+      <DependentUpon>Admin_itemInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_empPage.cs">
+    <Compile Include="Admin_empInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_empPage.Designer.cs">
-      <DependentUpon>Admin_empPage.cs</DependentUpon>
+    <Compile Include="Admin_empInfo.Designer.cs">
+      <DependentUpon>Admin_empInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emp_custInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emp_custInfo.Designer.cs">
+      <DependentUpon>Emp_custInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emp_itemInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emp_itemInfo.Designer.cs">
+      <DependentUpon>Emp_itemInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="splash.cs">
       <SubType>Form</SubType>
@@ -84,11 +96,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Admin_itemPage.resx">
-      <DependentUpon>Admin_itemPage.cs</DependentUpon>
+    <EmbeddedResource Include="Admin_itemInfo.resx">
+      <DependentUpon>Admin_itemInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin_empPage.resx">
-      <DependentUpon>Admin_empPage.cs</DependentUpon>
+    <EmbeddedResource Include="Admin_empInfo.resx">
+      <DependentUpon>Admin_empInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emp_custInfo.resx">
+      <DependentUpon>Emp_custInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emp_itemInfo.resx">
+      <DependentUpon>Emp_itemInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
@@ -124,12 +142,11 @@
     <None Include="Resources\user_name.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\MAAR ket.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\password.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\MAAR ket2.png" />
+    <None Include="Resources\MAAR ket.png" />
     <Content Include="Resources\password-icon-png-13.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

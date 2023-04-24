@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Super_Shop_Management
 {
-    public partial class Admin_empPage : Form
+    public partial class Admin_empInfo : Form
     {
-        public Admin_empPage()
+        public Admin_empInfo()
         {
             InitializeComponent();
         }
 
         private void button_ItemInfo_Click(object sender, EventArgs e)
         {
-            Admin_itemPage item = new Admin_itemPage();
+            Admin_itemInfo item = new Admin_itemInfo();
             item.Show();
             this.Hide();
         }

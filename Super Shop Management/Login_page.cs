@@ -70,13 +70,13 @@ namespace Super_Shop_Management
              
                 if (dt.Rows[0][0].ToString()=="admin") //admin
                 {
-                    Admin_itemPage ad = new Admin_itemPage();
+                    Admin_itemInfo ad = new Admin_itemInfo();
                     ad.Show();
                     this.Hide();
                 }
                 else if (dt.Rows[0][0].ToString() == "emp") //emp 
                 {
-                    Admin_empPage emp = new Admin_empPage();
+                    Emp_itemInfo emp = new Emp_itemInfo();
                     emp.Show();
                     this.Hide();
                 }
@@ -95,23 +95,23 @@ namespace Super_Shop_Management
             }
 
 
-            /*if (textBox1_lgin.Text != "admin") //any condition
+            /*if (textBox1_uname.Text != "admin") //any condition
             {
                 invalid_u_pnl.Visible = true;
-                textBox1_lgin.Focus();
+                textBox1_uname.Focus();
                 return;
             }
 
-            if (textBox2_lgin.Text != "admin") //any condition
+            if (textBox2_pass.Text != "admin") //any condition
             {
                 invalid_p_pnl.Visible = true;
-                textBox2_lgin.Focus();
+                textBox2_pass.Focus();
                 return;
             }
 
-            if (textBox1_lgin.Text == "admin" && textBox2_lgin.Text == "admin")
+            if (textBox1_uname.Text == "admin" && textBox2_pass.Text == "admin")
             {
-                Admin_itemPage ad = new Admin_itemPage();
+                Admin_itemInfo ad = new Admin_itemInfo();
                 ad.Show();
                 this.Hide();
             }*/
