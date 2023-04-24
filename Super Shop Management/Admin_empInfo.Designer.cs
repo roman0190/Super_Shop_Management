@@ -34,13 +34,13 @@ namespace Super_Shop_Management
             this.button_emp_delete = new Guna.UI2.WinForms.Guna2Button();
             this.button_emp_insert = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView_emp = new System.Windows.Forms.DataGridView();
-            this.textBox_emp_name = new System.Windows.Forms.TextBox();
+            this.textBox_emp_pass = new System.Windows.Forms.TextBox();
             this.textBox_search = new System.Windows.Forms.TextBox();
-            this.textBox_emp_id = new System.Windows.Forms.TextBox();
+            this.textBox_emp_uname = new System.Windows.Forms.TextBox();
             this.label_emp_R = new System.Windows.Forms.Label();
-            this.label_item_name = new System.Windows.Forms.Label();
+            this.label_emp_pass = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label_item_id = new System.Windows.Forms.Label();
+            this.label_item_uname = new System.Windows.Forms.Label();
             this.button_ItemInfo = new System.Windows.Forms.Button();
             this.button_empInfo = new System.Windows.Forms.Button();
             this.ITEM = new System.Windows.Forms.Label();
@@ -131,12 +131,12 @@ namespace Super_Shop_Management
             this.dataGridView_emp.Size = new System.Drawing.Size(489, 479);
             this.dataGridView_emp.TabIndex = 2;
             // 
-            // textBox_emp_name
+            // textBox_emp_pass
             // 
-            this.textBox_emp_name.Location = new System.Drawing.Point(109, 144);
-            this.textBox_emp_name.Name = "textBox_emp_name";
-            this.textBox_emp_name.Size = new System.Drawing.Size(244, 20);
-            this.textBox_emp_name.TabIndex = 1;
+            this.textBox_emp_pass.Location = new System.Drawing.Point(109, 144);
+            this.textBox_emp_pass.Name = "textBox_emp_pass";
+            this.textBox_emp_pass.Size = new System.Drawing.Size(244, 20);
+            this.textBox_emp_pass.TabIndex = 1;
             // 
             // textBox_search
             // 
@@ -145,34 +145,34 @@ namespace Super_Shop_Management
             this.textBox_search.Size = new System.Drawing.Size(244, 20);
             this.textBox_search.TabIndex = 1;
             // 
-            // textBox_emp_id
+            // textBox_emp_uname
             // 
-            this.textBox_emp_id.Location = new System.Drawing.Point(109, 112);
-            this.textBox_emp_id.Name = "textBox_emp_id";
-            this.textBox_emp_id.Size = new System.Drawing.Size(244, 20);
-            this.textBox_emp_id.TabIndex = 1;
+            this.textBox_emp_uname.Location = new System.Drawing.Point(109, 112);
+            this.textBox_emp_uname.Name = "textBox_emp_uname";
+            this.textBox_emp_uname.Size = new System.Drawing.Size(244, 20);
+            this.textBox_emp_uname.TabIndex = 1;
             // 
             // label_emp_R
             // 
             this.label_emp_R.AutoSize = true;
             this.label_emp_R.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_emp_R.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_emp_R.Location = new System.Drawing.Point(22, 176);
+            this.label_emp_R.Location = new System.Drawing.Point(5, 176);
             this.label_emp_R.Name = "label_emp_R";
             this.label_emp_R.Size = new System.Drawing.Size(46, 20);
             this.label_emp_R.TabIndex = 0;
             this.label_emp_R.Text = "Role";
             // 
-            // label_item_name
+            // label_emp_pass
             // 
-            this.label_item_name.AutoSize = true;
-            this.label_item_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_item_name.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_item_name.Location = new System.Drawing.Point(22, 145);
-            this.label_item_name.Name = "label_item_name";
-            this.label_item_name.Size = new System.Drawing.Size(55, 20);
-            this.label_item_name.TabIndex = 0;
-            this.label_item_name.Text = "Name";
+            this.label_emp_pass.AutoSize = true;
+            this.label_emp_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_emp_pass.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_emp_pass.Location = new System.Drawing.Point(5, 142);
+            this.label_emp_pass.Name = "label_emp_pass";
+            this.label_emp_pass.Size = new System.Drawing.Size(86, 20);
+            this.label_emp_pass.TabIndex = 0;
+            this.label_emp_pass.Text = "Password";
             // 
             // label1
             // 
@@ -185,16 +185,16 @@ namespace Super_Shop_Management
             this.label1.TabIndex = 0;
             this.label1.Text = "Search";
             // 
-            // label_item_id
+            // label_item_uname
             // 
-            this.label_item_id.AutoSize = true;
-            this.label_item_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_item_id.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_item_id.Location = new System.Drawing.Point(22, 112);
-            this.label_item_id.Name = "label_item_id";
-            this.label_item_id.Size = new System.Drawing.Size(28, 20);
-            this.label_item_id.TabIndex = 0;
-            this.label_item_id.Text = "ID";
+            this.label_item_uname.AutoSize = true;
+            this.label_item_uname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_item_uname.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_item_uname.Location = new System.Drawing.Point(5, 112);
+            this.label_item_uname.Name = "label_item_uname";
+            this.label_item_uname.Size = new System.Drawing.Size(98, 20);
+            this.label_item_uname.TabIndex = 0;
+            this.label_item_uname.Text = "User Name";
             // 
             // button_ItemInfo
             // 
@@ -253,18 +253,19 @@ namespace Super_Shop_Management
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.button_emp_update);
             this.panel2.Controls.Add(this.button_emp_delete);
             this.panel2.Controls.Add(this.button_emp_insert);
             this.panel2.Controls.Add(this.dataGridView_emp);
-            this.panel2.Controls.Add(this.textBox_emp_name);
+            this.panel2.Controls.Add(this.textBox_emp_pass);
             this.panel2.Controls.Add(this.textBox_search);
-            this.panel2.Controls.Add(this.textBox_emp_id);
+            this.panel2.Controls.Add(this.textBox_emp_uname);
             this.panel2.Controls.Add(this.label_emp_R);
-            this.panel2.Controls.Add(this.label_item_name);
+            this.panel2.Controls.Add(this.label_emp_pass);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label_item_id);
+            this.panel2.Controls.Add(this.label_item_uname);
             this.panel2.Controls.Add(this.ITEM);
             this.panel2.Location = new System.Drawing.Point(315, 12);
             this.panel2.Name = "panel2";
@@ -346,13 +347,13 @@ namespace Super_Shop_Management
         private Guna.UI2.WinForms.Guna2Button button_emp_delete;
         private Guna.UI2.WinForms.Guna2Button button_emp_insert;
         private System.Windows.Forms.DataGridView dataGridView_emp;
-        private System.Windows.Forms.TextBox textBox_emp_name;
+        private System.Windows.Forms.TextBox textBox_emp_pass;
         private System.Windows.Forms.TextBox textBox_search;
-        private System.Windows.Forms.TextBox textBox_emp_id;
+        private System.Windows.Forms.TextBox textBox_emp_uname;
         private System.Windows.Forms.Label label_emp_R;
-        private System.Windows.Forms.Label label_item_name;
+        private System.Windows.Forms.Label label_emp_pass;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label_item_id;
+        private System.Windows.Forms.Label label_item_uname;
         private System.Windows.Forms.Button button_ItemInfo;
         private System.Windows.Forms.Button button_empInfo;
         private System.Windows.Forms.Label ITEM;

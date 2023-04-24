@@ -31,6 +31,8 @@ namespace Super_Shop_Management
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_itemInfo));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Employee = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button_item_update = new Guna.UI2.WinForms.Guna2Button();
@@ -52,12 +54,10 @@ namespace Super_Shop_Management
             this.button_empInfo = new System.Windows.Forms.Button();
             this.button_ItemInfo = new System.Windows.Forms.Button();
             this.button_logoutAdmin = new System.Windows.Forms.Button();
-            this.Employee = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_item)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,8 +69,31 @@ namespace Super_Shop_Management
             this.panel1.Size = new System.Drawing.Size(297, 324);
             this.panel1.TabIndex = 0;
             // 
+            // Employee
+            // 
+            this.Employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Employee.Font = new System.Drawing.Font("Romantic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Employee.ForeColor = System.Drawing.Color.White;
+            this.Employee.Location = new System.Drawing.Point(43, 24);
+            this.Employee.Name = "Employee";
+            this.Employee.Size = new System.Drawing.Size(213, 23);
+            this.Employee.TabIndex = 12;
+            this.Employee.Text = "Admin Control Panel";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Super_Shop_Management.Properties.Resources.MAAR_ket2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(297, 324);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.button_item_update);
             this.panel2.Controls.Add(this.button_item_delete);
@@ -346,28 +369,6 @@ namespace Super_Shop_Management
             this.button_logoutAdmin.MouseEnter += new System.EventHandler(this.button_logoutAdmin_MouseEnter_1);
             this.button_logoutAdmin.MouseLeave += new System.EventHandler(this.button_logoutAdmin_MouseLeave);
             // 
-            // Employee
-            // 
-            this.Employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Employee.Font = new System.Drawing.Font("Romantic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.Employee.ForeColor = System.Drawing.Color.White;
-            this.Employee.Location = new System.Drawing.Point(43, 24);
-            this.Employee.Name = "Employee";
-            this.Employee.Size = new System.Drawing.Size(213, 23);
-            this.Employee.TabIndex = 12;
-            this.Employee.Text = "Admin Control Panel";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Super_Shop_Management.Properties.Resources.MAAR_ket2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 324);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // Admin_itemInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,10 +387,10 @@ namespace Super_Shop_Management
             this.Text = "Item Information";
             this.Load += new System.EventHandler(this.Admin_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_item)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
