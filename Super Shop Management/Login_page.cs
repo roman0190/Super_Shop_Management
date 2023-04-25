@@ -82,7 +82,9 @@ namespace Super_Shop_Management
                 }
                 else if (dt.Rows[0][0].ToString() == "") //customer after active
                 {
-                   this.Close();
+                    CustomerView cus = new CustomerView();
+                    cus.Show();
+                    this.Hide();
                 }
             }
             else
