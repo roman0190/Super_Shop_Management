@@ -30,7 +30,7 @@ namespace Super_Shop_Management
             {
                 MessageBox.Show("Enter your FirstName");
             }
-            else if(textBox_lastname.Text== "")
+            else if (textBox_lastname.Text == "")
             {
                 MessageBox.Show("Enter your lastName");
             }
@@ -50,25 +50,25 @@ namespace Super_Shop_Management
             {
                 MessageBox.Show("Enter your Email");
             }
-            
-          
+
+
             else
             {
-                
-                
-                    if (textBox_password.Text == textBox_confirmpassword.Text)
-                    {
-                        MessageBox.Show("You are successfully registired");
 
-                    }
-                    else 
-                    {
-                        MessageBox.Show("Recheak plz");
 
-                    }
-                    
-                
-             
+                if (textBox_password.Text == textBox_confirmpassword.Text)
+                {
+                    MessageBox.Show("You are successfully registired");
+
+                }
+                else
+                {
+                    MessageBox.Show("Recheak plz");
+
+                }
+
+
+
 
 
             }

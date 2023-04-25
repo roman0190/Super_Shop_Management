@@ -48,12 +48,12 @@ namespace Super_Shop_Management
             this.label_item_price = new System.Windows.Forms.Label();
             this.label_item_quantity = new System.Windows.Forms.Label();
             this.label_item_name = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label_item_id = new System.Windows.Forms.Label();
             this.ITEM = new System.Windows.Forms.Label();
             this.button_empInfo = new System.Windows.Forms.Button();
             this.button_ItemInfo = new System.Windows.Forms.Button();
             this.button_logoutAdmin = new System.Windows.Forms.Button();
+            this.button_item_src = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -94,6 +94,7 @@ namespace Super_Shop_Management
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button_item_src);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.button_item_update);
             this.panel2.Controls.Add(this.button_item_delete);
@@ -108,7 +109,6 @@ namespace Super_Shop_Management
             this.panel2.Controls.Add(this.label_item_price);
             this.panel2.Controls.Add(this.label_item_quantity);
             this.panel2.Controls.Add(this.label_item_name);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label_item_id);
             this.panel2.Controls.Add(this.ITEM);
             this.panel2.Location = new System.Drawing.Point(315, 13);
@@ -285,17 +285,6 @@ namespace Super_Shop_Management
             this.label_item_name.TabIndex = 0;
             this.label_item_name.Text = "Name";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(538, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Search";
-            // 
             // label_item_id
             // 
             this.label_item_id.AutoSize = true;
@@ -348,7 +337,6 @@ namespace Super_Shop_Management
             this.button_ItemInfo.TabIndex = 3;
             this.button_ItemInfo.Text = "Item Information";
             this.button_ItemInfo.UseVisualStyleBackColor = false;
-            this.button_ItemInfo.Click += new System.EventHandler(this.button_ItemInfo_Click);
             this.button_ItemInfo.MouseEnter += new System.EventHandler(this.button_ItemInfo_MouseEnter);
             this.button_ItemInfo.MouseLeave += new System.EventHandler(this.button_ItemInfo_MouseLeave_1);
             // 
@@ -368,6 +356,16 @@ namespace Super_Shop_Management
             this.button_logoutAdmin.Click += new System.EventHandler(this.button_logoutAdmin_Click);
             this.button_logoutAdmin.MouseEnter += new System.EventHandler(this.button_logoutAdmin_MouseEnter_1);
             this.button_logoutAdmin.MouseLeave += new System.EventHandler(this.button_logoutAdmin_MouseLeave);
+            // 
+            // button_item_src
+            // 
+            this.button_item_src.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_item_src.Location = new System.Drawing.Point(529, 27);
+            this.button_item_src.Name = "button_item_src";
+            this.button_item_src.Size = new System.Drawing.Size(75, 23);
+            this.button_item_src.TabIndex = 7;
+            this.button_item_src.Text = "Search";
+            this.button_item_src.UseVisualStyleBackColor = true;
             // 
             // Admin_itemInfo
             // 
@@ -415,11 +413,11 @@ namespace Super_Shop_Management
         private System.Windows.Forms.Label ITEM;
         private System.Windows.Forms.DataGridView dataGridView_item;
         private System.Windows.Forms.TextBox textBox_search;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button button_item_insert;
         private Guna.UI2.WinForms.Guna2Button button_item_update;
         private Guna.UI2.WinForms.Guna2Button button_item_delete;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label Employee;
+        private System.Windows.Forms.Button button_item_src;
     }
 }

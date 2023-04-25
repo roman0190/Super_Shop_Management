@@ -31,7 +31,7 @@ namespace Super_Shop_Management
         {
             DashBoard dashBoard = new DashBoard();
             this.Hide();
-            dashBoard.Show();   
+            dashBoard.Show();
 
         }
 
@@ -39,14 +39,14 @@ namespace Super_Shop_Management
         {
             cart curt = new cart();
             this.Hide();
-            curt.Show();    
+            curt.Show();
         }
 
         private void ctgMeat_Click(object sender, EventArgs e)
         {
-            CategoryForm categoryForm = new CategoryForm(); 
+            CategoryForm categoryForm = new CategoryForm();
             this.Hide(); ;
-            categoryForm.Show();        
+            categoryForm.Show();
         }
 
         private void CustomerView_Load(object sender, EventArgs e)

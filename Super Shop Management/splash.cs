@@ -26,7 +26,7 @@ namespace Super_Shop_Management
         {
             startpoint += 5;
             progressBar.Value = startpoint;
-            if(progressBar.Value==100)
+            if (progressBar.Value == 100)
             {
                 progressBar.Value = 0;
                 timer1.Stop();

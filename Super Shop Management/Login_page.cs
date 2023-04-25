@@ -67,8 +67,8 @@ namespace Super_Shop_Management
             sda.Fill(dt);
             if (dt.Rows.Count == 1)
             {
-             
-                if (dt.Rows[0][0].ToString()=="admin") //admin
+
+                if (dt.Rows[0][0].ToString() == "admin") //admin
                 {
                     Admin_itemInfo ad = new Admin_itemInfo();
                     ad.Show();

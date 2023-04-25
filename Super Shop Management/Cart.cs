@@ -19,7 +19,7 @@ namespace Super_Shop_Management
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            CustomerView customerView  = new CustomerView();
+            CustomerView customerView = new CustomerView();
             this.Hide();
             customerView.Show();
         }

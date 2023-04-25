@@ -68,13 +68,8 @@ namespace Super_Shop_Management
         private void button_empInfo_Click(object sender, EventArgs e)
         {
             Admin_empInfo emp = new Admin_empInfo();
-                emp.Show();
-                this.Hide();
-
-        }
-
-        private void button_ItemInfo_Click(object sender, EventArgs e)
-        {
+            emp.Show();
+            this.Hide();
 
         }
 

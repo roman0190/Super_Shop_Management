@@ -39,17 +39,17 @@ namespace Super_Shop_Management
             this.textBox_emp_uname = new System.Windows.Forms.TextBox();
             this.label_emp_R = new System.Windows.Forms.Label();
             this.label_emp_pass = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label_emp_uname = new System.Windows.Forms.Label();
             this.button_ItemInfo = new System.Windows.Forms.Button();
             this.button_empInfo = new System.Windows.Forms.Button();
             this.ITEM = new System.Windows.Forms.Label();
             this.button_logoutAdmin = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_emp_role = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Employee = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button_emp_src = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_emp)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -77,6 +77,7 @@ namespace Super_Shop_Management
             this.button_emp_update.Size = new System.Drawing.Size(91, 30);
             this.button_emp_update.TabIndex = 4;
             this.button_emp_update.Text = "UPDATE";
+            this.button_emp_update.Click += new System.EventHandler(this.button_emp_update_Click);
             // 
             // button_emp_delete
             // 
@@ -99,6 +100,7 @@ namespace Super_Shop_Management
             this.button_emp_delete.Size = new System.Drawing.Size(91, 30);
             this.button_emp_delete.TabIndex = 4;
             this.button_emp_delete.Text = "DELETE";
+            this.button_emp_delete.Click += new System.EventHandler(this.button_emp_delete_Click);
             // 
             // button_emp_insert
             // 
@@ -121,6 +123,7 @@ namespace Super_Shop_Management
             this.button_emp_insert.Size = new System.Drawing.Size(91, 30);
             this.button_emp_insert.TabIndex = 4;
             this.button_emp_insert.Text = "INSERT";
+            this.button_emp_insert.Click += new System.EventHandler(this.button_emp_insert_Click);
             // 
             // dataGridView_emp
             // 
@@ -173,17 +176,6 @@ namespace Super_Shop_Management
             this.label_emp_pass.Size = new System.Drawing.Size(86, 20);
             this.label_emp_pass.TabIndex = 0;
             this.label_emp_pass.Text = "Password";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(538, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Search";
             // 
             // label_emp_uname
             // 
@@ -254,7 +246,8 @@ namespace Super_Shop_Management
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.button_emp_src);
+            this.panel2.Controls.Add(this.comboBox_emp_role);
             this.panel2.Controls.Add(this.button_emp_update);
             this.panel2.Controls.Add(this.button_emp_delete);
             this.panel2.Controls.Add(this.button_emp_insert);
@@ -264,7 +257,6 @@ namespace Super_Shop_Management
             this.panel2.Controls.Add(this.textBox_emp_uname);
             this.panel2.Controls.Add(this.label_emp_R);
             this.panel2.Controls.Add(this.label_emp_pass);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label_emp_uname);
             this.panel2.Controls.Add(this.ITEM);
             this.panel2.Location = new System.Drawing.Point(315, 12);
@@ -272,15 +264,15 @@ namespace Super_Shop_Management
             this.panel2.Size = new System.Drawing.Size(857, 536);
             this.panel2.TabIndex = 6;
             // 
-            // comboBox1
+            // comboBox_emp_role
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Employee"});
-            this.comboBox1.Location = new System.Drawing.Point(109, 178);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(244, 21);
-            this.comboBox1.TabIndex = 5;
+            this.comboBox_emp_role.FormattingEnabled = true;
+            this.comboBox_emp_role.Items.AddRange(new object[] {
+            "emp"});
+            this.comboBox_emp_role.Location = new System.Drawing.Point(109, 178);
+            this.comboBox_emp_role.Name = "comboBox_emp_role";
+            this.comboBox_emp_role.Size = new System.Drawing.Size(244, 21);
+            this.comboBox_emp_role.TabIndex = 5;
             // 
             // panel1
             // 
@@ -313,6 +305,16 @@ namespace Super_Shop_Management
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // button_emp_src
+            // 
+            this.button_emp_src.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_emp_src.Location = new System.Drawing.Point(529, 25);
+            this.button_emp_src.Name = "button_emp_src";
+            this.button_emp_src.Size = new System.Drawing.Size(75, 23);
+            this.button_emp_src.TabIndex = 6;
+            this.button_emp_src.Text = "Search";
+            this.button_emp_src.UseVisualStyleBackColor = true;
             // 
             // Admin_empInfo
             // 
@@ -352,7 +354,6 @@ namespace Super_Shop_Management
         private System.Windows.Forms.TextBox textBox_emp_uname;
         private System.Windows.Forms.Label label_emp_R;
         private System.Windows.Forms.Label label_emp_pass;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label_emp_uname;
         private System.Windows.Forms.Button button_ItemInfo;
         private System.Windows.Forms.Button button_empInfo;
@@ -360,7 +361,8 @@ namespace Super_Shop_Management
         private System.Windows.Forms.Button button_logoutAdmin;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_emp_role;
         private System.Windows.Forms.Label Employee;
+        private System.Windows.Forms.Button button_emp_src;
     }
 }
