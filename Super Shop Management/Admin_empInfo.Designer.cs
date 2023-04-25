@@ -315,6 +315,7 @@ namespace Super_Shop_Management
             this.button_emp_src.TabIndex = 6;
             this.button_emp_src.Text = "Search";
             this.button_emp_src.UseVisualStyleBackColor = true;
+            this.button_emp_src.Click += new System.EventHandler(this.button_emp_src_Click);
             // 
             // Admin_empInfo
             // 
@@ -333,6 +334,7 @@ namespace Super_Shop_Management
             this.Name = "Admin_empInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Information";
+            this.Load += new System.EventHandler(this.Admin_empInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_emp)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

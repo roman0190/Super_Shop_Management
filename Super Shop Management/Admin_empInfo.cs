@@ -58,11 +58,14 @@ namespace Super_Shop_Management
                         textBox_emp_uname.Text = " ";
                         textBox_emp_pass.Text = " ";
                         comboBox_emp_role.Text = " ";
+                        
                     }   
                     else
                         MessageBox.Show("Failed!!!");
 
                 }
+                conn.Close();
+                display_data();
             }
         }
 
@@ -79,11 +82,13 @@ namespace Super_Shop_Management
                     MessageBox.Show("Employee Info Deleted!!!");
                     textBox_emp_uname.Text = " ";
                     textBox_emp_pass.Text = " ";
+                   
                 }
                 else
                     MessageBox.Show("failed!!!");
-
             }
+            conn.Close();
+            display_data();
         }
 
         private void button_emp_update_Click(object sender, EventArgs e)
@@ -99,12 +104,49 @@ namespace Super_Shop_Management
                     MessageBox.Show("Employee Info Updated!!!");
                     textBox_emp_uname.Text = " ";
                     textBox_emp_pass.Text = " ";
+                    
+
                 }
                 else
                     MessageBox.Show("failed!!!");
 
             }
+            conn.Close();
+            display_data();
 
+
+        }
+
+        private void Admin_empInfo_Load(object sender, EventArgs e)
+        {
+            display_data();
+        }
+
+        private void button_emp_src_Click(object sender, EventArgs e)
+        {
+
+            conn.Open();
+            string q1 = "select * from empInfo_table where username like '%" + textBox_search.Text + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(q1, conn);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView_emp.DataSource = dt;
+            conn.Close();
+ 
+            
+        }
+
+
+        public void display_data()
+        {
+            conn.Open();
+            string q2= "select * from empInfo_table ";
+            SqlDataAdapter sda = new SqlDataAdapter(q2, conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView_emp.DataSource = dt;
+            conn.Close();
         }
     }
 }
