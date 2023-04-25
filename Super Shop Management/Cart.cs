@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Super_Shop_Management
 {
-    public partial class curt : Form
+    public partial class cart : Form
     {
-        public curt()
+        public cart()
         {
             InitializeComponent();
         }

@@ -19,7 +19,7 @@ namespace Super_Shop_Management
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            curt curt = new curt();
+            cart curt = new cart();
             this.Hide();
             curt.Show();    
         }
@@ -29,6 +29,11 @@ namespace Super_Shop_Management
             CustomerView customerView = new CustomerView();
             this.Hide();
             customerView.Show();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

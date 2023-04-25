@@ -1,6 +1,6 @@
 ﻿namespace Super_Shop_Management
 {
-    partial class curt
+    partial class cart
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(curt));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cart));
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btn_checkout = new Guna.UI2.WinForms.Guna2Button();
+            this.label_total = new System.Windows.Forms.Label();
+            this.label_taka = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Cart_back = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +46,7 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.Black;
+            this.guna2DataGridView1.BackgroundColor = System.Drawing.SystemColors.AppWorkspace;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,19 +66,20 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(30, 89);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(20, 58);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 62;
             this.guna2DataGridView1.RowTemplate.Height = 28;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(549, 494);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(366, 321);
             this.guna2DataGridView1.TabIndex = 0;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.Black;
+            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -99,100 +100,108 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(162, 39);
+            this.label1.Location = new System.Drawing.Point(160, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 37);
+            this.label1.Size = new System.Drawing.Size(104, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Checkout";
             // 
-            // guna2Button1
+            // btn_checkout
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 21;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(535, 602);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 2;
-            this.guna2Button1.Text = "Checkout";
-            this.guna2Button1.UseTransparentBackground = true;
+            this.btn_checkout.Animated = true;
+            this.btn_checkout.AutoRoundedCorners = true;
+            this.btn_checkout.BackColor = System.Drawing.Color.Transparent;
+            this.btn_checkout.BorderRadius = 13;
+            this.btn_checkout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_checkout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_checkout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_checkout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_checkout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_checkout.ForeColor = System.Drawing.Color.White;
+            this.btn_checkout.Location = new System.Drawing.Point(357, 391);
+            this.btn_checkout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_checkout.Name = "btn_checkout";
+            this.btn_checkout.Size = new System.Drawing.Size(120, 29);
+            this.btn_checkout.TabIndex = 2;
+            this.btn_checkout.Text = "Checkout";
+            this.btn_checkout.UseTransparentBackground = true;
             // 
-            // label2
+            // label_total
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(269, 610);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 37);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Total";
+            this.label_total.AutoSize = true;
+            this.label_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_total.Location = new System.Drawing.Point(179, 396);
+            this.label_total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_total.Name = "label_total";
+            this.label_total.Size = new System.Drawing.Size(59, 26);
+            this.label_total.TabIndex = 1;
+            this.label_total.Text = "Total";
             // 
-            // label3
+            // label_taka
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(364, 610);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 37);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "0.00";
+            this.label_taka.AutoSize = true;
+            this.label_taka.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_taka.Location = new System.Drawing.Point(243, 396);
+            this.label_taka.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_taka.Name = "label_taka";
+            this.label_taka.Size = new System.Drawing.Size(54, 26);
+            this.label_taka.TabIndex = 1;
+            this.label_taka.Text = "0.00";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(450, 610);
+            this.label4.Location = new System.Drawing.Point(300, 396);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 37);
+            this.label4.Size = new System.Drawing.Size(45, 26);
             this.label4.TabIndex = 1;
             this.label4.Text = "TK.";
             // 
-            // guna2Button2
+            // btn_Cart_back
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 20;
-            this.guna2Button2.DefaultAutoSize = true;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(30, 39);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(64, 42);
-            this.guna2Button2.TabIndex = 2;
-            this.guna2Button2.Text = "<=";
-            this.guna2Button2.UseTransparentBackground = true;
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.btn_Cart_back.Animated = true;
+            this.btn_Cart_back.AutoRoundedCorners = true;
+            this.btn_Cart_back.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Cart_back.BorderRadius = 14;
+            this.btn_Cart_back.DefaultAutoSize = true;
+            this.btn_Cart_back.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Cart_back.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Cart_back.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Cart_back.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Cart_back.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cart_back.ForeColor = System.Drawing.Color.White;
+            this.btn_Cart_back.Location = new System.Drawing.Point(20, 25);
+            this.btn_Cart_back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cart_back.Name = "btn_Cart_back";
+            this.btn_Cart_back.Size = new System.Drawing.Size(51, 31);
+            this.btn_Cart_back.TabIndex = 2;
+            this.btn_Cart_back.Text = "<=";
+            this.btn_Cart_back.UseTransparentBackground = true;
+            this.btn_Cart_back.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
-            // curt
+            // cart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(751, 669);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
+            this.ClientSize = new System.Drawing.Size(501, 435);
+            this.Controls.Add(this.btn_Cart_back);
+            this.Controls.Add(this.btn_checkout);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label_taka);
+            this.Controls.Add(this.label_total);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2DataGridView1);
             this.ForeColor = System.Drawing.Color.SlateBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "curt";
-            this.Text = "Curt";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "cart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cart";
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -203,10 +212,10 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Button btn_checkout;
+        private System.Windows.Forms.Label label_total;
+        private System.Windows.Forms.Label label_taka;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btn_Cart_back;
     }
 }

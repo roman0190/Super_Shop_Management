@@ -60,8 +60,8 @@
             this.ctgMeat = new System.Windows.Forms.PictureBox();
             this.lblCategory = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.button_emp_update = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_goToCart = new Guna.UI2.WinForms.Guna2Button();
+            this.button_goToDB = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logopic)).BeginInit();
             this.panel2.SuspendLayout();
@@ -90,18 +90,20 @@
             this.panel1.Controls.Add(this.logopic);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.LblTheBiggest);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(8, 8);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1165, 159);
+            this.panel1.Size = new System.Drawing.Size(778, 105);
             this.panel1.TabIndex = 0;
             // 
             // logopic
             // 
             this.logopic.BackColor = System.Drawing.Color.Transparent;
             this.logopic.Image = global::Super_Shop_Management.Properties.Resources.icon;
-            this.logopic.Location = new System.Drawing.Point(802, 9);
+            this.logopic.Location = new System.Drawing.Point(592, 6);
+            this.logopic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logopic.Name = "logopic";
-            this.logopic.Size = new System.Drawing.Size(145, 83);
+            this.logopic.Size = new System.Drawing.Size(97, 54);
             this.logopic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logopic.TabIndex = 1;
             this.logopic.TabStop = false;
@@ -113,9 +115,10 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 26F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label1.Location = new System.Drawing.Point(188, 9);
+            this.label1.Location = new System.Drawing.Point(159, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(594, 63);
+            this.label1.Size = new System.Drawing.Size(404, 43);
             this.label1.TabIndex = 0;
             this.label1.Text = "WELCOME TO MAAR-KET";
             // 
@@ -126,9 +129,10 @@
             this.LblTheBiggest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LblTheBiggest.Font = new System.Drawing.Font("Monotype Corsiva", 26F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTheBiggest.ForeColor = System.Drawing.Color.SlateBlue;
-            this.LblTheBiggest.Location = new System.Drawing.Point(72, 87);
+            this.LblTheBiggest.Location = new System.Drawing.Point(29, 57);
+            this.LblTheBiggest.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblTheBiggest.Name = "LblTheBiggest";
-            this.LblTheBiggest.Size = new System.Drawing.Size(1053, 63);
+            this.LblTheBiggest.Size = new System.Drawing.Size(722, 43);
             this.LblTheBiggest.TabIndex = 0;
             this.LblTheBiggest.Text = "THE BIGGEST ONLINE SHOP IN THE COUNTRY";
             // 
@@ -143,9 +147,10 @@
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.lblCategory);
-            this.panel2.Location = new System.Drawing.Point(12, 177);
+            this.panel2.Location = new System.Drawing.Point(8, 115);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1165, 452);
+            this.panel2.Size = new System.Drawing.Size(777, 294);
             this.panel2.TabIndex = 1;
             // 
             // panel11
@@ -153,9 +158,10 @@
             this.panel11.BackColor = System.Drawing.Color.Transparent;
             this.panel11.Controls.Add(this.label4);
             this.panel11.Controls.Add(this.ctgOil);
-            this.panel11.Location = new System.Drawing.Point(891, 258);
+            this.panel11.Location = new System.Drawing.Point(594, 168);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(263, 188);
+            this.panel11.Size = new System.Drawing.Size(175, 122);
             this.panel11.TabIndex = 1;
             // 
             // label4
@@ -163,19 +169,21 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label4.Location = new System.Drawing.Point(95, 145);
+            this.label4.Location = new System.Drawing.Point(63, 94);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 26);
+            this.label4.Size = new System.Drawing.Size(31, 18);
             this.label4.TabIndex = 1;
-            this.label4.Text = "OILS";
+            this.label4.Text = "OIL";
             // 
             // ctgOil
             // 
             this.ctgOil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgOil.Image = global::Super_Shop_Management.Properties.Resources.Oil;
-            this.ctgOil.Location = new System.Drawing.Point(3, 3);
+            this.ctgOil.Location = new System.Drawing.Point(2, 2);
+            this.ctgOil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ctgOil.Name = "ctgOil";
-            this.ctgOil.Size = new System.Drawing.Size(257, 139);
+            this.ctgOil.Size = new System.Drawing.Size(172, 91);
             this.ctgOil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ctgOil.TabIndex = 0;
             this.ctgOil.TabStop = false;
@@ -186,9 +194,10 @@
             this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.Controls.Add(this.label3);
             this.panel7.Controls.Add(this.ctgEgg);
-            this.panel7.Location = new System.Drawing.Point(891, 64);
+            this.panel7.Location = new System.Drawing.Point(594, 42);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(263, 188);
+            this.panel7.Size = new System.Drawing.Size(175, 122);
             this.panel7.TabIndex = 1;
             // 
             // label3
@@ -196,9 +205,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label3.Location = new System.Drawing.Point(95, 145);
+            this.label3.Location = new System.Drawing.Point(63, 94);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 26);
+            this.label3.Size = new System.Drawing.Size(52, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "EGGS";
             // 
@@ -206,10 +216,11 @@
             // 
             this.ctgEgg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgEgg.Image = global::Super_Shop_Management.Properties.Resources.egg;
-            this.ctgEgg.Location = new System.Drawing.Point(3, 0);
+            this.ctgEgg.Location = new System.Drawing.Point(2, 0);
+            this.ctgEgg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ctgEgg.Name = "ctgEgg";
-            this.ctgEgg.Size = new System.Drawing.Size(257, 139);
-            this.ctgEgg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ctgEgg.Size = new System.Drawing.Size(172, 91);
+            this.ctgEgg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ctgEgg.TabIndex = 0;
             this.ctgEgg.TabStop = false;
             this.ctgEgg.Click += new System.EventHandler(this.ctgEgg_Click);
@@ -219,9 +230,10 @@
             this.panel10.BackColor = System.Drawing.Color.Transparent;
             this.panel10.Controls.Add(this.label5);
             this.panel10.Controls.Add(this.ctgDal);
-            this.panel10.Location = new System.Drawing.Point(602, 258);
+            this.panel10.Location = new System.Drawing.Point(401, 168);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(263, 188);
+            this.panel10.Size = new System.Drawing.Size(175, 122);
             this.panel10.TabIndex = 1;
             // 
             // label5
@@ -229,19 +241,21 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label5.Location = new System.Drawing.Point(118, 145);
+            this.label5.Location = new System.Drawing.Point(79, 94);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 26);
+            this.label5.Size = new System.Drawing.Size(36, 18);
             this.label5.TabIndex = 1;
-            this.label5.Text = "DALS";
+            this.label5.Text = "DAL";
             // 
             // ctgDal
             // 
             this.ctgDal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgDal.Image = global::Super_Shop_Management.Properties.Resources.dal;
-            this.ctgDal.Location = new System.Drawing.Point(3, 0);
+            this.ctgDal.Location = new System.Drawing.Point(2, 0);
+            this.ctgDal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ctgDal.Name = "ctgDal";
-            this.ctgDal.Size = new System.Drawing.Size(257, 139);
+            this.ctgDal.Size = new System.Drawing.Size(172, 91);
             this.ctgDal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ctgDal.TabIndex = 0;
             this.ctgDal.TabStop = false;
@@ -252,9 +266,10 @@
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.pictureBox2);
-            this.panel6.Location = new System.Drawing.Point(602, 64);
+            this.panel6.Location = new System.Drawing.Point(401, 42);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(263, 188);
+            this.panel6.Size = new System.Drawing.Size(175, 122);
             this.panel6.TabIndex = 1;
             // 
             // label2
@@ -262,9 +277,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label2.Location = new System.Drawing.Point(12, 145);
+            this.label2.Location = new System.Drawing.Point(8, 94);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(248, 26);
+            this.label2.Size = new System.Drawing.Size(166, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "FRUITS & VEGETABLES";
             // 
@@ -272,9 +288,10 @@
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::Super_Shop_Management.Properties.Resources.fruits_vegetables_chalk_white_icon_260nw_1709143813;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(257, 139);
+            this.pictureBox2.Size = new System.Drawing.Size(172, 91);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -285,9 +302,10 @@
             this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.Controls.Add(this.label8);
             this.panel9.Controls.Add(this.ctgRice);
-            this.panel9.Location = new System.Drawing.Point(312, 258);
+            this.panel9.Location = new System.Drawing.Point(208, 168);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(263, 188);
+            this.panel9.Size = new System.Drawing.Size(175, 122);
             this.panel9.TabIndex = 1;
             // 
             // label8
@@ -295,9 +313,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label8.Location = new System.Drawing.Point(105, 145);
+            this.label8.Location = new System.Drawing.Point(70, 94);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 26);
+            this.label8.Size = new System.Drawing.Size(43, 18);
             this.label8.TabIndex = 1;
             this.label8.Text = "RICE";
             // 
@@ -305,9 +324,10 @@
             // 
             this.ctgRice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgRice.Image = global::Super_Shop_Management.Properties.Resources.rice;
-            this.ctgRice.Location = new System.Drawing.Point(3, 0);
+            this.ctgRice.Location = new System.Drawing.Point(2, 0);
+            this.ctgRice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ctgRice.Name = "ctgRice";
-            this.ctgRice.Size = new System.Drawing.Size(257, 139);
+            this.ctgRice.Size = new System.Drawing.Size(172, 91);
             this.ctgRice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ctgRice.TabIndex = 0;
             this.ctgRice.TabStop = false;
@@ -318,9 +338,10 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.lblMilkandBeverages);
             this.panel5.Controls.Add(this.ctgMilkBeverage);
-            this.panel5.Location = new System.Drawing.Point(312, 64);
+            this.panel5.Location = new System.Drawing.Point(208, 42);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(263, 188);
+            this.panel5.Size = new System.Drawing.Size(175, 122);
             this.panel5.TabIndex = 1;
             // 
             // lblMilkandBeverages
@@ -328,9 +349,10 @@
             this.lblMilkandBeverages.AutoSize = true;
             this.lblMilkandBeverages.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMilkandBeverages.ForeColor = System.Drawing.Color.SlateBlue;
-            this.lblMilkandBeverages.Location = new System.Drawing.Point(24, 145);
+            this.lblMilkandBeverages.Location = new System.Drawing.Point(19, 94);
+            this.lblMilkandBeverages.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMilkandBeverages.Name = "lblMilkandBeverages";
-            this.lblMilkandBeverages.Size = new System.Drawing.Size(213, 26);
+            this.lblMilkandBeverages.Size = new System.Drawing.Size(141, 18);
             this.lblMilkandBeverages.TabIndex = 1;
             this.lblMilkandBeverages.Text = "MILK & BEVERAGES";
             // 
@@ -338,9 +360,10 @@
             // 
             this.ctgMilkBeverage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgMilkBeverage.Image = global::Super_Shop_Management.Properties.Resources.Mik_and_beverages;
-            this.ctgMilkBeverage.Location = new System.Drawing.Point(3, 3);
+            this.ctgMilkBeverage.Location = new System.Drawing.Point(2, 2);
+            this.ctgMilkBeverage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ctgMilkBeverage.Name = "ctgMilkBeverage";
-            this.ctgMilkBeverage.Size = new System.Drawing.Size(257, 139);
+            this.ctgMilkBeverage.Size = new System.Drawing.Size(172, 91);
             this.ctgMilkBeverage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ctgMilkBeverage.TabIndex = 0;
             this.ctgMilkBeverage.TabStop = false;
@@ -351,9 +374,10 @@
             this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.Controls.Add(this.label6);
             this.panel8.Controls.Add(this.ctgSpices);
-            this.panel8.Location = new System.Drawing.Point(18, 258);
+            this.panel8.Location = new System.Drawing.Point(12, 168);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(263, 188);
+            this.panel8.Size = new System.Drawing.Size(175, 122);
             this.panel8.TabIndex = 1;
             // 
             // label6
@@ -361,9 +385,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label6.Location = new System.Drawing.Point(82, 145);
+            this.label6.Location = new System.Drawing.Point(55, 94);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 26);
+            this.label6.Size = new System.Drawing.Size(62, 18);
             this.label6.TabIndex = 1;
             this.label6.Text = "SPICES";
             // 
@@ -371,9 +396,10 @@
             // 
             this.ctgSpices.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgSpices.Image = global::Super_Shop_Management.Properties.Resources.Spices;
-            this.ctgSpices.Location = new System.Drawing.Point(3, 3);
+            this.ctgSpices.Location = new System.Drawing.Point(2, 2);
+            this.ctgSpices.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ctgSpices.Name = "ctgSpices";
-            this.ctgSpices.Size = new System.Drawing.Size(257, 139);
+            this.ctgSpices.Size = new System.Drawing.Size(172, 91);
             this.ctgSpices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ctgSpices.TabIndex = 0;
             this.ctgSpices.TabStop = false;
@@ -384,9 +410,10 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.lblmeat);
             this.panel4.Controls.Add(this.ctgMeat);
-            this.panel4.Location = new System.Drawing.Point(18, 64);
+            this.panel4.Location = new System.Drawing.Point(12, 42);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(263, 188);
+            this.panel4.Size = new System.Drawing.Size(175, 122);
             this.panel4.TabIndex = 1;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -395,9 +422,10 @@
             this.lblmeat.AutoSize = true;
             this.lblmeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmeat.ForeColor = System.Drawing.Color.SlateBlue;
-            this.lblmeat.Location = new System.Drawing.Point(82, 145);
+            this.lblmeat.Location = new System.Drawing.Point(55, 94);
+            this.lblmeat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblmeat.Name = "lblmeat";
-            this.lblmeat.Size = new System.Drawing.Size(72, 26);
+            this.lblmeat.Size = new System.Drawing.Size(49, 18);
             this.lblmeat.TabIndex = 1;
             this.lblmeat.Text = "MEAT";
             // 
@@ -405,9 +433,10 @@
             // 
             this.ctgMeat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgMeat.Image = global::Super_Shop_Management.Properties.Resources.Meat;
-            this.ctgMeat.Location = new System.Drawing.Point(3, 3);
+            this.ctgMeat.Location = new System.Drawing.Point(2, 2);
+            this.ctgMeat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ctgMeat.Name = "ctgMeat";
-            this.ctgMeat.Size = new System.Drawing.Size(257, 139);
+            this.ctgMeat.Size = new System.Drawing.Size(172, 91);
             this.ctgMeat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ctgMeat.TabIndex = 0;
             this.ctgMeat.TabStop = false;
@@ -420,82 +449,84 @@
             this.lblCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblCategory.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.SlateBlue;
-            this.lblCategory.Location = new System.Drawing.Point(460, 9);
+            this.lblCategory.Location = new System.Drawing.Point(307, 6);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(239, 43);
+            this.lblCategory.Size = new System.Drawing.Size(159, 28);
             this.lblCategory.TabIndex = 0;
             this.lblCategory.Text = "All Categories";
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.guna2Button1);
-            this.panel3.Controls.Add(this.button_emp_update);
-            this.panel3.Location = new System.Drawing.Point(716, 635);
+            this.panel3.Controls.Add(this.btn_goToCart);
+            this.panel3.Controls.Add(this.button_goToDB);
+            this.panel3.Location = new System.Drawing.Point(477, 413);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(461, 103);
+            this.panel3.Size = new System.Drawing.Size(307, 67);
             this.panel3.TabIndex = 1;
             // 
-            // guna2Button1
+            // btn_goToCart
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Snow;
-            this.guna2Button1.BorderRadius = 22;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2Button1.Font = new System.Drawing.Font("MS UI Gothic", 9.75F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(271, 5);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(167, 46);
-            this.guna2Button1.TabIndex = 6;
-            this.guna2Button1.Text = "GO TO CURT";
-            this.guna2Button1.UseTransparentBackground = true;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btn_goToCart.Animated = true;
+            this.btn_goToCart.AutoRoundedCorners = true;
+            this.btn_goToCart.BackColor = System.Drawing.Color.Transparent;
+            this.btn_goToCart.BorderColor = System.Drawing.Color.Snow;
+            this.btn_goToCart.BorderRadius = 14;
+            this.btn_goToCart.BorderThickness = 1;
+            this.btn_goToCart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_goToCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_goToCart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_goToCart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_goToCart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_goToCart.Font = new System.Drawing.Font("MS UI Gothic", 9.75F);
+            this.btn_goToCart.ForeColor = System.Drawing.Color.White;
+            this.btn_goToCart.Location = new System.Drawing.Point(181, 3);
+            this.btn_goToCart.Name = "btn_goToCart";
+            this.btn_goToCart.Size = new System.Drawing.Size(111, 30);
+            this.btn_goToCart.TabIndex = 6;
+            this.btn_goToCart.Text = "GO TO CART";
+            this.btn_goToCart.UseTransparentBackground = true;
+            this.btn_goToCart.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // button_emp_update
+            // button_goToDB
             // 
-            this.button_emp_update.Animated = true;
-            this.button_emp_update.AutoRoundedCorners = true;
-            this.button_emp_update.BackColor = System.Drawing.Color.Transparent;
-            this.button_emp_update.BorderColor = System.Drawing.Color.Snow;
-            this.button_emp_update.BorderRadius = 22;
-            this.button_emp_update.BorderThickness = 1;
-            this.button_emp_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_emp_update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_emp_update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_emp_update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_emp_update.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button_emp_update.Font = new System.Drawing.Font("MS UI Gothic", 9.75F);
-            this.button_emp_update.ForeColor = System.Drawing.Color.White;
-            this.button_emp_update.Location = new System.Drawing.Point(21, 5);
-            this.button_emp_update.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button_emp_update.Name = "button_emp_update";
-            this.button_emp_update.Size = new System.Drawing.Size(214, 46);
-            this.button_emp_update.TabIndex = 5;
-            this.button_emp_update.Text = "GO TO DSAHBOARD";
-            this.button_emp_update.Click += new System.EventHandler(this.button_emp_update_Click);
+            this.button_goToDB.Animated = true;
+            this.button_goToDB.AutoRoundedCorners = true;
+            this.button_goToDB.BackColor = System.Drawing.Color.Transparent;
+            this.button_goToDB.BorderColor = System.Drawing.Color.Snow;
+            this.button_goToDB.BorderRadius = 14;
+            this.button_goToDB.BorderThickness = 1;
+            this.button_goToDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_goToDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_goToDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_goToDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_goToDB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_goToDB.Font = new System.Drawing.Font("MS UI Gothic", 9.75F);
+            this.button_goToDB.ForeColor = System.Drawing.Color.White;
+            this.button_goToDB.Location = new System.Drawing.Point(14, 3);
+            this.button_goToDB.Name = "button_goToDB";
+            this.button_goToDB.Size = new System.Drawing.Size(143, 30);
+            this.button_goToDB.TabIndex = 5;
+            this.button_goToDB.Text = "GO TO DASHBOARD";
+            this.button_goToDB.Click += new System.EventHandler(this.button_emp_update_Click);
             // 
             // CustomerView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(1190, 750);
+            this.ClientSize = new System.Drawing.Size(797, 499);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1212, 806);
-            this.MinimumSize = new System.Drawing.Size(1212, 806);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(813, 538);
+            this.MinimumSize = new System.Drawing.Size(813, 538);
             this.Name = "CustomerView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MAAR ket";
             this.Load += new System.EventHandler(this.CustomerView_Load);
             this.panel1.ResumeLayout(false);
@@ -565,7 +596,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button button_emp_update;
+        private Guna.UI2.WinForms.Guna2Button btn_goToCart;
+        private Guna.UI2.WinForms.Guna2Button button_goToDB;
     }
 }

@@ -37,7 +37,7 @@ namespace Super_Shop_Management
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            curt curt = new curt();
+            cart curt = new cart();
             this.Hide();
             curt.Show();    
         }
