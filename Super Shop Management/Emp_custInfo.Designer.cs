@@ -31,11 +31,9 @@ namespace Super_Shop_Management
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Emp_custInfo));
             this.panel_custInfo = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_custRank = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox_cusSearchBar = new System.Windows.Forms.TextBox();
             this.label_custRank = new System.Windows.Forms.Label();
-            this.label_cusSearch = new System.Windows.Forms.Label();
             this.button_custActivate = new System.Windows.Forms.Button();
             this.button_custRemove = new System.Windows.Forms.Button();
             this.button_custUpdate = new System.Windows.Forms.Button();
@@ -46,7 +44,7 @@ namespace Super_Shop_Management
             this.label_custPhone = new System.Windows.Forms.Label();
             this.label_custAddress = new System.Windows.Forms.Label();
             this.panel_custName = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_cust = new System.Windows.Forms.DataGridView();
             this.textBox_custName = new System.Windows.Forms.TextBox();
             this.panel_custId = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,19 +56,21 @@ namespace Super_Shop_Management
             this.button_custInfo = new System.Windows.Forms.Button();
             this.Employee = new System.Windows.Forms.Label();
             this.pictureBox_custInfo = new System.Windows.Forms.PictureBox();
+            this.button_custSearch = new System.Windows.Forms.Button();
+            this.textBox_custSearch = new System.Windows.Forms.TextBox();
             this.panel_custInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_cust)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_custInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_custInfo
             // 
             this.panel_custInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_custInfo.Controls.Add(this.comboBox1);
+            this.panel_custInfo.Controls.Add(this.button_custSearch);
+            this.panel_custInfo.Controls.Add(this.comboBox_custRank);
+            this.panel_custInfo.Controls.Add(this.textBox_custSearch);
             this.panel_custInfo.Controls.Add(this.panel1);
-            this.panel_custInfo.Controls.Add(this.textBox_cusSearchBar);
             this.panel_custInfo.Controls.Add(this.label_custRank);
-            this.panel_custInfo.Controls.Add(this.label_cusSearch);
             this.panel_custInfo.Controls.Add(this.button_custActivate);
             this.panel_custInfo.Controls.Add(this.button_custRemove);
             this.panel_custInfo.Controls.Add(this.button_custUpdate);
@@ -81,7 +81,7 @@ namespace Super_Shop_Management
             this.panel_custInfo.Controls.Add(this.label_custPhone);
             this.panel_custInfo.Controls.Add(this.label_custAddress);
             this.panel_custInfo.Controls.Add(this.panel_custName);
-            this.panel_custInfo.Controls.Add(this.dataGridView1);
+            this.panel_custInfo.Controls.Add(this.dataGridView_cust);
             this.panel_custInfo.Controls.Add(this.textBox_custName);
             this.panel_custInfo.Controls.Add(this.panel_custId);
             this.panel_custInfo.Controls.Add(this.label1);
@@ -93,19 +93,19 @@ namespace Super_Shop_Management
             this.panel_custInfo.Size = new System.Drawing.Size(933, 537);
             this.panel_custInfo.TabIndex = 14;
             // 
-            // comboBox1
+            // comboBox_custRank
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_custRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_custRank.FormattingEnabled = true;
+            this.comboBox_custRank.Items.AddRange(new object[] {
             "Newbie",
             "Power customer",
             "Super customer",
             "Premium customer"});
-            this.comboBox1.Location = new System.Drawing.Point(114, 253);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(228, 28);
-            this.comboBox1.TabIndex = 35;
+            this.comboBox_custRank.Location = new System.Drawing.Point(114, 253);
+            this.comboBox_custRank.Name = "comboBox_custRank";
+            this.comboBox_custRank.Size = new System.Drawing.Size(228, 28);
+            this.comboBox_custRank.TabIndex = 35;
             // 
             // panel1
             // 
@@ -115,18 +115,6 @@ namespace Super_Shop_Management
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(228, 1);
             this.panel1.TabIndex = 34;
-            // 
-            // textBox_cusSearchBar
-            // 
-            this.textBox_cusSearchBar.BackColor = System.Drawing.Color.White;
-            this.textBox_cusSearchBar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_cusSearchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_cusSearchBar.ForeColor = System.Drawing.Color.White;
-            this.textBox_cusSearchBar.Location = new System.Drawing.Point(691, 68);
-            this.textBox_cusSearchBar.Multiline = true;
-            this.textBox_cusSearchBar.Name = "textBox_cusSearchBar";
-            this.textBox_cusSearchBar.Size = new System.Drawing.Size(228, 25);
-            this.textBox_cusSearchBar.TabIndex = 33;
             // 
             // label_custRank
             // 
@@ -139,19 +127,6 @@ namespace Super_Shop_Management
             this.label_custRank.Size = new System.Drawing.Size(83, 25);
             this.label_custRank.TabIndex = 32;
             this.label_custRank.Text = "Rank";
-            // 
-            // label_cusSearch
-            // 
-            this.label_cusSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_cusSearch.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_cusSearch.ForeColor = System.Drawing.Color.White;
-            this.label_cusSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_cusSearch.Location = new System.Drawing.Point(598, 71);
-            this.label_cusSearch.Name = "label_cusSearch";
-            this.label_cusSearch.Size = new System.Drawing.Size(87, 25);
-            this.label_cusSearch.TabIndex = 10;
-            this.label_cusSearch.Text = "Search:";
-            this.label_cusSearch.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button_custActivate
             // 
@@ -180,6 +155,7 @@ namespace Super_Shop_Management
             this.button_custRemove.TabIndex = 18;
             this.button_custRemove.Text = "REMOVE";
             this.button_custRemove.UseVisualStyleBackColor = false;
+            this.button_custRemove.Click += new System.EventHandler(this.button_custRemove_Click);
             // 
             // button_custUpdate
             // 
@@ -271,14 +247,14 @@ namespace Super_Shop_Management
             this.panel_custName.Size = new System.Drawing.Size(228, 1);
             this.panel_custName.TabIndex = 25;
             // 
-            // dataGridView1
+            // dataGridView_cust
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(358, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(561, 423);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView_cust.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView_cust.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_cust.Location = new System.Drawing.Point(358, 99);
+            this.dataGridView_cust.Name = "dataGridView_cust";
+            this.dataGridView_cust.Size = new System.Drawing.Size(561, 423);
+            this.dataGridView_cust.TabIndex = 1;
             // 
             // textBox_custName
             // 
@@ -413,6 +389,24 @@ namespace Super_Shop_Management
             this.pictureBox_custInfo.TabIndex = 10;
             this.pictureBox_custInfo.TabStop = false;
             // 
+            // button_custSearch
+            // 
+            this.button_custSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_custSearch.Location = new System.Drawing.Point(580, 65);
+            this.button_custSearch.Name = "button_custSearch";
+            this.button_custSearch.Size = new System.Drawing.Size(75, 28);
+            this.button_custSearch.TabIndex = 27;
+            this.button_custSearch.Text = "Search";
+            this.button_custSearch.UseVisualStyleBackColor = true;
+            // 
+            // textBox_custSearch
+            // 
+            this.textBox_custSearch.Location = new System.Drawing.Point(661, 65);
+            this.textBox_custSearch.Multiline = true;
+            this.textBox_custSearch.Name = "textBox_custSearch";
+            this.textBox_custSearch.Size = new System.Drawing.Size(258, 28);
+            this.textBox_custSearch.TabIndex = 26;
+            // 
             // Emp_custInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,9 +424,10 @@ namespace Super_Shop_Management
             this.Name = "Emp_custInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer Information";
+            this.Load += new System.EventHandler(this.Emp_custInfo_Load);
             this.panel_custInfo.ResumeLayout(false);
             this.panel_custInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_cust)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_custInfo)).EndInit();
             this.ResumeLayout(false);
 
@@ -441,11 +436,9 @@ namespace Super_Shop_Management
         #endregion
 
         private System.Windows.Forms.Panel panel_custInfo;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_custRank;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox_cusSearchBar;
         private System.Windows.Forms.Label label_custRank;
-        private System.Windows.Forms.Label label_cusSearch;
         private System.Windows.Forms.Button button_custActivate;
         private System.Windows.Forms.Button button_custRemove;
         private System.Windows.Forms.Button button_custUpdate;
@@ -456,7 +449,7 @@ namespace Super_Shop_Management
         private System.Windows.Forms.Label label_custPhone;
         private System.Windows.Forms.Label label_custAddress;
         private System.Windows.Forms.Panel panel_custName;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_cust;
         private System.Windows.Forms.TextBox textBox_custName;
         private System.Windows.Forms.Panel panel_custId;
         private System.Windows.Forms.Label label1;
@@ -468,5 +461,7 @@ namespace Super_Shop_Management
         private System.Windows.Forms.Button button_custInfo;
         private System.Windows.Forms.PictureBox pictureBox_custInfo;
         private System.Windows.Forms.Label Employee;
+        private System.Windows.Forms.Button button_custSearch;
+        private System.Windows.Forms.TextBox textBox_custSearch;
     }
 }

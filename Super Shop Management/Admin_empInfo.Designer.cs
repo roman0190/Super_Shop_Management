@@ -127,11 +127,12 @@ namespace Super_Shop_Management
             // 
             // dataGridView_emp
             // 
+            this.dataGridView_emp.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView_emp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_emp.Location = new System.Drawing.Point(368, 54);
+            this.dataGridView_emp.Location = new System.Drawing.Point(368, 83);
             this.dataGridView_emp.Name = "dataGridView_emp";
             this.dataGridView_emp.RowHeadersWidth = 62;
-            this.dataGridView_emp.Size = new System.Drawing.Size(476, 468);
+            this.dataGridView_emp.Size = new System.Drawing.Size(476, 439);
             this.dataGridView_emp.TabIndex = 2;
             // 
             // textBox_emp_pass
@@ -143,9 +144,10 @@ namespace Super_Shop_Management
             // 
             // textBox_search
             // 
-            this.textBox_search.Location = new System.Drawing.Point(610, 28);
+            this.textBox_search.Location = new System.Drawing.Point(610, 51);
+            this.textBox_search.Multiline = true;
             this.textBox_search.Name = "textBox_search";
-            this.textBox_search.Size = new System.Drawing.Size(234, 20);
+            this.textBox_search.Size = new System.Drawing.Size(234, 24);
             this.textBox_search.TabIndex = 1;
             // 
             // textBox_emp_uname
@@ -266,10 +268,10 @@ namespace Super_Shop_Management
             // 
             // button_emp_src
             // 
-            this.button_emp_src.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_emp_src.Location = new System.Drawing.Point(529, 28);
+            this.button_emp_src.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_emp_src.Location = new System.Drawing.Point(529, 51);
             this.button_emp_src.Name = "button_emp_src";
-            this.button_emp_src.Size = new System.Drawing.Size(75, 20);
+            this.button_emp_src.Size = new System.Drawing.Size(75, 24);
             this.button_emp_src.TabIndex = 6;
             this.button_emp_src.Text = "Search";
             this.button_emp_src.UseVisualStyleBackColor = true;

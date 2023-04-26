@@ -137,7 +137,6 @@ namespace Super_Shop_Management
             
         }
 
-
         public void display_data()
         {
             conn.Open();

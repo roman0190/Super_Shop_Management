@@ -34,6 +34,7 @@ namespace Super_Shop_Management
             this.button_itemInfo = new System.Windows.Forms.Button();
             this.button_custInfo = new System.Windows.Forms.Button();
             this.panel_item = new System.Windows.Forms.Panel();
+            this.textBox_itemSearch = new System.Windows.Forms.TextBox();
             this.comboBox_ctg = new System.Windows.Forms.ComboBox();
             this.panel_itemPrice = new System.Windows.Forms.Panel();
             this.textBox_itemPrice = new System.Windows.Forms.TextBox();
@@ -50,12 +51,11 @@ namespace Super_Shop_Management
             this.label_itemQuantity = new System.Windows.Forms.Label();
             this.label_itemName = new System.Windows.Forms.Label();
             this.label_itemId = new System.Windows.Forms.Label();
-            this.label_ctgSearch = new System.Windows.Forms.Label();
-            this.comboBox_searchCtg = new System.Windows.Forms.ComboBox();
             this.dataGridView_items = new System.Windows.Forms.DataGridView();
             this.label_item = new System.Windows.Forms.Label();
             this.Employee = new System.Windows.Forms.Label();
             this.pictureBox_emp = new System.Windows.Forms.PictureBox();
+            this.button_itemSearch = new System.Windows.Forms.Button();
             this.panel_item.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_items)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_emp)).BeginInit();
@@ -109,6 +109,8 @@ namespace Super_Shop_Management
             // 
             this.panel_item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.panel_item.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_item.Controls.Add(this.button_itemSearch);
+            this.panel_item.Controls.Add(this.textBox_itemSearch);
             this.panel_item.Controls.Add(this.comboBox_ctg);
             this.panel_item.Controls.Add(this.panel_itemPrice);
             this.panel_item.Controls.Add(this.textBox_itemPrice);
@@ -125,14 +127,21 @@ namespace Super_Shop_Management
             this.panel_item.Controls.Add(this.label_itemQuantity);
             this.panel_item.Controls.Add(this.label_itemName);
             this.panel_item.Controls.Add(this.label_itemId);
-            this.panel_item.Controls.Add(this.label_ctgSearch);
-            this.panel_item.Controls.Add(this.comboBox_searchCtg);
             this.panel_item.Controls.Add(this.dataGridView_items);
             this.panel_item.Controls.Add(this.label_item);
             this.panel_item.Location = new System.Drawing.Point(302, 11);
             this.panel_item.Name = "panel_item";
             this.panel_item.Size = new System.Drawing.Size(931, 537);
             this.panel_item.TabIndex = 7;
+            this.panel_item.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_item_Paint);
+            // 
+            // textBox_itemSearch
+            // 
+            this.textBox_itemSearch.Location = new System.Drawing.Point(660, 65);
+            this.textBox_itemSearch.Multiline = true;
+            this.textBox_itemSearch.Name = "textBox_itemSearch";
+            this.textBox_itemSearch.Size = new System.Drawing.Size(258, 28);
+            this.textBox_itemSearch.TabIndex = 12;
             // 
             // comboBox_ctg
             // 
@@ -241,6 +250,7 @@ namespace Super_Shop_Management
             this.button_itemDelete.TabIndex = 16;
             this.button_itemDelete.Text = "DELETE";
             this.button_itemDelete.UseVisualStyleBackColor = false;
+            this.button_itemDelete.Click += new System.EventHandler(this.button_itemDelete_Click);
             // 
             // button_itemUpdate
             // 
@@ -330,41 +340,6 @@ namespace Super_Shop_Management
             this.label_itemId.Text = "ID";
             this.label_itemId.Click += new System.EventHandler(this.label_itemId_Click);
             // 
-            // label_ctgSearch
-            // 
-            this.label_ctgSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_ctgSearch.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ctgSearch.ForeColor = System.Drawing.Color.White;
-            this.label_ctgSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_ctgSearch.Location = new System.Drawing.Point(567, 68);
-            this.label_ctgSearch.Name = "label_ctgSearch";
-            this.label_ctgSearch.Size = new System.Drawing.Size(87, 25);
-            this.label_ctgSearch.TabIndex = 3;
-            this.label_ctgSearch.Text = "Search:";
-            this.label_ctgSearch.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // comboBox_searchCtg
-            // 
-            this.comboBox_searchCtg.AllowDrop = true;
-            this.comboBox_searchCtg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_searchCtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_searchCtg.FormattingEnabled = true;
-            this.comboBox_searchCtg.Items.AddRange(new object[] {
-            "Meat",
-            "Beverage",
-            "Vegetable",
-            "Fruits",
-            "Milk",
-            "Spices",
-            "Daal",
-            "Rice",
-            "Egg",
-            "Oil"});
-            this.comboBox_searchCtg.Location = new System.Drawing.Point(660, 65);
-            this.comboBox_searchCtg.Name = "comboBox_searchCtg";
-            this.comboBox_searchCtg.Size = new System.Drawing.Size(258, 28);
-            this.comboBox_searchCtg.TabIndex = 2;
-            // 
             // dataGridView_items
             // 
             this.dataGridView_items.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -408,6 +383,17 @@ namespace Super_Shop_Management
             this.pictureBox_emp.TabIndex = 6;
             this.pictureBox_emp.TabStop = false;
             // 
+            // button_itemSearch
+            // 
+            this.button_itemSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_itemSearch.Location = new System.Drawing.Point(579, 65);
+            this.button_itemSearch.Name = "button_itemSearch";
+            this.button_itemSearch.Size = new System.Drawing.Size(75, 28);
+            this.button_itemSearch.TabIndex = 25;
+            this.button_itemSearch.Text = "Search";
+            this.button_itemSearch.UseVisualStyleBackColor = true;
+            this.button_itemSearch.Click += new System.EventHandler(this.button_itemSearch_Click);
+            // 
             // Emp_itemInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,6 +411,7 @@ namespace Super_Shop_Management
             this.Name = "Emp_itemInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Item Information";
+            this.Load += new System.EventHandler(this.Emp_itemInfo_Load);
             this.panel_item.ResumeLayout(false);
             this.panel_item.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_items)).EndInit();
@@ -456,10 +443,10 @@ namespace Super_Shop_Management
         private System.Windows.Forms.Label label_itemQuantity;
         private System.Windows.Forms.Label label_itemName;
         private System.Windows.Forms.Label label_itemId;
-        private System.Windows.Forms.Label label_ctgSearch;
-        private System.Windows.Forms.ComboBox comboBox_searchCtg;
         private System.Windows.Forms.DataGridView dataGridView_items;
         private System.Windows.Forms.Label label_item;
         private System.Windows.Forms.Label Employee;
+        private System.Windows.Forms.TextBox textBox_itemSearch;
+        private System.Windows.Forms.Button button_itemSearch;
     }
 }

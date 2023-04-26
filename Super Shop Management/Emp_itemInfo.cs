@@ -60,6 +60,61 @@ namespace Super_Shop_Management
                     MessageBox.Show("Failed!");
 
             }
+            conn.Close();
+            display_data();
+        }
+
+        private void button_itemDelete_Click(object sender, EventArgs e)
+        {
+            string query1 = "DELETE from itemInfo_table where ID = " + textBox_itemId.Text;
+            SqlCommand cmd = new SqlCommand(query1, conn);
+            conn.Open();
+            if (conn.State == ConnectionState.Open)
+            {
+                int rows = cmd.ExecuteNonQuery();
+                if (rows > 0)
+                {
+                    MessageBox.Show("Item Deleted!");
+                    textBox_itemId.Text = " ";
+                }
+                else
+                    MessageBox.Show("Failed to delete item!");
+            }
+            conn.Close();
+            display_data();
+        }
+
+        private void panel_item_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Emp_itemInfo_Load(object sender, EventArgs e)
+        {
+            display_data();
+        }
+        public void display_data()
+        {
+            conn.Open();
+            string q2 = "select * from itemInfo_table ";
+            SqlDataAdapter sda = new SqlDataAdapter(q2, conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView_items.DataSource = dt;
+            conn.Close();
+        }
+
+        private void button_itemSearch_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string q1 = "SELECT * FROM itemInfo_table WHERE Name LIKE '" + textBox_itemSearch.Text + "%'";
+
+            SqlDataAdapter sda = new SqlDataAdapter(q1, conn);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView_items.DataSource = dt;
+            conn.Close();
         }
     }
 }
