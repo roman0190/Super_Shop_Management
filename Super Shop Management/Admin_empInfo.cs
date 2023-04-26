@@ -51,17 +51,26 @@ namespace Super_Shop_Management
                 conn.Open();
                 if (conn.State == ConnectionState.Open)
                 {
-                    int rows = cmd.ExecuteNonQuery();
-                    if (rows > 0)
+                    try
                     {
-                        MessageBox.Show("Employee Inserted!!!");
-                        textBox_emp_uname.Text = " ";
-                        textBox_emp_pass.Text = " ";
-                        comboBox_emp_role.Text = " ";
-                        
-                    }   
-                    else
-                        MessageBox.Show("Failed!!!");
+                        int rows = cmd.ExecuteNonQuery();
+                        if (rows > 0)
+                        {
+                            MessageBox.Show("Employee Inserted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            textBox_emp_uname.Text = "";
+                            textBox_emp_pass.Text = "";
+                            comboBox_emp_role.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
 
                 }
                 conn.Close();
@@ -76,16 +85,25 @@ namespace Super_Shop_Management
             conn.Open();
             if (conn.State == ConnectionState.Open)
             {
-                int rows = cmd.ExecuteNonQuery();
-                if (rows > 0)
+                try
                 {
-                    MessageBox.Show("Employee Info Deleted!!!");
-                    textBox_emp_uname.Text = " ";
-                    textBox_emp_pass.Text = " ";
-                   
+                    int rows = cmd.ExecuteNonQuery();
+                    if (rows > 0)
+                    {
+                        MessageBox.Show("Employee Info Deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        textBox_emp_uname.Text = "";
+                        textBox_emp_pass.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
-                    MessageBox.Show("failed!!!");
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             conn.Close();
             display_data();
@@ -98,17 +116,25 @@ namespace Super_Shop_Management
             conn.Open();
             if (conn.State == ConnectionState.Open)
             {
-                int rows = cmd.ExecuteNonQuery();
-                if (rows > 0)
+                try
                 {
-                    MessageBox.Show("Employee Info Updated!!!");
-                    textBox_emp_uname.Text = " ";
-                    textBox_emp_pass.Text = " ";
-                    
-
+                    int rows = cmd.ExecuteNonQuery();
+                    if (rows > 0)
+                    {
+                        MessageBox.Show("Employee Info Updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        textBox_emp_uname.Text = "";
+                        textBox_emp_pass.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
-                    MessageBox.Show("failed!!!");
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
 
             }
             conn.Close();
@@ -124,17 +150,13 @@ namespace Super_Shop_Management
 
         private void button_emp_src_Click(object sender, EventArgs e)
         {
-
-            conn.Open();
-            string q1 = "select * from empInfo_table where username like '%" + textBox_search.Text + "'";
+            string q1 = "SELECT * FROM empInfo_table WHERE username LIKE @search";
             SqlDataAdapter sda = new SqlDataAdapter(q1, conn);
-
+            sda.SelectCommand.Parameters.AddWithValue("@search", "%" + textBox_search.Text + "%");
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dataGridView_emp.DataSource = dt;
-            conn.Close();
- 
-            
+
         }
 
 

@@ -60,7 +60,7 @@ namespace Super_Shop_Management
         {
 
 
-            string q1 = "select type from login_table where username ='" + textBox1_uname.Text + "' and password = '" + textBox2_pass.Text + "'";
+            string q1 = "select role from login_table where username ='" + textBox1_uname.Text + "' and password = '" + textBox2_pass.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(q1, conn);
 
             DataTable dt = new DataTable();

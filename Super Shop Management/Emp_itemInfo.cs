@@ -61,5 +61,10 @@ namespace Super_Shop_Management
 
             }
         }
+
+        private void Emp_itemInfo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

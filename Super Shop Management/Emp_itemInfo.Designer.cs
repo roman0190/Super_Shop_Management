@@ -425,6 +425,7 @@ namespace Super_Shop_Management
             this.Name = "Emp_itemInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Item Information";
+            this.Load += new System.EventHandler(this.Emp_itemInfo_Load);
             this.panel_item.ResumeLayout(false);
             this.panel_item.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_items)).EndInit();

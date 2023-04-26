@@ -34,6 +34,7 @@ namespace Super_Shop_Management
             this.Employee = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button_item_src = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button_item_update = new Guna.UI2.WinForms.Guna2Button();
             this.button_item_delete = new Guna.UI2.WinForms.Guna2Button();
@@ -53,7 +54,6 @@ namespace Super_Shop_Management
             this.button_empInfo = new System.Windows.Forms.Button();
             this.button_ItemInfo = new System.Windows.Forms.Button();
             this.button_logoutAdmin = new System.Windows.Forms.Button();
-            this.button_item_src = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -116,6 +116,17 @@ namespace Super_Shop_Management
             this.panel2.Size = new System.Drawing.Size(857, 536);
             this.panel2.TabIndex = 1;
             // 
+            // button_item_src
+            // 
+            this.button_item_src.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_item_src.Location = new System.Drawing.Point(529, 27);
+            this.button_item_src.Name = "button_item_src";
+            this.button_item_src.Size = new System.Drawing.Size(75, 23);
+            this.button_item_src.TabIndex = 7;
+            this.button_item_src.Text = "Search";
+            this.button_item_src.UseVisualStyleBackColor = true;
+            this.button_item_src.Click += new System.EventHandler(this.button_item_src_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -123,7 +134,13 @@ namespace Super_Shop_Management
             "Meat",
             "Beverage",
             "Vegetable",
-            "Fruits"});
+            "Fruits",
+            "Milk",
+            "Spices",
+            "Daal",
+            "Rice",
+            "Egg",
+            "Oil"});
             this.comboBox1.Location = new System.Drawing.Point(109, 242);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(244, 21);
@@ -200,6 +217,7 @@ namespace Super_Shop_Management
             // 
             // dataGridView_item
             // 
+            this.dataGridView_item.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView_item.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_item.Location = new System.Drawing.Point(368, 54);
             this.dataGridView_item.Name = "dataGridView_item";
@@ -356,16 +374,6 @@ namespace Super_Shop_Management
             this.button_logoutAdmin.Click += new System.EventHandler(this.button_logoutAdmin_Click);
             this.button_logoutAdmin.MouseEnter += new System.EventHandler(this.button_logoutAdmin_MouseEnter_1);
             this.button_logoutAdmin.MouseLeave += new System.EventHandler(this.button_logoutAdmin_MouseLeave);
-            // 
-            // button_item_src
-            // 
-            this.button_item_src.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_item_src.Location = new System.Drawing.Point(529, 27);
-            this.button_item_src.Name = "button_item_src";
-            this.button_item_src.Size = new System.Drawing.Size(75, 23);
-            this.button_item_src.TabIndex = 7;
-            this.button_item_src.Text = "Search";
-            this.button_item_src.UseVisualStyleBackColor = true;
             // 
             // Admin_itemInfo
             // 

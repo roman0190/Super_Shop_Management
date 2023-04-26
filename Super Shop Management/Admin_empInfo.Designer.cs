@@ -127,7 +127,9 @@ namespace Super_Shop_Management
             // 
             // dataGridView_emp
             // 
+            this.dataGridView_emp.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView_emp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_emp.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView_emp.Location = new System.Drawing.Point(368, 54);
             this.dataGridView_emp.Name = "dataGridView_emp";
             this.dataGridView_emp.RowHeadersWidth = 62;
