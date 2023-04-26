@@ -116,10 +116,5 @@ namespace Super_Shop_Management
             dataGridView_items.DataSource = dt;
             conn.Close();
         }
-
-        private void Emp_itemInfo_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
