@@ -255,6 +255,7 @@ namespace Super_Shop_Management
             this.button_itemUpdate.TabIndex = 15;
             this.button_itemUpdate.Text = "UPDATE";
             this.button_itemUpdate.UseVisualStyleBackColor = false;
+            this.button_itemUpdate.Click += new System.EventHandler(this.button_itemUpdate_Click);
             // 
             // textBox_id
             // 

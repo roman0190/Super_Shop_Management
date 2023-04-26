@@ -35,5 +35,10 @@ namespace Super_Shop_Management
             this.Hide();
             cf.Show();
         }
+
+        private void button_itemUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
