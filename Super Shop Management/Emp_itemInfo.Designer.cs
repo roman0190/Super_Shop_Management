@@ -34,17 +34,17 @@ namespace Super_Shop_Management
             this.button_itemInfo = new System.Windows.Forms.Button();
             this.button_custInfo = new System.Windows.Forms.Button();
             this.panel_item = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_ctg = new System.Windows.Forms.ComboBox();
             this.panel_itemPrice = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_itemPrice = new System.Windows.Forms.TextBox();
             this.panel_itemQuantity = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_itemQty = new System.Windows.Forms.TextBox();
             this.panel_itemName = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_itemName = new System.Windows.Forms.TextBox();
             this.panel_itemId = new System.Windows.Forms.Panel();
             this.button_itemDelete = new System.Windows.Forms.Button();
             this.button_itemUpdate = new System.Windows.Forms.Button();
-            this.textBox_id = new System.Windows.Forms.TextBox();
+            this.textBox_itemId = new System.Windows.Forms.TextBox();
             this.label_itemCtg = new System.Windows.Forms.Label();
             this.label_itemPrice = new System.Windows.Forms.Label();
             this.label_itemQuantity = new System.Windows.Forms.Label();
@@ -109,17 +109,17 @@ namespace Super_Shop_Management
             // 
             this.panel_item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.panel_item.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_item.Controls.Add(this.comboBox1);
+            this.panel_item.Controls.Add(this.comboBox_ctg);
             this.panel_item.Controls.Add(this.panel_itemPrice);
-            this.panel_item.Controls.Add(this.textBox4);
+            this.panel_item.Controls.Add(this.textBox_itemPrice);
             this.panel_item.Controls.Add(this.panel_itemQuantity);
-            this.panel_item.Controls.Add(this.textBox2);
+            this.panel_item.Controls.Add(this.textBox_itemQty);
             this.panel_item.Controls.Add(this.panel_itemName);
-            this.panel_item.Controls.Add(this.textBox1);
+            this.panel_item.Controls.Add(this.textBox_itemName);
             this.panel_item.Controls.Add(this.panel_itemId);
             this.panel_item.Controls.Add(this.button_itemDelete);
             this.panel_item.Controls.Add(this.button_itemUpdate);
-            this.panel_item.Controls.Add(this.textBox_id);
+            this.panel_item.Controls.Add(this.textBox_itemId);
             this.panel_item.Controls.Add(this.label_itemCtg);
             this.panel_item.Controls.Add(this.label_itemPrice);
             this.panel_item.Controls.Add(this.label_itemQuantity);
@@ -134,13 +134,13 @@ namespace Super_Shop_Management
             this.panel_item.Size = new System.Drawing.Size(931, 537);
             this.panel_item.TabIndex = 7;
             // 
-            // comboBox1
+            // comboBox_ctg
             // 
-            this.comboBox1.AllowDrop = true;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_ctg.AllowDrop = true;
+            this.comboBox_ctg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_ctg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_ctg.FormattingEnabled = true;
+            this.comboBox_ctg.Items.AddRange(new object[] {
             "Meat",
             "Beverage",
             "Vegetable",
@@ -151,10 +151,10 @@ namespace Super_Shop_Management
             "Rice",
             "Egg",
             "Oil"});
-            this.comboBox1.Location = new System.Drawing.Point(112, 266);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(228, 28);
-            this.comboBox1.TabIndex = 24;
+            this.comboBox_ctg.Location = new System.Drawing.Point(112, 266);
+            this.comboBox_ctg.Name = "comboBox_ctg";
+            this.comboBox_ctg.Size = new System.Drawing.Size(228, 28);
+            this.comboBox_ctg.TabIndex = 24;
             // 
             // panel_itemPrice
             // 
@@ -165,17 +165,17 @@ namespace Super_Shop_Management
             this.panel_itemPrice.Size = new System.Drawing.Size(228, 1);
             this.panel_itemPrice.TabIndex = 23;
             // 
-            // textBox4
+            // textBox_itemPrice
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(112, 232);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(228, 25);
-            this.textBox4.TabIndex = 22;
+            this.textBox_itemPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.textBox_itemPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_itemPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_itemPrice.ForeColor = System.Drawing.Color.White;
+            this.textBox_itemPrice.Location = new System.Drawing.Point(112, 232);
+            this.textBox_itemPrice.Multiline = true;
+            this.textBox_itemPrice.Name = "textBox_itemPrice";
+            this.textBox_itemPrice.Size = new System.Drawing.Size(228, 25);
+            this.textBox_itemPrice.TabIndex = 22;
             // 
             // panel_itemQuantity
             // 
@@ -186,17 +186,17 @@ namespace Super_Shop_Management
             this.panel_itemQuantity.Size = new System.Drawing.Size(228, 1);
             this.panel_itemQuantity.TabIndex = 21;
             // 
-            // textBox2
+            // textBox_itemQty
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(112, 192);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(228, 25);
-            this.textBox2.TabIndex = 20;
+            this.textBox_itemQty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.textBox_itemQty.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_itemQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_itemQty.ForeColor = System.Drawing.Color.White;
+            this.textBox_itemQty.Location = new System.Drawing.Point(112, 192);
+            this.textBox_itemQty.Multiline = true;
+            this.textBox_itemQty.Name = "textBox_itemQty";
+            this.textBox_itemQty.Size = new System.Drawing.Size(228, 25);
+            this.textBox_itemQty.TabIndex = 20;
             // 
             // panel_itemName
             // 
@@ -207,17 +207,17 @@ namespace Super_Shop_Management
             this.panel_itemName.Size = new System.Drawing.Size(228, 1);
             this.panel_itemName.TabIndex = 19;
             // 
-            // textBox1
+            // textBox_itemName
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(112, 155);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 25);
-            this.textBox1.TabIndex = 18;
+            this.textBox_itemName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.textBox_itemName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_itemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_itemName.ForeColor = System.Drawing.Color.White;
+            this.textBox_itemName.Location = new System.Drawing.Point(112, 155);
+            this.textBox_itemName.Multiline = true;
+            this.textBox_itemName.Name = "textBox_itemName";
+            this.textBox_itemName.Size = new System.Drawing.Size(228, 25);
+            this.textBox_itemName.TabIndex = 18;
             // 
             // panel_itemId
             // 
@@ -257,17 +257,17 @@ namespace Super_Shop_Management
             this.button_itemUpdate.UseVisualStyleBackColor = false;
             this.button_itemUpdate.Click += new System.EventHandler(this.button_itemUpdate_Click);
             // 
-            // textBox_id
+            // textBox_itemId
             // 
-            this.textBox_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.textBox_id.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_id.ForeColor = System.Drawing.Color.White;
-            this.textBox_id.Location = new System.Drawing.Point(112, 122);
-            this.textBox_id.Multiline = true;
-            this.textBox_id.Name = "textBox_id";
-            this.textBox_id.Size = new System.Drawing.Size(228, 25);
-            this.textBox_id.TabIndex = 10;
+            this.textBox_itemId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.textBox_itemId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_itemId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_itemId.ForeColor = System.Drawing.Color.White;
+            this.textBox_itemId.Location = new System.Drawing.Point(112, 122);
+            this.textBox_itemId.Multiline = true;
+            this.textBox_itemId.Name = "textBox_itemId";
+            this.textBox_itemId.Size = new System.Drawing.Size(228, 25);
+            this.textBox_itemId.TabIndex = 10;
             // 
             // label_itemCtg
             // 
@@ -440,17 +440,17 @@ namespace Super_Shop_Management
         private System.Windows.Forms.Button button_custInfo;
         private System.Windows.Forms.PictureBox pictureBox_emp;
         private System.Windows.Forms.Panel panel_item;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_ctg;
         private System.Windows.Forms.Panel panel_itemPrice;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_itemPrice;
         private System.Windows.Forms.Panel panel_itemQuantity;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_itemQty;
         private System.Windows.Forms.Panel panel_itemName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_itemName;
         private System.Windows.Forms.Panel panel_itemId;
         private System.Windows.Forms.Button button_itemDelete;
         private System.Windows.Forms.Button button_itemUpdate;
-        private System.Windows.Forms.TextBox textBox_id;
+        private System.Windows.Forms.TextBox textBox_itemId;
         private System.Windows.Forms.Label label_itemCtg;
         private System.Windows.Forms.Label label_itemPrice;
         private System.Windows.Forms.Label label_itemQuantity;
