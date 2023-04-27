@@ -76,7 +76,7 @@ namespace Super_Shop_Management
                 }
                 else if (dt.Rows[0][0].ToString() == "emp") //emp 
                 {
-                    Emp_custInfo emp = new Emp_custInfo();
+                    Emp_itemInfo emp = new Emp_itemInfo();
                     emp.Show();
                     this.Hide();
                 }

@@ -34,6 +34,7 @@ namespace Super_Shop_Management
             this.button_itemInfo = new System.Windows.Forms.Button();
             this.button_custInfo = new System.Windows.Forms.Button();
             this.panel_item = new System.Windows.Forms.Panel();
+            this.button_itemSearch = new System.Windows.Forms.Button();
             this.textBox_itemSearch = new System.Windows.Forms.TextBox();
             this.comboBox_ctg = new System.Windows.Forms.ComboBox();
             this.panel_itemPrice = new System.Windows.Forms.Panel();
@@ -55,7 +56,6 @@ namespace Super_Shop_Management
             this.label_item = new System.Windows.Forms.Label();
             this.Employee = new System.Windows.Forms.Label();
             this.pictureBox_emp = new System.Windows.Forms.PictureBox();
-            this.button_itemSearch = new System.Windows.Forms.Button();
             this.panel_item.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_items)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_emp)).BeginInit();
@@ -134,6 +134,17 @@ namespace Super_Shop_Management
             this.panel_item.Size = new System.Drawing.Size(931, 537);
             this.panel_item.TabIndex = 7;
             this.panel_item.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_item_Paint);
+            // 
+            // button_itemSearch
+            // 
+            this.button_itemSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_itemSearch.Location = new System.Drawing.Point(579, 65);
+            this.button_itemSearch.Name = "button_itemSearch";
+            this.button_itemSearch.Size = new System.Drawing.Size(75, 28);
+            this.button_itemSearch.TabIndex = 25;
+            this.button_itemSearch.Text = "Search";
+            this.button_itemSearch.UseVisualStyleBackColor = true;
+            this.button_itemSearch.Click += new System.EventHandler(this.button_itemSearch_Click);
             // 
             // textBox_itemSearch
             // 
@@ -382,17 +393,6 @@ namespace Super_Shop_Management
             this.pictureBox_emp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_emp.TabIndex = 6;
             this.pictureBox_emp.TabStop = false;
-            // 
-            // button_itemSearch
-            // 
-            this.button_itemSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_itemSearch.Location = new System.Drawing.Point(579, 65);
-            this.button_itemSearch.Name = "button_itemSearch";
-            this.button_itemSearch.Size = new System.Drawing.Size(75, 28);
-            this.button_itemSearch.TabIndex = 25;
-            this.button_itemSearch.Text = "Search";
-            this.button_itemSearch.UseVisualStyleBackColor = true;
-            this.button_itemSearch.Click += new System.EventHandler(this.button_itemSearch_Click);
             // 
             // Emp_itemInfo
             // 
