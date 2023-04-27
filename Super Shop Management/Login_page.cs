@@ -76,7 +76,7 @@ namespace Super_Shop_Management
                 }
                 else if (dt.Rows[0][0].ToString() == "emp") //emp 
                 {
-                    Emp_itemInfo emp = new Emp_itemInfo();
+                    Emp_custInfo emp = new Emp_custInfo();
                     emp.Show();
                     this.Hide();
                 }
@@ -89,35 +89,12 @@ namespace Super_Shop_Management
             }
             else
             {
-                DialogResult result = MessageBox.Show("Invalid. Do you want to try again?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                DialogResult result = MessageBox.Show("Invalid User Name or Password. Do you want to try again?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                 if (result == DialogResult.No)
                 {
                     this.Close();
                 }
             }
-
-
-            /*if (textBox1_uname.Text != "admin") //any condition
-            {
-                invalid_u_pnl.Visible = true;
-                textBox1_uname.Focus();
-                return;
-            }
-
-            if (textBox2_pass.Text != "admin") //any condition
-            {
-                invalid_p_pnl.Visible = true;
-                textBox2_pass.Focus();
-                return;
-            }
-
-            if (textBox1_uname.Text == "admin" && textBox2_pass.Text == "admin")
-            {
-                Admin_itemInfo ad = new Admin_itemInfo();
-                ad.Show();
-                this.Hide();
-            }*/
-
         }
 
         private void linkLabel_forgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

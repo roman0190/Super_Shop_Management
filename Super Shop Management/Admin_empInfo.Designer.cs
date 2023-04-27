@@ -50,6 +50,10 @@ namespace Super_Shop_Management
             this.panel1 = new System.Windows.Forms.Panel();
             this.Employee = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_emp_name = new System.Windows.Forms.TextBox();
+            this.textBox_emp_pnum = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_emp)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -72,7 +76,7 @@ namespace Super_Shop_Management
             this.button_emp_update.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button_emp_update.Font = new System.Drawing.Font("MS UI Gothic", 9.75F);
             this.button_emp_update.ForeColor = System.Drawing.Color.White;
-            this.button_emp_update.Location = new System.Drawing.Point(185, 262);
+            this.button_emp_update.Location = new System.Drawing.Point(191, 355);
             this.button_emp_update.Name = "button_emp_update";
             this.button_emp_update.Size = new System.Drawing.Size(91, 30);
             this.button_emp_update.TabIndex = 4;
@@ -95,7 +99,7 @@ namespace Super_Shop_Management
             this.button_emp_delete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button_emp_delete.Font = new System.Drawing.Font("MS UI Gothic", 9.75F);
             this.button_emp_delete.ForeColor = System.Drawing.Color.White;
-            this.button_emp_delete.Location = new System.Drawing.Point(238, 215);
+            this.button_emp_delete.Location = new System.Drawing.Point(244, 308);
             this.button_emp_delete.Name = "button_emp_delete";
             this.button_emp_delete.Size = new System.Drawing.Size(91, 30);
             this.button_emp_delete.TabIndex = 4;
@@ -118,7 +122,7 @@ namespace Super_Shop_Management
             this.button_emp_insert.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button_emp_insert.Font = new System.Drawing.Font("MS Gothic", 9.75F);
             this.button_emp_insert.ForeColor = System.Drawing.Color.White;
-            this.button_emp_insert.Location = new System.Drawing.Point(129, 215);
+            this.button_emp_insert.Location = new System.Drawing.Point(135, 308);
             this.button_emp_insert.Name = "button_emp_insert";
             this.button_emp_insert.Size = new System.Drawing.Size(91, 30);
             this.button_emp_insert.TabIndex = 4;
@@ -130,7 +134,7 @@ namespace Super_Shop_Management
             this.dataGridView_emp.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView_emp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_emp.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView_emp.Location = new System.Drawing.Point(368, 54);
+            this.dataGridView_emp.Location = new System.Drawing.Point(368, 81);
             this.dataGridView_emp.Name = "dataGridView_emp";
             this.dataGridView_emp.RowHeadersWidth = 62;
             this.dataGridView_emp.Size = new System.Drawing.Size(476, 439);
@@ -163,7 +167,7 @@ namespace Super_Shop_Management
             this.label_emp_R.AutoSize = true;
             this.label_emp_R.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_emp_R.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_emp_R.Location = new System.Drawing.Point(5, 176);
+            this.label_emp_R.Location = new System.Drawing.Point(5, 246);
             this.label_emp_R.Name = "label_emp_R";
             this.label_emp_R.Size = new System.Drawing.Size(46, 20);
             this.label_emp_R.TabIndex = 0;
@@ -255,10 +259,14 @@ namespace Super_Shop_Management
             this.panel2.Controls.Add(this.button_emp_delete);
             this.panel2.Controls.Add(this.button_emp_insert);
             this.panel2.Controls.Add(this.dataGridView_emp);
+            this.panel2.Controls.Add(this.textBox_emp_pnum);
             this.panel2.Controls.Add(this.textBox_emp_pass);
+            this.panel2.Controls.Add(this.textBox_emp_name);
             this.panel2.Controls.Add(this.textBox_search);
             this.panel2.Controls.Add(this.textBox_emp_uname);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label_emp_R);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label_emp_pass);
             this.panel2.Controls.Add(this.label_emp_uname);
             this.panel2.Controls.Add(this.ITEM);
@@ -283,7 +291,7 @@ namespace Super_Shop_Management
             this.comboBox_emp_role.FormattingEnabled = true;
             this.comboBox_emp_role.Items.AddRange(new object[] {
             "emp"});
-            this.comboBox_emp_role.Location = new System.Drawing.Point(109, 178);
+            this.comboBox_emp_role.Location = new System.Drawing.Point(109, 248);
             this.comboBox_emp_role.Name = "comboBox_emp_role";
             this.comboBox_emp_role.Size = new System.Drawing.Size(244, 21);
             this.comboBox_emp_role.TabIndex = 5;
@@ -319,6 +327,42 @@ namespace Super_Shop_Management
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(5, 175);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(3, 205);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Number";
+            // 
+            // textBox_emp_name
+            // 
+            this.textBox_emp_name.Location = new System.Drawing.Point(109, 175);
+            this.textBox_emp_name.Name = "textBox_emp_name";
+            this.textBox_emp_name.Size = new System.Drawing.Size(244, 20);
+            this.textBox_emp_name.TabIndex = 1;
+            // 
+            // textBox_emp_pnum
+            // 
+            this.textBox_emp_pnum.Location = new System.Drawing.Point(109, 207);
+            this.textBox_emp_pnum.Name = "textBox_emp_pnum";
+            this.textBox_emp_pnum.Size = new System.Drawing.Size(244, 20);
+            this.textBox_emp_pnum.TabIndex = 1;
             // 
             // Admin_empInfo
             // 
@@ -369,5 +413,9 @@ namespace Super_Shop_Management
         private System.Windows.Forms.ComboBox comboBox_emp_role;
         private System.Windows.Forms.Label Employee;
         private System.Windows.Forms.Button button_emp_src;
+        private System.Windows.Forms.TextBox textBox_emp_pnum;
+        private System.Windows.Forms.TextBox textBox_emp_name;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

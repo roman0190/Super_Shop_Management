@@ -39,108 +39,159 @@ namespace Super_Shop_Management
 
         private void button_emp_insert_Click(object sender, EventArgs e)
         {
-            if (textBox_emp_uname.Text == " " || textBox_emp_uname.Text == " " || comboBox_emp_role.Text == " ")
-            {
-                MessageBox.Show("Fill data properly");
-            }
-            else
-            {
-                string query = "insert into empInfo_table(username,password,role) values('" + textBox_emp_uname.Text + "','" + textBox_emp_pass.Text + "','" + comboBox_emp_role.Text + "')";
+                string empQuery = "INSERT INTO empInfo_table (username, role, password, name, pnum) " + "VALUES ('" + textBox_emp_uname.Text + "', '" + comboBox_emp_role.Text + "', '" + textBox_emp_pass.Text + "', '" + textBox_emp_name.Text + "', '" + textBox_emp_pnum.Text + "')";
 
-                SqlCommand cmd = new SqlCommand(query, conn);
-                conn.Open();
-                if (conn.State == ConnectionState.Open)
-                {
-                    try
-                    {
-                        int rows = cmd.ExecuteNonQuery();
-                        if (rows > 0)
-                        {
-                            MessageBox.Show("Employee Inserted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            textBox_emp_uname.Text = "";
-                            textBox_emp_pass.Text = "";
-                            comboBox_emp_role.Text = "";
-                        }
-                        else
-                        {
-                            MessageBox.Show("Failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                string loginQuery = "INSERT INTO login_table (username, password, role) " + "VALUES ('" + textBox_emp_uname.Text + "', '" + textBox_emp_pass.Text + "', '" + comboBox_emp_role.Text + "')";
 
-
-                }
-                conn.Close();
-                display_data();
-            }
-        }
-
-        private void button_emp_delete_Click(object sender, EventArgs e)
-        {
-            string query1 = "delete from empInfo_table where username = '" + textBox_emp_uname.Text + "'";
-            SqlCommand cmd = new SqlCommand(query1, conn);
-            conn.Open();
-            if (conn.State == ConnectionState.Open)
-            {
+                SqlCommand empCmd = new SqlCommand(empQuery, conn);
+                SqlCommand loginCmd = new SqlCommand(loginQuery, conn);
+                SqlTransaction transaction = null;
                 try
                 {
-                    int rows = cmd.ExecuteNonQuery();
-                    if (rows > 0)
+                    conn.Open();
+                    transaction = conn.BeginTransaction();
+                    empCmd.Transaction = transaction;
+                    loginCmd.Transaction = transaction;
+                    int empRows = empCmd.ExecuteNonQuery();
+                    int loginRows = loginCmd.ExecuteNonQuery();
+                    if (empRows > 0 && loginRows > 0)
                     {
-                        MessageBox.Show("Employee Info Deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        transaction.Commit();
+                        MessageBox.Show("Employee Inserted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         textBox_emp_uname.Text = "";
                         textBox_emp_pass.Text = "";
+                        comboBox_emp_role.Text = "";
+                        textBox_emp_name.Text = "";
+                        textBox_emp_pnum.Text = "";
                     }
                     else
                     {
+                        transaction.Rollback();
                         MessageBox.Show("Failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
                 {
+                    if (transaction != null)
+                    {
+                        transaction.Rollback();
+                    }
                     MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox_emp_uname.Text = "";
+                    textBox_emp_pass.Text = "";
+                    comboBox_emp_role.Text = "";
+                    textBox_emp_name.Text = "";
+                    textBox_emp_pnum.Text = "";
                 }
+                finally
+                {
+                    conn.Close();
+                }
+                display_data();
+        }
 
+        private void button_emp_delete_Click(object sender, EventArgs e)
+        {
+            string empQuery = "DELETE FROM empInfo_table WHERE username = '" + textBox_emp_uname.Text + "'";
+            string loginQuery = "DELETE FROM login_table WHERE username = '" + textBox_emp_uname.Text + "'";
+            SqlCommand empCmd = new SqlCommand(empQuery, conn);
+            SqlCommand loginCmd = new SqlCommand(loginQuery, conn);
+            SqlTransaction transaction = null;
+            try
+            {
+                conn.Open();
+                transaction = conn.BeginTransaction();
+                empCmd.Transaction = transaction;
+                loginCmd.Transaction = transaction;
+                int empRows = empCmd.ExecuteNonQuery();
+                int loginRows = loginCmd.ExecuteNonQuery();
+                if (empRows > 0 && loginRows > 0)
+                {
+                    transaction.Commit();
+                    MessageBox.Show("Employee Deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBox_emp_uname.Text = "";
+                    textBox_emp_pass.Text = "";
+                    comboBox_emp_role.Text = "";
+                    textBox_emp_name.Text = "";
+                    textBox_emp_pnum.Text = "";
+                }
+                else
+                {
+                    transaction.Rollback();
+                    MessageBox.Show("Failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            conn.Close();
+            catch (Exception ex)
+            {
+                if (transaction != null)
+                {
+                    transaction.Rollback();
+                }
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_emp_uname.Text = "";
+                textBox_emp_pass.Text = "";
+                comboBox_emp_role.Text = "";
+                textBox_emp_name.Text = "";
+                textBox_emp_pnum.Text = "";
+            }
+            finally
+            {
+                conn.Close();
+            }
             display_data();
         }
 
         private void button_emp_update_Click(object sender, EventArgs e)
         {
-            string query1 = "update empInfo_table set password ='" + textBox_emp_pass.Text + "' where username = '" + textBox_emp_uname.Text + "'";
-            SqlCommand cmd = new SqlCommand(query1, conn);
-            conn.Open();
-            if (conn.State == ConnectionState.Open)
+            string empQuery = "UPDATE empInfo_table SET role='" + comboBox_emp_role.Text + "', password='" + textBox_emp_pass.Text + "', name='" + textBox_emp_name.Text + "', pnum='" + textBox_emp_pnum.Text + "' WHERE username='" + textBox_emp_uname.Text + "'";
+
+            string loginQuery = "UPDATE login_table SET password='" + textBox_emp_pass.Text + "', role='" + comboBox_emp_role.Text + "' WHERE username='" + textBox_emp_uname.Text + "'";
+
+            SqlCommand empCmd = new SqlCommand(empQuery, conn);
+            SqlCommand loginCmd = new SqlCommand(loginQuery, conn);
+            SqlTransaction transaction = null;
+            try
             {
-                try
+                conn.Open();
+                transaction = conn.BeginTransaction();
+                empCmd.Transaction = transaction;
+                loginCmd.Transaction = transaction;
+                int empRows = empCmd.ExecuteNonQuery();
+                int loginRows = loginCmd.ExecuteNonQuery();
+                if (empRows > 0 && loginRows > 0)
                 {
-                    int rows = cmd.ExecuteNonQuery();
-                    if (rows > 0)
-                    {
-                        MessageBox.Show("Employee Info Updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        textBox_emp_uname.Text = "";
-                        textBox_emp_pass.Text = "";
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    transaction.Commit();
+                    MessageBox.Show("Employee Info Updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBox_emp_uname.Text = "";
+                    textBox_emp_pass.Text = "";
+                    comboBox_emp_role.Text = "";
+                    textBox_emp_name.Text = "";
+                    textBox_emp_pnum.Text = "";
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    transaction.Rollback();
+                    MessageBox.Show("Failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
             }
-            conn.Close();
+            catch (Exception ex)
+            {
+                if (transaction != null)
+                {
+                    transaction.Rollback();
+                }
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_emp_uname.Text = "";
+                textBox_emp_pass.Text = "";
+                comboBox_emp_role.Text = "";
+                textBox_emp_name.Text = "";
+                textBox_emp_pnum.Text = "";
+            }
+            finally
+            {
+                conn.Close();
+            }
             display_data();
-
-
         }
 
         private void Admin_empInfo_Load(object sender, EventArgs e)
