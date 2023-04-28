@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Super_Shop_Management
 {
     public partial class CustomerView : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
         public CustomerView()
         {
             InitializeComponent();
@@ -44,10 +46,12 @@ namespace Super_Shop_Management
 
         private void ctgMeat_Click(object sender, EventArgs e)
         {
-            CategoryForm categoryForm = new CategoryForm();
+            CategoryForm categoryForm = new CategoryForm("ctgMeat");
             this.Hide(); ;
             categoryForm.Show();
+          
         }
+        
 
         private void CustomerView_Load(object sender, EventArgs e)
         {
@@ -56,49 +60,49 @@ namespace Super_Shop_Management
 
         private void ctgMilkBeverage_Click(object sender, EventArgs e)
         {
-            CategoryForm categoryForm = new CategoryForm();
+            CategoryForm categoryForm = new CategoryForm("ctgMilkBeverage");
             this.Hide(); ;
             categoryForm.Show();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void ctgFruits_Click(object sender, EventArgs e)
         {
-            CategoryForm categoryForm = new CategoryForm();
+            CategoryForm categoryForm = new CategoryForm("ctgFruits");
             this.Hide(); ;
             categoryForm.Show();
         }
 
         private void ctgEgg_Click(object sender, EventArgs e)
         {
-            CategoryForm categoryForm = new CategoryForm();
+            CategoryForm categoryForm = new CategoryForm("ctgEgg");
             this.Hide(); ;
             categoryForm.Show();
         }
 
         private void ctgSpices_Click(object sender, EventArgs e)
         {
-            CategoryForm categoryForm = new CategoryForm();
+            CategoryForm categoryForm = new CategoryForm("ctgSpices");
             this.Hide(); ;
             categoryForm.Show();
         }
 
         private void ctgRice_Click(object sender, EventArgs e)
         {
-            CategoryForm categoryForm = new CategoryForm();
+            CategoryForm categoryForm = new CategoryForm("ctgRice");
             this.Hide(); ;
             categoryForm.Show();
         }
 
         private void ctgDal_Click(object sender, EventArgs e)
         {
-            CategoryForm categoryForm = new CategoryForm();
+            CategoryForm categoryForm = new CategoryForm("ctgDal");
             this.Hide(); ;
             categoryForm.Show();
         }
 
         private void ctgOil_Click(object sender, EventArgs e)
         {
-            CategoryForm categoryForm = new CategoryForm();
+            CategoryForm categoryForm = new CategoryForm("ctgOil");
             this.Hide(); ;
             categoryForm.Show();
         }

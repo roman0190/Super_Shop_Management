@@ -13,8 +13,10 @@ namespace Super_Shop_Management
 {
     public partial class Emp_itemInfo : Form
     {
-        //mrittika
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
+
+        //roman
+        SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
         public Emp_itemInfo()
         {
             InitializeComponent();
