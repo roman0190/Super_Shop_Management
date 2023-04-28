@@ -31,33 +31,27 @@ namespace Super_Shop_Management
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Emp_custInfo));
             this.panel_custInfo = new System.Windows.Forms.Panel();
-            this.comboBox_custRank = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label_custRank = new System.Windows.Forms.Label();
+            this.button_custSearch = new System.Windows.Forms.Button();
+            this.textBox_custSearch = new System.Windows.Forms.TextBox();
             this.button_custActivate = new System.Windows.Forms.Button();
             this.button_custRemove = new System.Windows.Forms.Button();
             this.button_custUpdate = new System.Windows.Forms.Button();
             this.panel_custPhone = new System.Windows.Forms.Panel();
-            this.textBox_custPhone = new System.Windows.Forms.TextBox();
+            this.textBox_custEmail = new System.Windows.Forms.TextBox();
             this.panel_custAddress = new System.Windows.Forms.Panel();
             this.textBox_custAddress = new System.Windows.Forms.TextBox();
-            this.label_custPhone = new System.Windows.Forms.Label();
+            this.label_custEmail = new System.Windows.Forms.Label();
             this.label_custAddress = new System.Windows.Forms.Label();
-            this.panel_custName = new System.Windows.Forms.Panel();
             this.dataGridView_cust = new System.Windows.Forms.DataGridView();
-            this.textBox_custName = new System.Windows.Forms.TextBox();
             this.panel_custId = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox_custId = new System.Windows.Forms.TextBox();
-            this.label_custId = new System.Windows.Forms.Label();
-            this.label_custName = new System.Windows.Forms.Label();
+            this.textBox_custUname = new System.Windows.Forms.TextBox();
+            this.label_custUname = new System.Windows.Forms.Label();
             this.button_empLogout = new System.Windows.Forms.Button();
             this.button_itemInfo = new System.Windows.Forms.Button();
             this.button_custInfo = new System.Windows.Forms.Button();
             this.Employee = new System.Windows.Forms.Label();
             this.pictureBox_custInfo = new System.Windows.Forms.PictureBox();
-            this.button_custSearch = new System.Windows.Forms.Button();
-            this.textBox_custSearch = new System.Windows.Forms.TextBox();
             this.panel_custInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_cust)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_custInfo)).BeginInit();
@@ -67,66 +61,43 @@ namespace Super_Shop_Management
             // 
             this.panel_custInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_custInfo.Controls.Add(this.button_custSearch);
-            this.panel_custInfo.Controls.Add(this.comboBox_custRank);
             this.panel_custInfo.Controls.Add(this.textBox_custSearch);
-            this.panel_custInfo.Controls.Add(this.panel1);
-            this.panel_custInfo.Controls.Add(this.label_custRank);
             this.panel_custInfo.Controls.Add(this.button_custActivate);
             this.panel_custInfo.Controls.Add(this.button_custRemove);
             this.panel_custInfo.Controls.Add(this.button_custUpdate);
             this.panel_custInfo.Controls.Add(this.panel_custPhone);
-            this.panel_custInfo.Controls.Add(this.textBox_custPhone);
+            this.panel_custInfo.Controls.Add(this.textBox_custEmail);
             this.panel_custInfo.Controls.Add(this.panel_custAddress);
             this.panel_custInfo.Controls.Add(this.textBox_custAddress);
-            this.panel_custInfo.Controls.Add(this.label_custPhone);
+            this.panel_custInfo.Controls.Add(this.label_custEmail);
             this.panel_custInfo.Controls.Add(this.label_custAddress);
-            this.panel_custInfo.Controls.Add(this.panel_custName);
             this.panel_custInfo.Controls.Add(this.dataGridView_cust);
-            this.panel_custInfo.Controls.Add(this.textBox_custName);
             this.panel_custInfo.Controls.Add(this.panel_custId);
             this.panel_custInfo.Controls.Add(this.label1);
-            this.panel_custInfo.Controls.Add(this.textBox_custId);
-            this.panel_custInfo.Controls.Add(this.label_custId);
-            this.panel_custInfo.Controls.Add(this.label_custName);
+            this.panel_custInfo.Controls.Add(this.textBox_custUname);
+            this.panel_custInfo.Controls.Add(this.label_custUname);
             this.panel_custInfo.Location = new System.Drawing.Point(299, 10);
             this.panel_custInfo.Name = "panel_custInfo";
             this.panel_custInfo.Size = new System.Drawing.Size(933, 537);
             this.panel_custInfo.TabIndex = 14;
             // 
-            // comboBox_custRank
+            // button_custSearch
             // 
-            this.comboBox_custRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_custRank.FormattingEnabled = true;
-            this.comboBox_custRank.Items.AddRange(new object[] {
-            "Newbie",
-            "Power customer",
-            "Super customer",
-            "Premium customer"});
-            this.comboBox_custRank.Location = new System.Drawing.Point(114, 253);
-            this.comboBox_custRank.Name = "comboBox_custRank";
-            this.comboBox_custRank.Size = new System.Drawing.Size(228, 28);
-            this.comboBox_custRank.TabIndex = 35;
+            this.button_custSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_custSearch.Location = new System.Drawing.Point(580, 65);
+            this.button_custSearch.Name = "button_custSearch";
+            this.button_custSearch.Size = new System.Drawing.Size(75, 28);
+            this.button_custSearch.TabIndex = 27;
+            this.button_custSearch.Text = "Search";
+            this.button_custSearch.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // textBox_custSearch
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(114, 273);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 1);
-            this.panel1.TabIndex = 34;
-            // 
-            // label_custRank
-            // 
-            this.label_custRank.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_custRank.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_custRank.ForeColor = System.Drawing.Color.White;
-            this.label_custRank.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_custRank.Location = new System.Drawing.Point(16, 255);
-            this.label_custRank.Name = "label_custRank";
-            this.label_custRank.Size = new System.Drawing.Size(83, 25);
-            this.label_custRank.TabIndex = 32;
-            this.label_custRank.Text = "Rank";
+            this.textBox_custSearch.Location = new System.Drawing.Point(661, 65);
+            this.textBox_custSearch.Multiline = true;
+            this.textBox_custSearch.Name = "textBox_custSearch";
+            this.textBox_custSearch.Size = new System.Drawing.Size(258, 28);
+            this.textBox_custSearch.TabIndex = 26;
             // 
             // button_custActivate
             // 
@@ -135,7 +106,7 @@ namespace Super_Shop_Management
             this.button_custActivate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_custActivate.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_custActivate.ForeColor = System.Drawing.Color.White;
-            this.button_custActivate.Location = new System.Drawing.Point(171, 336);
+            this.button_custActivate.Location = new System.Drawing.Point(171, 263);
             this.button_custActivate.Name = "button_custActivate";
             this.button_custActivate.Size = new System.Drawing.Size(116, 31);
             this.button_custActivate.TabIndex = 32;
@@ -149,7 +120,7 @@ namespace Super_Shop_Management
             this.button_custRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_custRemove.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_custRemove.ForeColor = System.Drawing.Color.White;
-            this.button_custRemove.Location = new System.Drawing.Point(233, 299);
+            this.button_custRemove.Location = new System.Drawing.Point(233, 226);
             this.button_custRemove.Name = "button_custRemove";
             this.button_custRemove.Size = new System.Drawing.Size(109, 31);
             this.button_custRemove.TabIndex = 18;
@@ -164,7 +135,7 @@ namespace Super_Shop_Management
             this.button_custUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_custUpdate.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_custUpdate.ForeColor = System.Drawing.Color.White;
-            this.button_custUpdate.Location = new System.Drawing.Point(114, 299);
+            this.button_custUpdate.Location = new System.Drawing.Point(114, 226);
             this.button_custUpdate.Name = "button_custUpdate";
             this.button_custUpdate.Size = new System.Drawing.Size(113, 31);
             this.button_custUpdate.TabIndex = 17;
@@ -176,28 +147,28 @@ namespace Super_Shop_Management
             // 
             this.panel_custPhone.BackColor = System.Drawing.Color.White;
             this.panel_custPhone.ForeColor = System.Drawing.Color.White;
-            this.panel_custPhone.Location = new System.Drawing.Point(114, 239);
+            this.panel_custPhone.Location = new System.Drawing.Point(114, 203);
             this.panel_custPhone.Name = "panel_custPhone";
             this.panel_custPhone.Size = new System.Drawing.Size(228, 1);
             this.panel_custPhone.TabIndex = 31;
             // 
-            // textBox_custPhone
+            // textBox_custEmail
             // 
-            this.textBox_custPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.textBox_custPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_custPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_custPhone.ForeColor = System.Drawing.Color.White;
-            this.textBox_custPhone.Location = new System.Drawing.Point(114, 217);
-            this.textBox_custPhone.Multiline = true;
-            this.textBox_custPhone.Name = "textBox_custPhone";
-            this.textBox_custPhone.Size = new System.Drawing.Size(228, 25);
-            this.textBox_custPhone.TabIndex = 30;
+            this.textBox_custEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.textBox_custEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_custEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_custEmail.ForeColor = System.Drawing.Color.White;
+            this.textBox_custEmail.Location = new System.Drawing.Point(114, 181);
+            this.textBox_custEmail.Multiline = true;
+            this.textBox_custEmail.Name = "textBox_custEmail";
+            this.textBox_custEmail.Size = new System.Drawing.Size(228, 25);
+            this.textBox_custEmail.TabIndex = 30;
             // 
             // panel_custAddress
             // 
             this.panel_custAddress.BackColor = System.Drawing.Color.White;
             this.panel_custAddress.ForeColor = System.Drawing.Color.White;
-            this.panel_custAddress.Location = new System.Drawing.Point(114, 206);
+            this.panel_custAddress.Location = new System.Drawing.Point(114, 170);
             this.panel_custAddress.Name = "panel_custAddress";
             this.panel_custAddress.Size = new System.Drawing.Size(228, 1);
             this.panel_custAddress.TabIndex = 29;
@@ -208,23 +179,23 @@ namespace Super_Shop_Management
             this.textBox_custAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_custAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_custAddress.ForeColor = System.Drawing.Color.White;
-            this.textBox_custAddress.Location = new System.Drawing.Point(114, 184);
+            this.textBox_custAddress.Location = new System.Drawing.Point(114, 148);
             this.textBox_custAddress.Multiline = true;
             this.textBox_custAddress.Name = "textBox_custAddress";
             this.textBox_custAddress.Size = new System.Drawing.Size(228, 25);
             this.textBox_custAddress.TabIndex = 28;
             // 
-            // label_custPhone
+            // label_custEmail
             // 
-            this.label_custPhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_custPhone.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_custPhone.ForeColor = System.Drawing.Color.White;
-            this.label_custPhone.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_custPhone.Location = new System.Drawing.Point(16, 224);
-            this.label_custPhone.Name = "label_custPhone";
-            this.label_custPhone.Size = new System.Drawing.Size(71, 25);
-            this.label_custPhone.TabIndex = 27;
-            this.label_custPhone.Text = "Phone";
+            this.label_custEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_custEmail.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_custEmail.ForeColor = System.Drawing.Color.White;
+            this.label_custEmail.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label_custEmail.Location = new System.Drawing.Point(13, 188);
+            this.label_custEmail.Name = "label_custEmail";
+            this.label_custEmail.Size = new System.Drawing.Size(71, 25);
+            this.label_custEmail.TabIndex = 27;
+            this.label_custEmail.Text = "Email";
             // 
             // label_custAddress
             // 
@@ -232,20 +203,11 @@ namespace Super_Shop_Management
             this.label_custAddress.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_custAddress.ForeColor = System.Drawing.Color.White;
             this.label_custAddress.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_custAddress.Location = new System.Drawing.Point(16, 187);
+            this.label_custAddress.Location = new System.Drawing.Point(13, 151);
             this.label_custAddress.Name = "label_custAddress";
             this.label_custAddress.Size = new System.Drawing.Size(92, 25);
             this.label_custAddress.TabIndex = 26;
             this.label_custAddress.Text = "Address";
-            // 
-            // panel_custName
-            // 
-            this.panel_custName.BackColor = System.Drawing.Color.White;
-            this.panel_custName.ForeColor = System.Drawing.Color.White;
-            this.panel_custName.Location = new System.Drawing.Point(114, 169);
-            this.panel_custName.Name = "panel_custName";
-            this.panel_custName.Size = new System.Drawing.Size(228, 1);
-            this.panel_custName.TabIndex = 25;
             // 
             // dataGridView_cust
             // 
@@ -255,18 +217,6 @@ namespace Super_Shop_Management
             this.dataGridView_cust.Name = "dataGridView_cust";
             this.dataGridView_cust.Size = new System.Drawing.Size(561, 423);
             this.dataGridView_cust.TabIndex = 1;
-            // 
-            // textBox_custName
-            // 
-            this.textBox_custName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.textBox_custName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_custName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_custName.ForeColor = System.Drawing.Color.White;
-            this.textBox_custName.Location = new System.Drawing.Point(114, 147);
-            this.textBox_custName.Multiline = true;
-            this.textBox_custName.Name = "textBox_custName";
-            this.textBox_custName.Size = new System.Drawing.Size(228, 25);
-            this.textBox_custName.TabIndex = 24;
             // 
             // panel_custId
             // 
@@ -287,41 +237,29 @@ namespace Super_Shop_Management
             this.label1.TabIndex = 0;
             this.label1.Text = "CUSTOMER";
             // 
-            // textBox_custId
+            // textBox_custUname
             // 
-            this.textBox_custId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.textBox_custId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_custId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_custId.ForeColor = System.Drawing.Color.White;
-            this.textBox_custId.Location = new System.Drawing.Point(114, 114);
-            this.textBox_custId.Multiline = true;
-            this.textBox_custId.Name = "textBox_custId";
-            this.textBox_custId.Size = new System.Drawing.Size(228, 25);
-            this.textBox_custId.TabIndex = 22;
+            this.textBox_custUname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.textBox_custUname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_custUname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_custUname.ForeColor = System.Drawing.Color.White;
+            this.textBox_custUname.Location = new System.Drawing.Point(114, 114);
+            this.textBox_custUname.Multiline = true;
+            this.textBox_custUname.Name = "textBox_custUname";
+            this.textBox_custUname.Size = new System.Drawing.Size(228, 25);
+            this.textBox_custUname.TabIndex = 22;
             // 
-            // label_custId
+            // label_custUname
             // 
-            this.label_custId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_custId.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_custId.ForeColor = System.Drawing.Color.White;
-            this.label_custId.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_custId.Location = new System.Drawing.Point(16, 117);
-            this.label_custId.Name = "label_custId";
-            this.label_custId.Size = new System.Drawing.Size(41, 25);
-            this.label_custId.TabIndex = 20;
-            this.label_custId.Text = "ID";
-            // 
-            // label_custName
-            // 
-            this.label_custName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_custName.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_custName.ForeColor = System.Drawing.Color.White;
-            this.label_custName.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_custName.Location = new System.Drawing.Point(16, 154);
-            this.label_custName.Name = "label_custName";
-            this.label_custName.Size = new System.Drawing.Size(61, 25);
-            this.label_custName.TabIndex = 21;
-            this.label_custName.Text = "Name";
+            this.label_custUname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_custUname.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_custUname.ForeColor = System.Drawing.Color.White;
+            this.label_custUname.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label_custUname.Location = new System.Drawing.Point(13, 117);
+            this.label_custUname.Name = "label_custUname";
+            this.label_custUname.Size = new System.Drawing.Size(100, 25);
+            this.label_custUname.TabIndex = 20;
+            this.label_custUname.Text = "Username";
             // 
             // button_empLogout
             // 
@@ -389,24 +327,6 @@ namespace Super_Shop_Management
             this.pictureBox_custInfo.TabIndex = 10;
             this.pictureBox_custInfo.TabStop = false;
             // 
-            // button_custSearch
-            // 
-            this.button_custSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_custSearch.Location = new System.Drawing.Point(580, 65);
-            this.button_custSearch.Name = "button_custSearch";
-            this.button_custSearch.Size = new System.Drawing.Size(75, 28);
-            this.button_custSearch.TabIndex = 27;
-            this.button_custSearch.Text = "Search";
-            this.button_custSearch.UseVisualStyleBackColor = true;
-            // 
-            // textBox_custSearch
-            // 
-            this.textBox_custSearch.Location = new System.Drawing.Point(661, 65);
-            this.textBox_custSearch.Multiline = true;
-            this.textBox_custSearch.Name = "textBox_custSearch";
-            this.textBox_custSearch.Size = new System.Drawing.Size(258, 28);
-            this.textBox_custSearch.TabIndex = 26;
-            // 
             // Emp_custInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,26 +356,20 @@ namespace Super_Shop_Management
         #endregion
 
         private System.Windows.Forms.Panel panel_custInfo;
-        private System.Windows.Forms.ComboBox comboBox_custRank;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label_custRank;
         private System.Windows.Forms.Button button_custActivate;
         private System.Windows.Forms.Button button_custRemove;
         private System.Windows.Forms.Button button_custUpdate;
         private System.Windows.Forms.Panel panel_custPhone;
-        private System.Windows.Forms.TextBox textBox_custPhone;
+        private System.Windows.Forms.TextBox textBox_custEmail;
         private System.Windows.Forms.Panel panel_custAddress;
         private System.Windows.Forms.TextBox textBox_custAddress;
-        private System.Windows.Forms.Label label_custPhone;
+        private System.Windows.Forms.Label label_custEmail;
         private System.Windows.Forms.Label label_custAddress;
-        private System.Windows.Forms.Panel panel_custName;
         private System.Windows.Forms.DataGridView dataGridView_cust;
-        private System.Windows.Forms.TextBox textBox_custName;
         private System.Windows.Forms.Panel panel_custId;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_custId;
-        private System.Windows.Forms.Label label_custId;
-        private System.Windows.Forms.Label label_custName;
+        private System.Windows.Forms.TextBox textBox_custUname;
+        private System.Windows.Forms.Label label_custUname;
         private System.Windows.Forms.Button button_empLogout;
         private System.Windows.Forms.Button button_itemInfo;
         private System.Windows.Forms.Button button_custInfo;

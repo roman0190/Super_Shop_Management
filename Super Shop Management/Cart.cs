@@ -37,7 +37,7 @@ namespace Super_Shop_Management
             dataGridView2.DataSource = dt;
         }
         
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void button_removeItem_Click(object sender, EventArgs e)
         {
             if (dataGridView2.SelectedRows.Count > 0)
             {

@@ -357,8 +357,10 @@ namespace Super_Shop_Management
             this.dataGridView_items.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_items.Location = new System.Drawing.Point(357, 99);
             this.dataGridView_items.Name = "dataGridView_items";
+            this.dataGridView_items.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_items.Size = new System.Drawing.Size(561, 423);
             this.dataGridView_items.TabIndex = 1;
+            this.dataGridView_items.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_items_CellContentClick);
             // 
             // label_item
             // 
