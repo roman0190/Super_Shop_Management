@@ -16,11 +16,11 @@ namespace Super_Shop_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new splash());
+            //Application.Run(new splash());
             //Application.Run(new Login_page());
             //Application.Run(new Admin_itemInfo());
             //Application.Run(new Admin_empInfo());
-            //Application.Run(new CustomerView());
+            Application.Run(new CustomerView());
             //Application.Run(new Emp_itemInfo());
             //Application.Run(new Emp_custInfo());
             //Application.Run(new Registration_Form());
