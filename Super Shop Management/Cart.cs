@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,41 +29,42 @@ namespace Super_Shop_Management
             customerView.Show();
         }
 
+        private void button_removeItem_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+
+                bool select1 = Convert.ToBoolean(row.Cells["Selected"].Value);
+                if (select1 == true)
+                {
+                    SqlCommand cmd = new SqlCommand("DELETE FROM Selected WHERE ID=@ID ", con);
+                    cmd.Parameters.AddWithValue("ID", row.Cells["ID"].Value);
+                    //select1 = false;
+                    con.Open();
+                   
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    cart ct =new cart();
+                    ct.Show();
+
+                }
+                else
+                {
+                    //select1 = false;
+                }
+            }
+        }
         private void cart_Load(object sender, EventArgs e)
         {
-            string q9 = " select * from Selected";
+            string q9 = " select ID,Product,Price from Selected";
             SqlDataAdapter ada = new SqlDataAdapter(q9, con);
             DataTable dt = new DataTable();
             ada.Fill(dt);
             dataGridView2.DataSource = dt;
         }
         
-        private void button_removeItem_Click(object sender, EventArgs e)
-        {
-            if (dataGridView2.SelectedRows.Count > 0)
-            {
-                int ID = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["ID"].Value);
-                int product = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["Product"].Value);
-                int price = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["Price"].Value);
-                int quantity = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["Quantity"].Value);
-
-                string query = "DELETE FROM Selected WHERE ID =@ID AND Product =@Product AND Price = @Price AND Quantity =@Quantity";
-                
-                {
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@ID", ID);
-                    cmd.Parameters.AddWithValue("@Product", product);
-                    cmd.Parameters.AddWithValue("@Price", price);
-                    cmd.Parameters.AddWithValue("@Quantity", quantity);
-
-                    con.Open();
-                    cmd.ExecuteNonQuery();
-                }
-
-                // Refresh the DataGridView
-                dataGridView2.DataSource = GetDataFromDatabase();
-            }
-        }
+       
 
         private object GetDataFromDatabase()
         {
@@ -75,6 +77,40 @@ namespace Super_Shop_Management
             }
             return dt;
         }
+
+        
+
+        
+
+        public void SelectedRowTotal()
+        {
+            double sum = 0;
+            for (int i = 0; i < dataGridView2.Rows.Count; i++)
+            {
+                if (Convert.ToBoolean(dataGridView2.Rows[i].Cells[0].Value) == true)
+                {
+                    sum += double.Parse(dataGridView2.Rows[i].Cells[4].Value.ToString());
+                }
+
+            }
+            label_taka.Text= sum.ToString();    
+        }
+
+        private void btn_checkout_Click(object sender, EventArgs e)
+        {
+            SelectedRowTotal(); 
+
+        }
+
+        public void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btn_checkout.PerformClick();
+
+
+        }
+
     }
+
+
     
 }

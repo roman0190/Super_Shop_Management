@@ -222,13 +222,19 @@ namespace Super_Shop_Management
 
         public void display_data()
         {
-            conn.Open();
-            string q2= "select * from empInfo_table ";
-            SqlDataAdapter sda = new SqlDataAdapter(q2, conn);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView_emp.DataSource = dt;
-            conn.Close();
+            try
+            {
+                string q2 = "select * from empInfo_table ";
+                SqlDataAdapter sda = new SqlDataAdapter(q2, conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView_emp.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
         }
 
         private void dataGridView_emp_CellContentClick(object sender, DataGridViewCellEventArgs e)
