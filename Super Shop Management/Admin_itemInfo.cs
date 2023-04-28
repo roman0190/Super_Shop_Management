@@ -77,7 +77,7 @@ namespace Super_Shop_Management
 
         private void button_item_insert_Click(object sender, EventArgs e)
         {
-            if (textBox_item_id.Text == " " || textBox_item_name.Text == " " || textBox_item_price.Text == " "|| comboBox1.Text == " ")
+            if (textBox_item_id.Text == " " || textBox_item_name.Text == " " || textBox_item_price.Text == " " || comboBox1.Text == " ")
             {
                 MessageBox.Show("Fill data properly");
             }
@@ -181,14 +181,20 @@ namespace Super_Shop_Management
         }
         private void button_item_src_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string q1 = "SELECT * FROM itemInfo_table WHERE name LIKE @search";
+                SqlDataAdapter sda = new SqlDataAdapter(q1, conn);
+                sda.SelectCommand.Parameters.AddWithValue("@search", "%" + textBox_search.Text + "%");
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView_item.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
 
-            string q1 = "SELECT * FROM itemInfo_table WHERE name LIKE @search";
-            SqlDataAdapter sda = new SqlDataAdapter(q1,conn); // pass in the command object
-            sda.SelectCommand.Parameters.AddWithValue("@search", "%" + textBox_search.Text + "%");
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-
-            dataGridView_item.DataSource = dt;
         }
 
         public void display_data()
@@ -202,6 +208,17 @@ namespace Super_Shop_Management
             conn.Close();
         }
 
-        
+        private void dataGridView_item_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dataGridView_item.Rows[e.RowIndex];
+
+            // Assign the values of selected row to TextBoxes
+            textBox_item_id.Text = row.Cells["id"].Value.ToString();
+            textBox_item_name.Text = row.Cells["name"].Value.ToString();
+            textBox_item_price.Text = row.Cells["price"].Value.ToString();
+            textBox_item_quantity.Text = row.Cells["price"].Value.ToString();
+            comboBox1.Text = row.Cells["Category"].Value.ToString();
+
+        }
     }
 }
