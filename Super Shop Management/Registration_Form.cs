@@ -17,9 +17,6 @@ namespace Super_Shop_Management
         //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-67JSOLH\\SQL2022;Initial Catalog=form;Integrated Security=True");
         //roman
         SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
-        //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-67JSOLH\\SQL2022;Initial Catalog=form;Integrated Security=True");
-        //Mrittika
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
         public Registration_Form()
         {
             InitializeComponent();
@@ -27,7 +24,7 @@ namespace Super_Shop_Management
 
         private void button_singnup_Click(object sender, EventArgs e)
 
-        { 
+        {
 
             if (textBox_firstname.Text == "")
             {
@@ -79,21 +76,12 @@ namespace Super_Shop_Management
                 {
                     conn.Close();
                 }
-                SqlCommand cmd = new SqlCommand(query, conn);
-                conn.Open();
-                if (conn.State == ConnectionState.Open)
-                {
-                    int rows = cmd.ExecuteNonQuery();
-                    if (rows > 0)
-                        MessageBox.Show("Congratulation,you have successfully registered!!!");
-                    else
-                        MessageBox.Show("Opps!!!");
 
             }
             else
             {
 
-                MessageBox.Show("Recheck your password please!");
+                MessageBox.Show("Recheak your password please!");
             }
 
         }
