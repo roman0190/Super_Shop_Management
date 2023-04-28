@@ -92,13 +92,19 @@ namespace Super_Shop_Management
         }
         public void display_data()
         {
-            conn.Open();
-            string q2 = "select Username, Address, Email from Registration_table ";
-            SqlDataAdapter sda = new SqlDataAdapter(q2, conn);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView_cust.DataSource = dt;
-            conn.Close();
+            
+            try
+            {
+                string q2 = "select Username, Address, Email from Registration_table ";
+                SqlDataAdapter sda = new SqlDataAdapter(q2, conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView_cust.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }
