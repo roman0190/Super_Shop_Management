@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -10,6 +11,9 @@ namespace Super_Shop_Management
     public partial class CategoryForm : Form
     {
         SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+
+        
+
         public CategoryForm(string selectedCategory)
         {
             InitializeComponent();
@@ -78,6 +82,8 @@ namespace Super_Shop_Management
                 dataGridView1.DataSource = dt;
             }
         }
+
+        
         public CategoryForm()
         {
 
@@ -100,7 +106,21 @@ namespace Super_Shop_Management
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                bool select1 = Convert.ToBoolean(row.Cells["Add"].Value);
+                if (select1)
+                {
+                    SqlCommand cmd = new SqlCommand("insert into Selected (ID,Product,Price,Quantity)values(@ID,@Product,@Price,@Quantity)",con);
+                    cmd.Parameters.AddWithValue("ID", row.Cells["ID"].Value);
+                    cmd.Parameters.AddWithValue("Product", row.Cells["Product"].Value);
+                    cmd.Parameters.AddWithValue("Price", row.Cells["Price"].Value);
+                    cmd.Parameters.AddWithValue("Quantity", row.Cells["Quantity"].Value);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
         }
 
         private void CategoryForm_Load(object sender, EventArgs e)
