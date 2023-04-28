@@ -37,7 +37,8 @@
             this.btn_Cart_back = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Remove = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Selected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +70,7 @@
             this.btn_checkout.TabIndex = 2;
             this.btn_checkout.Text = "Checkout";
             this.btn_checkout.UseTransparentBackground = true;
+            this.btn_checkout.Click += new System.EventHandler(this.btn_checkout_Click);
             // 
             // label_total
             // 
@@ -147,20 +149,37 @@
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Remove});
+            this.Selected,
+            this.Qty});
             this.dataGridView2.Location = new System.Drawing.Point(48, 136);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
             this.dataGridView2.Size = new System.Drawing.Size(873, 438);
             this.dataGridView2.TabIndex = 4;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // Remove
+            // Selected
             // 
-            this.Remove.HeaderText = "Select";
-            this.Remove.MinimumWidth = 8;
-            this.Remove.Name = "Remove";
-            this.Remove.Width = 150;
+            this.Selected.HeaderText = "Select";
+            this.Selected.MinimumWidth = 8;
+            this.Selected.Name = "Selected";
+            this.Selected.Width = 50;
+            // 
+            // Qty
+            // 
+            this.Qty.HeaderText = "Quantity";
+            this.Qty.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.Qty.MinimumWidth = 8;
+            this.Qty.Name = "Qty";
+            this.Qty.Width = 80;
             // 
             // cart
             // 
@@ -198,6 +217,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_Cart_back;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Remove;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Selected;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Qty;
     }
 }
