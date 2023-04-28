@@ -13,7 +13,10 @@ namespace Super_Shop_Management
 {
     public partial class Registration_Form : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-67JSOLH\\SQL2022;Initial Catalog=form;Integrated Security=True");
+        //alvi
+        //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-67JSOLH\\SQL2022;Initial Catalog=form;Integrated Security=True");
+        //roman
+        SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
         public Registration_Form()
         {
             InitializeComponent();
@@ -50,19 +53,30 @@ namespace Super_Shop_Management
 
             else if (textBox_password.Text == textBox_confirmpassword.Text)
             {
-                string query = "insert into Registration_table (Username,Password,First_name,Last_Name,Email,Gender,Address) values('" + textBox_username.Text + "','" + textBox_password.Text + "','" + textBox_firstname.Text + "','" + textBox_lastname.Text + "','" + textBox_email.Text + "','" + comboBox1.Text + "','" + textBox_address.Text + "')";
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-                conn.Open();
-                if (conn.State == ConnectionState.Open)
+                try
                 {
-                    int rows = cmd.ExecuteNonQuery();
-                    if (rows > 0)
-                        MessageBox.Show("Congratulation,You have successfully registered!!!");
-                    else
-                        MessageBox.Show("Opps!!!");
+                    string query = "IF NOT EXISTS (SELECT * FROM login_table WHERE Username = '" + textBox_username.Text + "') BEGIN INSERT INTO Registration_table (Username, Password, First_name, Last_Name, Email, Gender, Address) VALUES('" + textBox_username.Text + "','" + textBox_password.Text + "','" + textBox_firstname.Text + "','" + textBox_lastname.Text + "','" + textBox_email.Text + "','" + comboBox1.Text + "','" + textBox_address.Text + "') END";
 
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open();
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        int rows = cmd.ExecuteNonQuery();
+                        if (rows > 0)
+                            MessageBox.Show("Congratulations, you have successfully registered!");
+                        else
+                            MessageBox.Show("UserName Already exist in Database.User another username");
+                    }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
             }
             else
             {

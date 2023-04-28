@@ -13,6 +13,7 @@ namespace Super_Shop_Management
 {
     public partial class Emp_custInfo : Form
     {
+        //Mrittika
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
         public Emp_custInfo()
         {
@@ -26,7 +27,8 @@ namespace Super_Shop_Management
 
         private void button_custUpdate_Click(object sender, EventArgs e)
         {
-            string query1 = "UPDATE itemInfo_table SET Address = '" + textBox_custAddress.Text + "', Phone = '" + textBox_custPhone.Text + "', Rank = '" + comboBox_custRank.Text + "' WHERE ID = " + textBox_custId.Text + " AND Name = '" + textBox_custName.Text + "'";
+            string query1 = "UPDATE Registration_table SET Address = '" + textBox_custAddress.Text + "', Email = '" + textBox_custEmail.Text + "' WHERE Username = '" + textBox_custUname.Text + "'";
+
             SqlCommand cmd = new SqlCommand(query1, conn);
             conn.Open();
             if (conn.State == ConnectionState.Open)
@@ -34,12 +36,10 @@ namespace Super_Shop_Management
                 int rows = cmd.ExecuteNonQuery();
                 if (rows > 0)
                 {
-                    MessageBox.Show("Item Info Updated!");
-                    textBox_custId.Text = " ";
-                    textBox_custName.Text = " ";
+                    MessageBox.Show("Customer Info Updated!");
+                    textBox_custUname.Text = " ";
                     textBox_custAddress.Text = " ";
-                    textBox_custPhone.Text = " ";
-                    comboBox_custRank.Text = " ";
+                    textBox_custEmail.Text = " ";
                 }
                 else
                     MessageBox.Show("Failed!");
@@ -70,7 +70,7 @@ namespace Super_Shop_Management
 
         private void button_custRemove_Click(object sender, EventArgs e)
         {
-            string query1 = "DELETE from custInfo_table where ID = " + textBox_custId.Text;
+            string query1 = "DELETE from Registration_table where Username = " + textBox_custUname.Text;
             SqlCommand cmd = new SqlCommand(query1, conn);
             conn.Open();
             if (conn.State == ConnectionState.Open)
@@ -79,23 +79,32 @@ namespace Super_Shop_Management
                 if (rows > 0)
                 {
                     MessageBox.Show("Customer removed!");
-                    textBox_custId.Text = " ";
+                    textBox_custUname.Text = " ";
                 }
                 else
+                {
                     MessageBox.Show("Failed to remove customer!");
+                }
+                    
             }
             conn.Close();
             display_data();
         }
         public void display_data()
         {
-            conn.Open();
-            string q2 = "select * from custInfo_table ";
-            SqlDataAdapter sda = new SqlDataAdapter(q2, conn);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView_cust.DataSource = dt;
-            conn.Close();
+            
+            try
+            {
+                string q2 = "select Username, Address, Email from Registration_table ";
+                SqlDataAdapter sda = new SqlDataAdapter(q2, conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView_cust.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }

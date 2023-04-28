@@ -223,6 +223,7 @@ namespace Super_Shop_Management
             this.dataGridView_item.Name = "dataGridView_item";
             this.dataGridView_item.Size = new System.Drawing.Size(486, 479);
             this.dataGridView_item.TabIndex = 2;
+            this.dataGridView_item.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_item_CellContentClick);
             // 
             // textBox_item_name
             // 

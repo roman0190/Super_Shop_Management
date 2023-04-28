@@ -162,11 +162,11 @@ namespace Super_Shop_Management
                 {
                     transaction.Commit();
                     MessageBox.Show("Employee Info Updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    /*textBox_emp_uname.Text = "";
+                    textBox_emp_uname.Text = "";
                     textBox_emp_pass.Text = "";
                     comboBox_emp_role.Text = "";
                     textBox_emp_name.Text = "";
-                    textBox_emp_pnum.Text = "";*/
+                    textBox_emp_pnum.Text = "";
                 }
                 else
                 {
@@ -201,24 +201,52 @@ namespace Super_Shop_Management
 
         private void button_emp_src_Click(object sender, EventArgs e)
         {
-            string q1 = "SELECT * FROM empInfo_table WHERE username LIKE @search";
-            SqlDataAdapter sda = new SqlDataAdapter(q1, conn);
-            sda.SelectCommand.Parameters.AddWithValue("@search", "%" + textBox_search.Text + "%");
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView_emp.DataSource = dt;
+            try
+            {
+                // Assuming that you have already created and opened a SqlConnection object named "conn"
+                string q1 = "SELECT * FROM empInfo_table WHERE username LIKE @search";
+                SqlDataAdapter sda = new SqlDataAdapter(q1, conn);
+                sda.SelectCommand.Parameters.AddWithValue("@search", "%" + textBox_search.Text + "%");
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView_emp.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
 
         }
 
         public void display_data()
         {
-            conn.Open();
-            string q2= "select * from empInfo_table ";
-            SqlDataAdapter sda = new SqlDataAdapter(q2, conn);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView_emp.DataSource = dt;
-            conn.Close();
+            try
+            {
+                string q2 = "select * from empInfo_table ";
+                SqlDataAdapter sda = new SqlDataAdapter(q2, conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView_emp.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+        }
+
+        private void dataGridView_emp_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dataGridView_emp.Rows[e.RowIndex];
+
+            // Assign the values of selected row to TextBoxes
+            textBox_emp_uname.Text = row.Cells["username"].Value.ToString();
+            textBox_emp_pass.Text = row.Cells["password"].Value.ToString();
+            textBox_emp_name.Text = row.Cells["name"].Value.ToString();
+            textBox_emp_pnum.Text = row.Cells["pnum"].Value.ToString();
+            comboBox_emp_role.Text = row.Cells["role"].Value.ToString();
+            
         }
     }
 }

@@ -47,13 +47,13 @@ namespace Super_Shop_Management
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_emp_src = new System.Windows.Forms.Button();
             this.comboBox_emp_role = new System.Windows.Forms.ComboBox();
+            this.textBox_emp_pnum = new System.Windows.Forms.TextBox();
+            this.textBox_emp_name = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Employee = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_emp_name = new System.Windows.Forms.TextBox();
-            this.textBox_emp_pnum = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_emp)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -131,6 +131,7 @@ namespace Super_Shop_Management
             // 
             // dataGridView_emp
             // 
+            this.dataGridView_emp.AllowUserToOrderColumns = true;
             this.dataGridView_emp.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView_emp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_emp.GridColor = System.Drawing.SystemColors.Control;
@@ -139,6 +140,7 @@ namespace Super_Shop_Management
             this.dataGridView_emp.RowHeadersWidth = 62;
             this.dataGridView_emp.Size = new System.Drawing.Size(476, 439);
             this.dataGridView_emp.TabIndex = 2;
+            this.dataGridView_emp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_emp_CellContentClick);
             // 
             // textBox_emp_pass
             // 
@@ -296,6 +298,42 @@ namespace Super_Shop_Management
             this.comboBox_emp_role.Size = new System.Drawing.Size(244, 21);
             this.comboBox_emp_role.TabIndex = 5;
             // 
+            // textBox_emp_pnum
+            // 
+            this.textBox_emp_pnum.Location = new System.Drawing.Point(109, 207);
+            this.textBox_emp_pnum.Name = "textBox_emp_pnum";
+            this.textBox_emp_pnum.Size = new System.Drawing.Size(244, 20);
+            this.textBox_emp_pnum.TabIndex = 1;
+            // 
+            // textBox_emp_name
+            // 
+            this.textBox_emp_name.Location = new System.Drawing.Point(109, 175);
+            this.textBox_emp_name.Name = "textBox_emp_name";
+            this.textBox_emp_name.Size = new System.Drawing.Size(244, 20);
+            this.textBox_emp_name.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(3, 205);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Number";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(5, 175);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name";
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.Employee);
@@ -327,42 +365,6 @@ namespace Super_Shop_Management
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(5, 175);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(3, 205);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Number";
-            // 
-            // textBox_emp_name
-            // 
-            this.textBox_emp_name.Location = new System.Drawing.Point(109, 175);
-            this.textBox_emp_name.Name = "textBox_emp_name";
-            this.textBox_emp_name.Size = new System.Drawing.Size(244, 20);
-            this.textBox_emp_name.TabIndex = 1;
-            // 
-            // textBox_emp_pnum
-            // 
-            this.textBox_emp_pnum.Location = new System.Drawing.Point(109, 207);
-            this.textBox_emp_pnum.Name = "textBox_emp_pnum";
-            this.textBox_emp_pnum.Size = new System.Drawing.Size(244, 20);
-            this.textBox_emp_pnum.TabIndex = 1;
             // 
             // Admin_empInfo
             // 
