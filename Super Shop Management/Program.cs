@@ -21,7 +21,7 @@ namespace Super_Shop_Management
             //Application.Run(new Admin_itemInfo());
             //Application.Run(new Admin_empInfo());
             //Application.Run(new CustomerView());
-            //Application.Run(new Emp_itemInfo());
+            Application.Run(new Emp_itemInfo());
             //Application.Run(new Registration_Form());
 
         }
