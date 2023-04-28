@@ -13,6 +13,7 @@ namespace Super_Shop_Management
 {
     public partial class Emp_itemInfo : Form
     {
+        //Mrittika
         SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
 
         //roman
@@ -108,15 +109,18 @@ namespace Super_Shop_Management
 
         private void button_itemSearch_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            string q1 = "SELECT * FROM itemInfo_table WHERE Name LIKE '" + textBox_itemSearch.Text + "%'";
-
-            SqlDataAdapter sda = new SqlDataAdapter(q1, conn);
-
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView_items.DataSource = dt;
-            conn.Close();
+            try
+            {
+                string q1 = "SELECT * FROM itemInfo_table WHERE Name LIKE '" + textBox_itemSearch.Text + "%'";
+                SqlDataAdapter sda = new SqlDataAdapter(q1, conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView_items.DataSource = dt;
+            }          
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void dataGridView_items_CellContentClick(object sender, DataGridViewCellEventArgs e)

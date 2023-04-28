@@ -13,7 +13,9 @@ namespace Super_Shop_Management
 {
     public partial class Registration_Form : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-67JSOLH\\SQL2022;Initial Catalog=form;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-67JSOLH\\SQL2022;Initial Catalog=form;Integrated Security=True");
+        //Mrittika
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
         public Registration_Form()
         {
             InitializeComponent();
@@ -58,7 +60,7 @@ namespace Super_Shop_Management
                 {
                     int rows = cmd.ExecuteNonQuery();
                     if (rows > 0)
-                        MessageBox.Show("Congratulation,You have successfully registered!!!");
+                        MessageBox.Show("Congratulation,you have successfully registered!!!");
                     else
                         MessageBox.Show("Opps!!!");
 
@@ -67,7 +69,7 @@ namespace Super_Shop_Management
             else
             {
 
-                MessageBox.Show("Recheak your password please!");
+                MessageBox.Show("Recheck your password please!");
             }
 
         }

@@ -70,13 +70,17 @@ namespace Super_Shop_Management
 
         private void button_custRemove_Click(object sender, EventArgs e)
         {
-            string query1 = "DELETE from Registration_table where Username = " + textBox_custUname.Text;
+            string query1 = "DELETE FROM Registration_table WHERE Username = '" + textBox_custUname.Text + "'";
+            string query2 = "DELETE from login_table WHERE Username = '" + textBox_custUname.Text + "'";
+
             SqlCommand cmd = new SqlCommand(query1, conn);
+            SqlCommand cmd1 = new SqlCommand(query2, conn);
             conn.Open();
             if (conn.State == ConnectionState.Open)
             {
                 int rows = cmd.ExecuteNonQuery();
-                if (rows > 0)
+                int rows1 = cmd1.ExecuteNonQuery();
+                if (rows > 0 && rows1 > 0)
                 {
                     MessageBox.Show("Customer removed!");
                     textBox_custUname.Text = " ";
@@ -89,6 +93,7 @@ namespace Super_Shop_Management
             }
             conn.Close();
             display_data();
+
         }
         public void display_data()
         {
@@ -99,6 +104,76 @@ namespace Super_Shop_Management
             sda.Fill(dt);
             dataGridView_cust.DataSource = dt;
             conn.Close();
+        }
+
+        private void dataGridView_cust_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Check if the clicked row is valid
+            {
+                DataGridViewRow row = this.dataGridView_cust.Rows[e.RowIndex];
+
+                // Populate textboxes with data from the selected row
+                textBox_custUname.Text = row.Cells["Username"].Value.ToString();
+                textBox_custAddress.Text = row.Cells["Address"].Value.ToString();
+                textBox_custEmail.Text = row.Cells["Email"].Value.ToString();
+            }
+            foreach (DataGridViewRow row in dataGridView_cust.Rows)
+            {
+                bool select1 = Convert.ToBoolean(row.Cells[0].Value);
+                if (select1)
+                {
+                    SqlCommand cmd = new SqlCommand("insert into login_table (Username, Password)values(@Username,@Password)", conn);
+                    cmd.Parameters.AddWithValue("Username", row.Cells["Username"].Value);
+                    cmd.Parameters.AddWithValue("Password", row.Cells["Password"].Value);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+
+        private void button_custSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string q1 = "SELECT Username, Address, Email FROM Registration_table WHERE Username LIKE '" + textBox_custSearch.Text + "%'";
+                SqlDataAdapter sda = new SqlDataAdapter(q1, conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView_cust.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
+
+        private void button_custActivate_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("INSERT INTO login_table (username, password) SELECT Username, Password FROM Registration_table WHERE Username = @Username", conn);
+            cmd.Parameters.AddWithValue("@Username", textBox_custUname.Text);
+
+            try
+            {
+                conn.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+                conn.Close();
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("User has been activated.");
+                }
+                else
+                {
+                    MessageBox.Show("No rows inserted.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("User is already active.");
+            }
+
+
+
         }
     }
 }

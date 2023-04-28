@@ -13,7 +13,9 @@ namespace Super_Shop_Management
 {
     public partial class Admin_empInfo : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
+        //Mrittika
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
         public Admin_empInfo()
         {
             InitializeComponent();
@@ -162,11 +164,11 @@ namespace Super_Shop_Management
                 {
                     transaction.Commit();
                     MessageBox.Show("Employee Info Updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    /*textBox_emp_uname.Text = "";
+                    textBox_emp_uname.Text = "";
                     textBox_emp_pass.Text = "";
                     comboBox_emp_role.Text = "";
                     textBox_emp_name.Text = "";
-                    textBox_emp_pnum.Text = "";*/
+                    textBox_emp_pnum.Text = "";
                 }
                 else
                 {
@@ -215,7 +217,6 @@ namespace Super_Shop_Management
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-
 
         }
 

@@ -52,6 +52,7 @@ namespace Super_Shop_Management
             this.button_custInfo = new System.Windows.Forms.Button();
             this.Employee = new System.Windows.Forms.Label();
             this.pictureBox_custInfo = new System.Windows.Forms.PictureBox();
+            this.Active = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel_custInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_cust)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_custInfo)).BeginInit();
@@ -90,6 +91,7 @@ namespace Super_Shop_Management
             this.button_custSearch.TabIndex = 27;
             this.button_custSearch.Text = "Search";
             this.button_custSearch.UseVisualStyleBackColor = true;
+            this.button_custSearch.Click += new System.EventHandler(this.button_custSearch_Click);
             // 
             // textBox_custSearch
             // 
@@ -112,6 +114,7 @@ namespace Super_Shop_Management
             this.button_custActivate.TabIndex = 32;
             this.button_custActivate.Text = "ACTIVATE";
             this.button_custActivate.UseVisualStyleBackColor = false;
+            this.button_custActivate.Click += new System.EventHandler(this.button_custActivate_Click);
             // 
             // button_custRemove
             // 
@@ -213,10 +216,13 @@ namespace Super_Shop_Management
             // 
             this.dataGridView_cust.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView_cust.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_cust.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Active});
             this.dataGridView_cust.Location = new System.Drawing.Point(358, 99);
             this.dataGridView_cust.Name = "dataGridView_cust";
             this.dataGridView_cust.Size = new System.Drawing.Size(561, 423);
             this.dataGridView_cust.TabIndex = 1;
+            this.dataGridView_cust.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_cust_CellContentClick);
             // 
             // panel_custId
             // 
@@ -327,6 +333,11 @@ namespace Super_Shop_Management
             this.pictureBox_custInfo.TabIndex = 10;
             this.pictureBox_custInfo.TabStop = false;
             // 
+            // Active
+            // 
+            this.Active.HeaderText = "Active";
+            this.Active.Name = "Active";
+            // 
             // Emp_custInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -377,5 +388,6 @@ namespace Super_Shop_Management
         private System.Windows.Forms.Label Employee;
         private System.Windows.Forms.Button button_custSearch;
         private System.Windows.Forms.TextBox textBox_custSearch;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Active;
     }
 }
