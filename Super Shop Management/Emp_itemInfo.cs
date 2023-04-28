@@ -80,7 +80,7 @@ namespace Super_Shop_Management
                     textBox_itemId.Text = " ";
                 }
                 else
-                    //MessageBox.Show("Failed to delete item!");
+                    MessageBox.Show("Failed to delete item!");
             }
             conn.Close();
             display_data();
@@ -131,11 +131,6 @@ namespace Super_Shop_Management
                 textBox_itemQty.Text = row.Cells["Quantity"].Value.ToString();
                 textBox_itemPrice.Text = row.Cells["Price"].Value.ToString();
                 comboBox_ctg.Text = row.Cells["Category"].Value.ToString();
-                // add other properties you want to display in textboxes
-
-                // You can also store the ID or primary key of the selected row in a variable
-                // for further use, like updating or deleting the selected row.
-                //int selectedID = Convert.ToInt32(row.Cells["ID"].Value);
             }
         }
     }
