@@ -162,11 +162,11 @@ namespace Super_Shop_Management
                 {
                     transaction.Commit();
                     MessageBox.Show("Employee Info Updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    textBox_emp_uname.Text = "";
+                    /*textBox_emp_uname.Text = "";
                     textBox_emp_pass.Text = "";
                     comboBox_emp_role.Text = "";
                     textBox_emp_name.Text = "";
-                    textBox_emp_pnum.Text = "";
+                    textBox_emp_pnum.Text = "";*/
                 }
                 else
                 {
