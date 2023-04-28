@@ -29,7 +29,7 @@ namespace Super_Shop_Management
             customerView.Show();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void button_removeItem_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView2.Rows)
             {
