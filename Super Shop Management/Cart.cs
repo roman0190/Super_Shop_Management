@@ -78,18 +78,39 @@ namespace Super_Shop_Management
             return dt;
         }
 
-        public void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        
+
+        public void SelectedRowTotal()
         {
-            
+            double sum = 0;
+            for (int i = 0; i < dataGridView2.Rows.Count; i++)
+            {
+                if (Convert.ToBoolean(dataGridView2.Rows[i].Cells[0].Value) == true)
+                {
+                    sum += double.Parse(dataGridView2.Rows[i].Cells[4].Value.ToString());
+                }
 
-
+            }
+            label_taka.Text= sum.ToString();    
         }
 
         private void btn_checkout_Click(object sender, EventArgs e)
         {
+            SelectedRowTotal(); 
 
         }
+
+        public void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btn_checkout.PerformClick();
+
+
+        }
+
     }
+
 
     
 }
