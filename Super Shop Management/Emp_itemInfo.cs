@@ -13,10 +13,10 @@ namespace Super_Shop_Management
 {
     public partial class Emp_itemInfo : Form
     {
-        //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
 
         //roman
-        SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
         public Emp_itemInfo()
         {
             InitializeComponent();
@@ -80,7 +80,7 @@ namespace Super_Shop_Management
                     textBox_itemId.Text = " ";
                 }
                 else
-                    MessageBox.Show("Failed to delete item!");
+                    //MessageBox.Show("Failed to delete item!");
             }
             conn.Close();
             display_data();
@@ -117,6 +117,26 @@ namespace Super_Shop_Management
             sda.Fill(dt);
             dataGridView_items.DataSource = dt;
             conn.Close();
+        }
+
+        private void dataGridView_items_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Check if the clicked row is valid
+            {
+                DataGridViewRow row = this.dataGridView_items.Rows[e.RowIndex];
+
+                // Populate textboxes with data from the selected row
+                textBox_itemId.Text = row.Cells["ID"].Value.ToString();
+                textBox_itemName.Text = row.Cells["Name"].Value.ToString();
+                textBox_itemQty.Text = row.Cells["Quantity"].Value.ToString();
+                textBox_itemPrice.Text = row.Cells["Price"].Value.ToString();
+                comboBox_ctg.Text = row.Cells["Category"].Value.ToString();
+                // add other properties you want to display in textboxes
+
+                // You can also store the ID or primary key of the selected row in a variable
+                // for further use, like updating or deleting the selected row.
+                //int selectedID = Convert.ToInt32(row.Cells["ID"].Value);
+            }
         }
     }
 }
