@@ -44,8 +44,32 @@ namespace Super_Shop_Management
 
         private void button_itemUpdate_Click(object sender, EventArgs e)
         {
-            string query1 = "UPDATE itemInfo_table SET Quantity = '" + textBox_itemQty.Text + "', Price = '" + textBox_itemPrice.Text + "', Category = '" + comboBox_ctg.Text + "' WHERE ID = " + textBox_itemId.Text + " AND Name = '" + textBox_itemName.Text + "'";
-            SqlCommand cmd = new SqlCommand(query1, conn);
+            string query = "BEGIN TRANSACTION " +
+               "UPDATE itemInfo_table SET name = @name, price = @price, quantity = @quantity WHERE id = @id " +
+               "IF EXISTS(SELECT id FROM Dal WHERE id = @id) " +
+               "   UPDATE Dal SET product = @name, price = @price, quantity = @quantity WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM Eggs WHERE id = @id) " +
+               "   UPDATE Eggs SET product = @name, price = @price, quantity = @quantity WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM Fruits_vegetable WHERE id = @id) " +
+               "   UPDATE Fruits_vegetable SET product = @name, price = @price, quantity = @quantity WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM Meat WHERE id = @id) " +
+               "   UPDATE Meat SET product = @name, price = @price, quantity = @quantity WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM Milk_beverages WHERE id = @id) " +
+               "   UPDATE Milk_beverages SET product = @name, price = @price, quantity = @quantity WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM oil WHERE id = @id) " +
+               "   UPDATE oil SET product = @name, price = @price, quantity = @quantity WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM Rice WHERE id = @id) " +
+               "   UPDATE Rice SET product = @name, price = @price, quantity = @quantity WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM Spices WHERE id = @id) " +
+               "   UPDATE Spices SET product = @name, price = @price, quantity = @quantity WHERE id = @id " +
+               "COMMIT";
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            cmd.Parameters.AddWithValue("@id", textBox_itemId.Text);
+            cmd.Parameters.AddWithValue("@name", textBox_itemName.Text);
+            cmd.Parameters.AddWithValue("@price", textBox_itemPrice.Text);
+            cmd.Parameters.AddWithValue("@quantity", textBox_itemQty.Text);
             conn.Open();
             if (conn.State == ConnectionState.Open)
             {
@@ -69,8 +93,27 @@ namespace Super_Shop_Management
 
         private void button_itemDelete_Click(object sender, EventArgs e)
         {
-            string query1 = "DELETE from itemInfo_table where ID = " + textBox_itemId.Text;
-            SqlCommand cmd = new SqlCommand(query1, conn);
+            string query = "BEGIN TRANSACTION " +
+               "DELETE FROM itemInfo_table WHERE id = @id " +
+               "IF EXISTS(SELECT id FROM Dal WHERE id = @id) " +
+               "   DELETE FROM Dal WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM Eggs WHERE id = @id) " +
+               "   DELETE FROM Eggs WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM Fruits_vegetable WHERE id = @id) " +
+               "   DELETE FROM Fruits_vegetable WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM Meat WHERE id = @id) " +
+               "   DELETE FROM Meat WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM Milk_beverages WHERE id = @id) " +
+               "   DELETE FROM Milk_beverages WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM oil WHERE id = @id) " +
+               "   DELETE FROM oil WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM Rice WHERE id = @id) " +
+               "   DELETE FROM Rice WHERE id = @id " +
+               "ELSE IF EXISTS(SELECT id FROM Spices WHERE id = @id) " +
+               "   DELETE FROM Spices WHERE id = @id " +
+               "COMMIT";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@id", textBox_itemId.Text);
             conn.Open();
             if (conn.State == ConnectionState.Open)
             {
