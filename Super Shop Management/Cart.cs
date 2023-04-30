@@ -62,6 +62,7 @@ namespace Super_Shop_Management
             DataTable dt = new DataTable();
             ada.Fill(dt);
             dataGridView2.DataSource = dt;
+            
         }
         
        
@@ -70,11 +71,11 @@ namespace Super_Shop_Management
         {
             DataTable dt = new DataTable();
             
-            {
-                string query = "SELECT * FROM Selected";
-                SqlDataAdapter da = new SqlDataAdapter(query, con);
-                da.Fill(dt);
-            }
+            
+              string query = "SELECT * FROM Selected";
+              SqlDataAdapter da = new SqlDataAdapter(query, con);
+              da.Fill(dt);
+            
             return dt;
         }
 
@@ -89,22 +90,39 @@ namespace Super_Shop_Management
             {
                 if (Convert.ToBoolean(dataGridView2.Rows[i].Cells[0].Value) == true)
                 {
-                    sum += double.Parse(dataGridView2.Rows[i].Cells[4].Value.ToString());
+                    int qty = Convert.ToInt32(dataGridView2.Rows[i].Cells[1].Value);
+                    int pri = Convert.ToInt32(dataGridView2.Rows[i].Cells[4].Value);
+                   
+                    sum+=pri*qty;
                 }
 
             }
             label_taka.Text= sum.ToString();    
         }
+        /*public void click()
+        {
+            for(int i =0;i<dataGridView2.Rows.Count;i++)
+            {
+              
+               if (Convert.ToBoolean(dataGridView2.Rows[i].Cells[1].Value) == true)
+               {
+                    
+               }
+            }
+            
+        }*/
 
         private void btn_checkout_Click(object sender, EventArgs e)
         {
-            SelectedRowTotal(); 
+            SelectedRowTotal();
+           // click();    
 
         }
 
         public void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             btn_checkout.PerformClick();
+            
 
 
         }
