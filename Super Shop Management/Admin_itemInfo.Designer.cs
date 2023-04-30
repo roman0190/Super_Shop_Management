@@ -132,14 +132,12 @@ namespace Super_Shop_Management
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Meat",
-            "Beverage",
-            "Vegetable",
-            "Fruits",
-            "Milk",
+            "Milk_beverages",
+            "Fruits_vegetable",
             "Spices",
-            "Daal",
+            "Dal",
             "Rice",
-            "Egg",
+            "Eggs",
             "Oil"});
             this.comboBox1.Location = new System.Drawing.Point(109, 242);
             this.comboBox1.Name = "comboBox1";
