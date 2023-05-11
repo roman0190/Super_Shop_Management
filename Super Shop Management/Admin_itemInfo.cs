@@ -294,5 +294,10 @@ namespace Super_Shop_Management
             comboBox1.Text = row.Cells["Category"].Value.ToString();
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
