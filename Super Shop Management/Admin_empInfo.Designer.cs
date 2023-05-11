@@ -29,6 +29,7 @@ namespace Super_Shop_Management
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_empInfo));
             this.button_emp_update = new Guna.UI2.WinForms.Guna2Button();
             this.button_emp_delete = new Guna.UI2.WinForms.Guna2Button();
@@ -135,10 +136,19 @@ namespace Super_Shop_Management
             this.dataGridView_emp.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView_emp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_emp.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView_emp.Location = new System.Drawing.Point(368, 81);
+            this.dataGridView_emp.Location = new System.Drawing.Point(359, 81);
             this.dataGridView_emp.Name = "dataGridView_emp";
+            this.dataGridView_emp.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_emp.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_emp.RowHeadersWidth = 62;
-            this.dataGridView_emp.Size = new System.Drawing.Size(476, 439);
+            this.dataGridView_emp.Size = new System.Drawing.Size(485, 439);
             this.dataGridView_emp.TabIndex = 2;
             this.dataGridView_emp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_emp_CellContentClick);
             // 

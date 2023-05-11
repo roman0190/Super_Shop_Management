@@ -18,6 +18,7 @@ namespace Super_Shop_Management
 
         //Mrittika
         //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
+        public TextBox TextBox1_uname { get { return textBox1_uname; } }
         public Login_page()
         {
             InitializeComponent();
