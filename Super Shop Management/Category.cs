@@ -10,9 +10,10 @@ namespace Super_Shop_Management
 {
     public partial class CategoryForm : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+        ///SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+        ///roman
+        SqlConnection con = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
 
-        
 
         public CategoryForm(string selectedCategory)
         {
@@ -111,13 +112,24 @@ namespace Super_Shop_Management
                 bool select1 = Convert.ToBoolean(row.Cells["Add"].Value);
                 if (select1)
                 {
-                    SqlCommand cmd = new SqlCommand("insert into Selected (ID,Product,Price,Quantity)values(@ID,@Product,@Price,@Quantity)",con);
-                    cmd.Parameters.AddWithValue("ID", row.Cells["ID"].Value);
-                    cmd.Parameters.AddWithValue("Product", row.Cells["Product"].Value);
-                    cmd.Parameters.AddWithValue("Price", row.Cells["Price"].Value);
-                    cmd.Parameters.AddWithValue("Quantity", row.Cells["Quantity"].Value);
-                    con.Open();
-                    cmd.ExecuteNonQuery();
+                    try
+                    {
+                        using (SqlCommand cmd = new SqlCommand("insert into Selected (ID,Product,Price,Quantity)values(@ID,@Product,@Price,@Quantity)", con))
+                        {
+                            cmd.Parameters.AddWithValue("ID", row.Cells["ID"].Value);
+                            cmd.Parameters.AddWithValue("Product", row.Cells["Product"].Value);
+                            cmd.Parameters.AddWithValue("Price", row.Cells["Price"].Value);
+                            cmd.Parameters.AddWithValue("Quantity", row.Cells["Quantity"].Value);
+                            con.Open();
+                            cmd.ExecuteNonQuery();
+                        }
+                        MessageBox.Show("Data has been inserted successfully");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("This Product is Already Added to cart");
+                    }
+
                     con.Close();
                 }
             }

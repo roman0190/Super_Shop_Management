@@ -7,11 +7,22 @@ namespace Super_Shop_Management
 {
     public partial class cart : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+        //SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
 
+        ///roman
+        SqlConnection con = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
+
+        private Login_page loginPage;
         public cart()
         {
             InitializeComponent();
+            loginPage = new Login_page();
+        }
+
+        public void SomeMethod()
+        {
+            string uname = loginPage.TextBox1_uname.Text;
+
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
