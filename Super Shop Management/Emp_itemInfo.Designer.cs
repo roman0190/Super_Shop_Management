@@ -161,16 +161,14 @@ namespace Super_Shop_Management
             this.comboBox_ctg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_ctg.FormattingEnabled = true;
             this.comboBox_ctg.Items.AddRange(new object[] {
+            "dal",
+            "eggs",
+            "Fruits_vegetable",
             "Meat",
-            "Beverage",
-            "Vegetable",
-            "Fruits",
-            "Milk",
-            "Spices",
-            "Daal",
+            "Milk_beverages",
+            "oil",
             "Rice",
-            "Egg",
-            "Oil"});
+            "Spices"});
             this.comboBox_ctg.Location = new System.Drawing.Point(112, 266);
             this.comboBox_ctg.Name = "comboBox_ctg";
             this.comboBox_ctg.Size = new System.Drawing.Size(228, 28);

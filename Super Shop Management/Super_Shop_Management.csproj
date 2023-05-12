@@ -208,6 +208,7 @@
     <None Include="Resources\password.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\user_name1.png" />
     <None Include="Resources\rice.jpg" />
     <None Include="Resources\Spices.jpg" />
     <None Include="Resources\MAAR ket2.png" />

@@ -124,23 +124,23 @@
   <data name="user_name" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_name.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Meat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Meat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MAAR ket2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MAAR ket2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="egg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\egg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Mik and beverages" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mik and beverages.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Meat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Meat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Milk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Milk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fruits-vegetables-chalk-white-icon-260nw-1709143813" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fruits-vegetables-chalk-white-icon-260nw-1709143813.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Milk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Milk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Mik and beverages" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mik and beverages.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MAAR ket" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MAAR ket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,16 +157,19 @@
   <data name="password-icon-png-13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password-icon-png-13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MAAR ket2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MAAR ket2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Spices" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Spices.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Oil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Oil.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user_name1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_name1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
