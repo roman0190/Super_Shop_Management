@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.DirectoryServices.ActiveDirectory;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace Super_Shop_Management
 {
@@ -47,11 +39,11 @@ namespace Super_Shop_Management
                     cmd.Parameters.AddWithValue("ID", row.Cells["ID"].Value);
                     //select1 = false;
                     con.Open();
-                   
+
                     cmd.ExecuteNonQuery();
                     con.Close();
 
-                    cart ct =new cart();
+                    cart ct = new cart();
                     ct.Show();
 
                 }
@@ -70,25 +62,25 @@ namespace Super_Shop_Management
             dataGridView2.DataSource = dt;
 
             Logined_Customer_Name.Text = CartTextValue;
-        }
-        
-       
 
+        }
+
+        //Refreshing data grid view after removing
         private object GetDataFromDatabase()
         {
             DataTable dt = new DataTable();
-            
-            
-              string query = "SELECT * FROM Selected";
-              SqlDataAdapter da = new SqlDataAdapter(query, con);
-              da.Fill(dt);
-            
+
+
+            string query = "select ID,Product,Price from Selected";
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            da.Fill(dt);
+
             return dt;
         }
 
-        
 
-        
+
+
 
         public void SelectedRowTotal()
         {
@@ -99,40 +91,92 @@ namespace Super_Shop_Management
                 {
                     int qty = Convert.ToInt32(dataGridView2.Rows[i].Cells[1].Value);
                     int pri = Convert.ToInt32(dataGridView2.Rows[i].Cells[4].Value);
-                   
-                    sum+=pri*qty;
+
+                    sum += pri * qty;
                 }
 
             }
-            label_taka.Text= sum.ToString();    
+            label_taka.Text = sum.ToString();
         }
-        /*public void click()
-        {
-            for(int i =0;i<dataGridView2.Rows.Count;i++)
-            {
-              
-               if (Convert.ToBoolean(dataGridView2.Rows[i].Cells[1].Value) == true)
-               {
-                    
-               }
-            }
-            
-        }*/
 
-        private void btn_checkout_Click(object sender, EventArgs e)
-        {
-            SelectedRowTotal();
-           // click();    
 
-        }
+
+
+
 
         public void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            btn_checkout.PerformClick();
+            btnInv.PerformClick();
+
+
+        }
+        private void btnInv_Click(object sender, EventArgs e)
+        {
+            SelectedRowTotal();
+        }
+
+
+        private void btn_checkout_Click(object sender, EventArgs e)
+        {
+
+
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                bool select1 = Convert.ToBoolean(row.Cells["Selected"].Value);
+                if (select1 == true)
+                {
+                    
+                    float Qty = Convert.ToInt32(row.Cells["Qty"].Value);
+
+                   
+                    int ID = Convert.ToInt32(row.Cells["ID"].Value);
+
+                    string query = "BEGIN TRANSACTION; " +
+                                    "UPDATE itemInfo_table SET Quantity = Quantity - @Qty WHERE ID = @ID; " +
+                                    "IF EXISTS(SELECT ID FROM Dal WHERE ID = @ID) " +
+                                    "   UPDATE Dal SET Quantity = Quantity - @Qty WHERE ID = @ID; " +
+                                    "ELSE IF EXISTS(SELECT id FROM Eggs WHERE id = @ID) " +
+                                    "   UPDATE Eggs SET Quantity = Quantity - @Qty WHERE ID = @ID; " +
+                                    "ELSE IF EXISTS(SELECT id FROM Fruits_vegetable WHERE id = @ID) " +
+                                    "   UPDATE Fruits_vegetable SET Quantity = Quantity - @Qty WHERE ID = @ID; " +
+                                    "ELSE IF EXISTS(SELECT id FROM Meat WHERE id = @ID) " +
+                                    "   UPDATE Meat SET Quantity = Quantity - @Qty WHERE ID = @ID; " +
+                                    "ELSE IF EXISTS(SELECT id FROM Milk_beverages WHERE id = @ID) " +
+                                    "   UPDATE Milk_beverages SET Quantity = Quantity - @Qty WHERE ID = @ID; " +
+                                    "ELSE IF EXISTS(SELECT id FROM oil WHERE id = @ID) " +
+                                    "   UPDATE oil SET Quantity = Quantity - @Qty WHERE ID = @ID; " +
+                                    "ELSE IF EXISTS(SELECT id FROM Rice WHERE id = @ID) " +
+                                    "   UPDATE Rice SET Quantity = Quantity - @Qty WHERE ID = @ID; " +
+                                    "ELSE IF EXISTS(SELECT id FROM Spices WHERE id = @ID) " +
+                                    "   UPDATE Spices SET Quantity = Quantity - @Qty WHERE ID = @ID; " +
+                                    "COMMIT;";
+
+
+
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Qty", Qty);
+                    cmd.Parameters.AddWithValue("@ID", ID);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
+
+
+            {
+                // create a new instance of the Invoice form and pass the dataGridView2 object
+                Invoice invoiceForm = new Invoice(dataGridView2);
+
+                // show the Invoice form
+                invoiceForm.Show();
+            }
+
+
         }
 
     }
 
 
-    
+
 }

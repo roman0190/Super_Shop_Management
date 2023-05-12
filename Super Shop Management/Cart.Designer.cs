@@ -41,6 +41,7 @@
             this.Qty = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Logined_customer = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Logined_Customer_Name = new System.Windows.Forms.Label();
+            this.btnInv = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logined_customer)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +99,7 @@
             this.label_taka.Size = new System.Drawing.Size(54, 26);
             this.label_taka.TabIndex = 1;
             this.label_taka.Text = "0.00";
+          
             // 
             // label4
             // 
@@ -215,12 +217,26 @@
             this.Logined_Customer_Name.TabIndex = 6;
             this.Logined_Customer_Name.Text = "Customer name here";
             // 
+            // btnInv
+            // 
+            this.btnInv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.btnInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.btnInv.Location = new System.Drawing.Point(785, 683);
+            this.btnInv.Name = "btnInv";
+            this.btnInv.Size = new System.Drawing.Size(75, 23);
+            this.btnInv.TabIndex = 7;
+            this.btnInv.Text = "Jhon Cena";
+            this.btnInv.UseVisualStyleBackColor = false;
+            this.btnInv.Click += new System.EventHandler(this.btnInv_Click);
+            // 
             // cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(645, 476);
+            this.ClientSize = new System.Drawing.Size(968, 732);
+            this.Controls.Add(this.btnInv);
             this.Controls.Add(this.Logined_Customer_Name);
             this.Controls.Add(this.Logined_customer);
             this.Controls.Add(this.dataGridView2);
@@ -258,6 +274,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Selected;
         private System.Windows.Forms.DataGridViewComboBoxColumn Qty;
         private Guna.UI2.WinForms.Guna2CirclePictureBox Logined_customer;
-        public System.Windows.Forms.Label Logined_Customer_Name;
+        private System.Windows.Forms.Label Logined_Customer_Name;
+        private System.Windows.Forms.Button btnInv;
     }
 }
