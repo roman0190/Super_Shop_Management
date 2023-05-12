@@ -167,13 +167,6 @@ namespace Super_Shop_Management
             }
 
 
-            {
-                // create a new instance of the Invoice form and pass the dataGridView2 object
-                Invoice invoiceForm = new Invoice(dataGridView2);
-
-                // show the Invoice form
-                invoiceForm.Show();
-            }
 
 
         }
