@@ -125,7 +125,7 @@ namespace Super_Shop_Management
                         }
                         MessageBox.Show("Data has been inserted successfully");
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         MessageBox.Show("This Product is Already Added to cart");
                     }
