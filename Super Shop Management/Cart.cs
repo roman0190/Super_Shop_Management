@@ -12,19 +12,14 @@ namespace Super_Shop_Management
         ///roman
         SqlConnection con = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
 
-        private Login_page loginPage;
+
+        public static string CartTextValue { get; set; }
+
         public cart()
         {
             InitializeComponent();
-            loginPage = new Login_page();
         }
-
-        public void SomeMethod()
-        {
-            string uname = loginPage.TextBox1_uname.Text;
-
-        }
-
+        
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             CustomerView customerView = new CustomerView();
@@ -65,6 +60,8 @@ namespace Super_Shop_Management
             DataTable dt = new DataTable();
             ada.Fill(dt);
             dataGridView2.DataSource = dt;
+
+            Logined_Customer_Name.Text = CartTextValue;
 
         }
 
