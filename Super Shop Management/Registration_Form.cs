@@ -16,9 +16,9 @@ namespace Super_Shop_Management
         //alvi
         //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-67JSOLH\\SQL2022;Initial Catalog=form;Integrated Security=True");
         //roman
-        //SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
         //Mrittika
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
+       // SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
 
         public Registration_Form()
         {
@@ -53,12 +53,16 @@ namespace Super_Shop_Management
             {
                 MessageBox.Show("Enter your Email");
             }
+            else if (textBox_petName.Text == "")
+            {
+                MessageBox.Show("Enter your Pet name");
+            }
 
             else if (textBox_password.Text == textBox_confirmpassword.Text)
             {
                 try
                 {
-                    string query = "IF NOT EXISTS (SELECT * FROM login_table WHERE Username = '" + textBox_username.Text + "') BEGIN INSERT INTO Registration_table (Username, Password, First_name, Last_Name, Email, Gender, Address) VALUES('" + textBox_username.Text + "','" + textBox_password.Text + "','" + textBox_firstname.Text + "','" + textBox_lastname.Text + "','" + textBox_email.Text + "','" + comboBox1.Text + "','" + textBox_address.Text + "') END";
+                    string query = "IF NOT EXISTS (SELECT * FROM login_table WHERE Username = '" + textBox_username.Text + "') BEGIN INSERT INTO Registration_table (Username, Password, First_name, Last_Name, Email, Gender, Address, PetName) VALUES('" + textBox_username.Text + "','" + textBox_password.Text + "','" + textBox_firstname.Text + "','" + textBox_lastname.Text + "','" + textBox_email.Text + "','" + comboBox1.Text + "','" + textBox_address.Text + "','" + textBox_petName.Text + "') END";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     conn.Open();
@@ -68,7 +72,7 @@ namespace Super_Shop_Management
                         if (rows > 0)
                             MessageBox.Show("Congratulations, you have successfully registered!");
                         else
-                            MessageBox.Show("UserName Already exist in Database.User another username");
+                            MessageBox.Show("Username already exists in the Database. Use another username");
                     }
                 }
                 catch (Exception ex)
@@ -79,26 +83,26 @@ namespace Super_Shop_Management
                 {
                     conn.Close();
                 }
-
             }
             else
             {
 
                 MessageBox.Show("Recheak your password please!");
             }
-
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
         private void button_login_Click(object sender, EventArgs e)
         {
             Login_page login = new Login_page();
             this.Hide();
             login.Show();
+        }
+        private void textBox_petName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

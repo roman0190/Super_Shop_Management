@@ -64,7 +64,11 @@ namespace Super_Shop_Management
        
         public void button1_login_Click(object sender, EventArgs e)
         {
+            //Pass the 
             cart.CartTextValue = textBox1_uname.Text;
+            Chat.SenderName= textBox1_uname.Text;
+            Support.ReceiverName= textBox1_uname.Text;
+            //Qurey for matching the role of user
             DashBoard.Custname = textBox1_uname.Text;
             Invoice.Cusname = textBox1_uname.Text;
             CategoryForm.CusValue = textBox1_uname.Text;
@@ -112,7 +116,9 @@ namespace Super_Shop_Management
 
         private void linkLabel_forgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Cust_verification cv = new Cust_verification();
+            this.Hide();
+            cv.Show();
         }
 
         private void linkLabel_creatAcc_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

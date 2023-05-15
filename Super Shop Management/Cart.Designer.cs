@@ -39,9 +39,9 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Selected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Logined_customer = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Logined_Customer_Name = new System.Windows.Forms.Label();
             this.btnInv = new System.Windows.Forms.Button();
+            this.Logined_customer = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logined_customer)).BeginInit();
             this.SuspendLayout();
@@ -221,6 +221,19 @@
             this.btnInv.Text = "Jhon Cena";
             this.btnInv.UseVisualStyleBackColor = false;
             this.btnInv.Click += new System.EventHandler(this.btnInv_Click);
+            // 
+            // Logined_customer
+            // 
+            this.Logined_customer.Image = global::Super_Shop_Management.Properties.Resources.user_name1;
+            this.Logined_customer.ImageRotate = 0F;
+            this.Logined_customer.Location = new System.Drawing.Point(425, 8);
+            this.Logined_customer.Margin = new System.Windows.Forms.Padding(2);
+            this.Logined_customer.Name = "Logined_customer";
+            this.Logined_customer.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Logined_customer.Size = new System.Drawing.Size(49, 45);
+            this.Logined_customer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logined_customer.TabIndex = 5;
+            this.Logined_customer.TabStop = false;
             // 
             // cart
             // 
