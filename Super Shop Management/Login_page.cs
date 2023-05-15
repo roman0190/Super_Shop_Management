@@ -14,10 +14,10 @@ namespace Super_Shop_Management
 {
     public partial class Login_page : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
 
         //Mrittika
-        //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
         public Login_page()
         {
             InitializeComponent();
@@ -102,7 +102,9 @@ namespace Super_Shop_Management
 
         private void linkLabel_forgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Cust_verification cv = new Cust_verification();
+            this.Hide();
+            cv.Show();
         }
 
         private void linkLabel_creatAcc_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
