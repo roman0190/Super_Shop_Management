@@ -16,7 +16,7 @@ namespace Super_Shop_Management
 
 
         public static string CartTextValue { get; set; }
-       
+
 
 
         public cart()
@@ -38,10 +38,10 @@ namespace Super_Shop_Management
 
                 bool select1 = Convert.ToBoolean(row.Cells["Selected"].Value);
                 string User = Logined_Customer_Name.Text;
-                
+
                 if (select1 == true)
                 {
-                    SqlCommand cmd = new SqlCommand("DELETE FROM Selected WHERE ID=@ID AND [User] ='"+Logined_Customer_Name.Text+"'", con);
+                    SqlCommand cmd = new SqlCommand("DELETE FROM Selected WHERE ID=@ID AND [User] ='" + Logined_Customer_Name.Text + "'", con);
                     cmd.Parameters.AddWithValue("ID", row.Cells["ID"].Value);
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -50,7 +50,7 @@ namespace Super_Shop_Management
                     ct.Show();
 
                 }
-               
+
             }
         }
         private void cart_Load(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace Super_Shop_Management
             Logined_Customer_Name.Text = CartTextValue;// showing logined customer name on the label.
             try
             {    // Showing items thats are in the cart for the customer who logined
-                string q9 = " select ID,Product,Price from Selected Where [User] ='"+Logined_Customer_Name.Text+"'";
+                string q9 = " select ID,Product,Price from Selected Where [User] ='" + Logined_Customer_Name.Text + "'";
                 SqlDataAdapter ada = new SqlDataAdapter(q9, con);
                 DataTable dt = new DataTable();
                 con.Open();
@@ -66,7 +66,7 @@ namespace Super_Shop_Management
                 dataGridView2.DataSource = dt;
                 con.Close();
 
-                
+
             }
             catch (Exception ex)
             {
@@ -75,25 +75,13 @@ namespace Super_Shop_Management
 
         }
 
-        //Refreshing data grid view after removing some products from cart
-        private object GetDataFromDatabase()
-        {
-            DataTable dt = new DataTable();
-            string query="select ID,Product,Price from Selected Where [User] ='" + Logined_Customer_Name.Text + "'";
-            SqlDataAdapter da = new SqlDataAdapter(query, con);
-            da.Fill(dt);
-            return dt;
-        }
-
-
-
 
         // Counting total of selected products. (Products price * selected Quantity)
         public void SelectedRowTotal()
-        {   
-            
+        {
 
-           
+
+
             double sum = 0;
             for (int i = 0; i < dataGridView2.Rows.Count; i++)
             {
@@ -127,7 +115,7 @@ namespace Super_Shop_Management
 
         private void btn_checkout_Click(object sender, EventArgs e)
         {
-            //After purchase updating the quantity of iteam info table and category table
+            //After purchase updating the quantity of iteam info table and category table at the same time
             //(Qty- Buyed qty )
 
             foreach (DataGridViewRow row in dataGridView2.Rows)
@@ -135,10 +123,10 @@ namespace Super_Shop_Management
                 bool select1 = Convert.ToBoolean(row.Cells["Selected"].Value);
                 if (select1 == true)
                 {
-                    
+
                     float Qty = Convert.ToInt32(row.Cells["Qty"].Value);
 
-                   
+
                     int ID = Convert.ToInt32(row.Cells["ID"].Value);
 
                     string query = "BEGIN TRANSACTION; " +
@@ -194,15 +182,15 @@ namespace Super_Shop_Management
                             cmd.ExecuteNonQuery();
                             con.Close();
                         }
-                       
+
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Purchase Operation failed. Please try again later !! "+ ex.Message);
+                        MessageBox.Show("Purchase Operation failed. Please try again later !! " + ex.Message);
                     }
 
 
-
+                    // Making a temp table to store selected product to pass it in the invoice form
 
                     DataTable selectedProducts = new DataTable();
                     selectedProducts.Columns.Add("ID", typeof(int));
@@ -218,12 +206,12 @@ namespace Super_Shop_Management
                         {
                             bool selected2 = Convert.ToBoolean(dvrow.Cells["Selected"].Value);
                             if (selected2)
-                            {
+                            {   //convering data accroding to temp table data
                                 int id = Convert.ToInt32(dvrow.Cells["ID"].Value);
                                 int Qty = Convert.ToInt32(dvrow.Cells["Qty"].Value);
                                 string product = dvrow.Cells["Product"].Value.ToString();
                                 decimal price = Convert.ToDecimal(dvrow.Cells["Price"].Value);
-
+                                //Felling temp table with data
                                 DataRow newRow = selectedProducts.NewRow();
                                 newRow["ID"] = id;
                                 newRow["Qty"] = Qty;
@@ -240,12 +228,12 @@ namespace Super_Shop_Management
                         MessageBox.Show("Please select a product! ");
                     }
 
-                    
+
 
                     // passing the value in invoice form
                     Invoice invoiceForm = new Invoice(selectedProducts);
                     Invoice.totalPrice = label_taka.Text;
-                  
+
 
 
                     // Deleting the selected product from cart after buying
@@ -265,15 +253,16 @@ namespace Super_Shop_Management
                     invoiceForm.Show();
 
 
-                    
+
                 }
             }
 
-            
+
         }
 
+
+
+
+
     }
-
-
-
 }

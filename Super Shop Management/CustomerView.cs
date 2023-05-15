@@ -32,7 +32,7 @@ namespace Super_Shop_Management
         {
 
         }
-
+        // Go to dashboard button
         private void button_emp_update_Click(object sender, EventArgs e)
         {
             DashBoard dashBoard = new DashBoard();
@@ -40,7 +40,7 @@ namespace Super_Shop_Management
             dashBoard.Show();
 
         }
-
+        //go to cart button
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             cart curt = new cart();

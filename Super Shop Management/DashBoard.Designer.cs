@@ -124,7 +124,7 @@
             this.btn_DB_back.Size = new System.Drawing.Size(64, 42);
             this.btn_DB_back.TabIndex = 2;
             this.btn_DB_back.Text = "<=";
-            this.btn_DB_back.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btn_DB_back.Click += new System.EventHandler(this.btn_DB_back_Click);
             // 
             // guna2CirclePictureBox1
             // 

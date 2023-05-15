@@ -21,8 +21,8 @@ namespace Super_Shop_Management
         {
             InitializeComponent();
         }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
+        //back button
+        private void btn_DB_back_Click(object sender, EventArgs e)
         {
             CustomerView customerView = new CustomerView();
             this.Hide();
@@ -34,7 +34,7 @@ namespace Super_Shop_Management
         {
             cus_lbl.Text = Custname;
 
-            string q10 = " select * from Buyed Where [User]='"+cus_lbl.Text+"'";
+            string q10 = " select * from Buyed Where [User]='"+cus_lbl.Text+"'";// Showing the products that logined customer had bought
             SqlDataAdapter ada = new SqlDataAdapter(q10, con);
             DataTable dt = new DataTable();
             ada.Fill(dt);
