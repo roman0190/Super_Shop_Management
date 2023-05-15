@@ -14,7 +14,10 @@ namespace Super_Shop_Management
 {
     public partial class Invoice : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+        // SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+
+        //roman
+        SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
 
         public static string Cusname { get; set; }
         public static string totalPrice { get; set; }
@@ -64,34 +67,27 @@ namespace Super_Shop_Management
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            using (Bitmap screenshot = new Bitmap(953, 812))
-            {
-                using (Graphics g = Graphics.FromImage(screenshot))
-                {
-                    g.CopyFromScreen(0, 0, 0, 0, new Size(953, 812));
-                }
-
-                e.Graphics.DrawImage(screenshot, 0, 0);
-            }
+            // Draw the screenshot image on the PrintPage event
+            e.Graphics.DrawImage(screenshot, e.MarginBounds);
         }
 
 
-
-        private void CaptureFullScreenshot()
+        Bitmap screenshot;
+        private void CaptureFormScreenshot(Form form)
         {
-            // Calculate the position and size of the invoice window
-            int invoiceWidth = 953;
-            int invoiceHeight = 812;
-            int invoiceX = (Screen.PrimaryScreen.Bounds.Width - invoiceWidth) / 2;
-            int invoiceY = (Screen.PrimaryScreen.Bounds.Height - invoiceHeight) / 2;
+            // Get the position and size of the form
+            int formWidth = form.ClientSize.Width;
+            int formHeight = form.ClientSize.Height;
+            int formX = form.Location.X + form.DisplayRectangle.X;
+            int formY = form.Location.Y + form.DisplayRectangle.Y;
 
             // Create a bitmap to hold the screenshot
-            Bitmap screenshot = new Bitmap(invoiceWidth, invoiceHeight);
+            screenshot = new Bitmap(formWidth, formHeight);
 
-            // Capture the screenshot of the invoice window
+            // Capture the screenshot of the form
             using (Graphics g = Graphics.FromImage(screenshot))
             {
-                g.CopyFromScreen(invoiceX, invoiceY, 0, 0, new Size(invoiceWidth, invoiceHeight));
+                g.CopyFromScreen(formX, formY, 0, 0, new Size(formWidth, formHeight));
             }
 
             // Show the screenshot in a picture box (optional)
@@ -100,12 +96,29 @@ namespace Super_Shop_Management
             pictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             Form screenshotForm = new Form();
             screenshotForm.Controls.Add(pictureBox);
+
+            // Add a print button to the form
+            Button printButton = new Button();
+            printButton.Text = "Print";
+            printButton.Click += new EventHandler(Download_Click);
+            screenshotForm.Controls.Add(printButton);
+
             screenshotForm.ShowDialog();
         }
 
         private void Download_Click(object sender, EventArgs e)
         {
-            CaptureFullScreenshot();
+           CaptureFormScreenshot(this);
+
+            // Create a PrintDocument object and set its properties
+            PrintDocument pd = new PrintDocument();
+            pd.DefaultPageSettings.Landscape = true;
+
+            // Add an event handler for the PrintPage event
+            pd.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+
+            // Print the image
+            pd.Print();
         }
             
         //back button

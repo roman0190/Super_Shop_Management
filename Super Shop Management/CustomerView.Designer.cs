@@ -92,7 +92,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.LblTheBiggest);
             this.panel1.Location = new System.Drawing.Point(8, 8);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(778, 105);
             this.panel1.TabIndex = 0;
@@ -102,7 +102,7 @@
             this.logopic.BackColor = System.Drawing.Color.Transparent;
             this.logopic.Image = global::Super_Shop_Management.Properties.Resources.icon;
             this.logopic.Location = new System.Drawing.Point(592, 6);
-            this.logopic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logopic.Margin = new System.Windows.Forms.Padding(2);
             this.logopic.Name = "logopic";
             this.logopic.Size = new System.Drawing.Size(97, 54);
             this.logopic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -149,7 +149,7 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.lblCategory);
             this.panel2.Location = new System.Drawing.Point(8, 115);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(777, 294);
             this.panel2.TabIndex = 1;
@@ -160,7 +160,7 @@
             this.panel11.Controls.Add(this.label4);
             this.panel11.Controls.Add(this.ctgOil);
             this.panel11.Location = new System.Drawing.Point(594, 168);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(175, 122);
             this.panel11.TabIndex = 1;
@@ -182,7 +182,7 @@
             this.ctgOil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgOil.Image = global::Super_Shop_Management.Properties.Resources.Oil;
             this.ctgOil.Location = new System.Drawing.Point(2, 2);
-            this.ctgOil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctgOil.Margin = new System.Windows.Forms.Padding(2);
             this.ctgOil.Name = "ctgOil";
             this.ctgOil.Size = new System.Drawing.Size(172, 91);
             this.ctgOil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -196,7 +196,7 @@
             this.panel7.Controls.Add(this.label3);
             this.panel7.Controls.Add(this.ctgEgg);
             this.panel7.Location = new System.Drawing.Point(594, 42);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(175, 122);
             this.panel7.TabIndex = 1;
@@ -218,7 +218,7 @@
             this.ctgEgg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgEgg.Image = global::Super_Shop_Management.Properties.Resources.egg;
             this.ctgEgg.Location = new System.Drawing.Point(2, 0);
-            this.ctgEgg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctgEgg.Margin = new System.Windows.Forms.Padding(2);
             this.ctgEgg.Name = "ctgEgg";
             this.ctgEgg.Size = new System.Drawing.Size(172, 91);
             this.ctgEgg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -232,7 +232,7 @@
             this.panel10.Controls.Add(this.label5);
             this.panel10.Controls.Add(this.ctgDal);
             this.panel10.Location = new System.Drawing.Point(401, 168);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(175, 122);
             this.panel10.TabIndex = 1;
@@ -254,7 +254,7 @@
             this.ctgDal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgDal.Image = global::Super_Shop_Management.Properties.Resources.dal;
             this.ctgDal.Location = new System.Drawing.Point(2, 0);
-            this.ctgDal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctgDal.Margin = new System.Windows.Forms.Padding(2);
             this.ctgDal.Name = "ctgDal";
             this.ctgDal.Size = new System.Drawing.Size(172, 91);
             this.ctgDal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -268,7 +268,7 @@
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.ctgFruits);
             this.panel6.Location = new System.Drawing.Point(401, 42);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(175, 122);
             this.panel6.TabIndex = 1;
@@ -290,7 +290,7 @@
             this.ctgFruits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgFruits.Image = global::Super_Shop_Management.Properties.Resources.fruits_vegetables_chalk_white_icon_260nw_1709143813;
             this.ctgFruits.Location = new System.Drawing.Point(2, 2);
-            this.ctgFruits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctgFruits.Margin = new System.Windows.Forms.Padding(2);
             this.ctgFruits.Name = "ctgFruits";
             this.ctgFruits.Size = new System.Drawing.Size(172, 91);
             this.ctgFruits.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -304,7 +304,7 @@
             this.panel9.Controls.Add(this.label8);
             this.panel9.Controls.Add(this.ctgRice);
             this.panel9.Location = new System.Drawing.Point(208, 168);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(175, 122);
             this.panel9.TabIndex = 1;
@@ -326,7 +326,7 @@
             this.ctgRice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgRice.Image = global::Super_Shop_Management.Properties.Resources.rice;
             this.ctgRice.Location = new System.Drawing.Point(2, 0);
-            this.ctgRice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctgRice.Margin = new System.Windows.Forms.Padding(2);
             this.ctgRice.Name = "ctgRice";
             this.ctgRice.Size = new System.Drawing.Size(172, 91);
             this.ctgRice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -340,7 +340,7 @@
             this.panel5.Controls.Add(this.lblMilkandBeverages);
             this.panel5.Controls.Add(this.ctgMilkBeverage);
             this.panel5.Location = new System.Drawing.Point(208, 42);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(175, 122);
             this.panel5.TabIndex = 1;
@@ -362,7 +362,7 @@
             this.ctgMilkBeverage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgMilkBeverage.Image = global::Super_Shop_Management.Properties.Resources.Mik_and_beverages;
             this.ctgMilkBeverage.Location = new System.Drawing.Point(2, 2);
-            this.ctgMilkBeverage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctgMilkBeverage.Margin = new System.Windows.Forms.Padding(2);
             this.ctgMilkBeverage.Name = "ctgMilkBeverage";
             this.ctgMilkBeverage.Size = new System.Drawing.Size(172, 91);
             this.ctgMilkBeverage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -376,7 +376,7 @@
             this.panel8.Controls.Add(this.label6);
             this.panel8.Controls.Add(this.ctgSpices);
             this.panel8.Location = new System.Drawing.Point(12, 168);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(175, 122);
             this.panel8.TabIndex = 1;
@@ -398,7 +398,7 @@
             this.ctgSpices.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgSpices.Image = global::Super_Shop_Management.Properties.Resources.Spices;
             this.ctgSpices.Location = new System.Drawing.Point(2, 2);
-            this.ctgSpices.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctgSpices.Margin = new System.Windows.Forms.Padding(2);
             this.ctgSpices.Name = "ctgSpices";
             this.ctgSpices.Size = new System.Drawing.Size(172, 91);
             this.ctgSpices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -412,7 +412,7 @@
             this.panel4.Controls.Add(this.lblmeat);
             this.panel4.Controls.Add(this.ctgMeat);
             this.panel4.Location = new System.Drawing.Point(12, 42);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(175, 122);
             this.panel4.TabIndex = 1;
@@ -435,7 +435,7 @@
             this.ctgMeat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctgMeat.Image = global::Super_Shop_Management.Properties.Resources.Meat;
             this.ctgMeat.Location = new System.Drawing.Point(2, 2);
-            this.ctgMeat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctgMeat.Margin = new System.Windows.Forms.Padding(2);
             this.ctgMeat.Name = "ctgMeat";
             this.ctgMeat.Size = new System.Drawing.Size(172, 91);
             this.ctgMeat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -462,7 +462,7 @@
             this.panel3.Controls.Add(this.btn_goToCart);
             this.panel3.Controls.Add(this.button_goToDB);
             this.panel3.Location = new System.Drawing.Point(477, 413);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(307, 67);
             this.panel3.TabIndex = 1;
@@ -482,8 +482,7 @@
             this.btn_goToCart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_goToCart.Font = new System.Drawing.Font("MS UI Gothic", 9.75F);
             this.btn_goToCart.ForeColor = System.Drawing.Color.White;
-            this.btn_goToCart.Location = new System.Drawing.Point(188, 16);
-            this.btn_goToCart.Location = new System.Drawing.Point(181, 3);
+            this.btn_goToCart.Location = new System.Drawing.Point(172, 16);
             this.btn_goToCart.Name = "btn_goToCart";
             this.btn_goToCart.Size = new System.Drawing.Size(111, 30);
             this.btn_goToCart.TabIndex = 6;
@@ -508,7 +507,6 @@
             this.button_goToDB.ForeColor = System.Drawing.Color.White;
             this.button_goToDB.Location = new System.Drawing.Point(14, 16);
             this.button_goToDB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button_goToDB.Size = new System.Drawing.Size(143, 30);
             this.button_goToDB.Name = "button_goToDB";
             this.button_goToDB.Size = new System.Drawing.Size(143, 30);
             this.button_goToDB.TabIndex = 5;
@@ -518,6 +516,8 @@
             // button_support
             // 
             this.button_support.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_support.FlatAppearance.BorderSize = 0;
+            this.button_support.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_support.ForeColor = System.Drawing.SystemColors.Control;
             this.button_support.Location = new System.Drawing.Point(8, 458);
             this.button_support.Name = "button_support";
@@ -531,16 +531,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 493);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(795, 493);
             this.Controls.Add(this.button_support);
-            this.ClientSize = new System.Drawing.Size(795, 493);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(811, 532);
             this.MinimumSize = new System.Drawing.Size(811, 532);
             this.Name = "CustomerView";

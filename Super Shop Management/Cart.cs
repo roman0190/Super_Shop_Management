@@ -9,10 +9,10 @@ namespace Super_Shop_Management
 {
     public partial class cart : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+        //SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
 
         ///roman
-       // SqlConnection con = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
+         SqlConnection con = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
 
 
         public static string CartTextValue { get; set; }
@@ -239,16 +239,27 @@ namespace Super_Shop_Management
                     // Deleting the selected product from cart after buying
                     bool select2 = Convert.ToBoolean(row.Cells["Selected"].Value);
                     string User = Logined_Customer_Name.Text;
-
                     if (select1 == true)
                     {
-                        SqlCommand cmd = new SqlCommand("DELETE FROM Selected WHERE ID=@ID AND [User] ='" + Logined_Customer_Name.Text + "'", con);
-                        cmd.Parameters.AddWithValue("ID", row.Cells["ID"].Value);
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                        con.Close();
-
+                        try
+                        {
+                            SqlCommand cmd = new SqlCommand("DELETE FROM Selected WHERE ID=@ID AND [User] ='" + Logined_Customer_Name.Text + "'", con);
+                            cmd.Parameters.AddWithValue("ID", row.Cells["ID"].Value);
+                            con.Open();
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            // Handle the exception here, for example by displaying an error message
+                            MessageBox.Show("An error occurred: " + ex.Message);
+                        }
+                        finally
+                        {
+                            // Make sure to close the connection, even if an exception occurred
+                            con.Close();
+                        }
                     }
+
 
                     invoiceForm.Show();
 

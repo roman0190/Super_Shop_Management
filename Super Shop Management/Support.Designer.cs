@@ -58,7 +58,7 @@ namespace Super_Shop_Management
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(671, 594);
+            this.panel1.Size = new System.Drawing.Size(671, 566);
             this.panel1.TabIndex = 0;
             // 
             // label_cusname
@@ -111,9 +111,9 @@ namespace Super_Shop_Management
             this.listBoxReceivers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.listBoxReceivers.FormattingEnabled = true;
             this.listBoxReceivers.ItemHeight = 20;
-            this.listBoxReceivers.Location = new System.Drawing.Point(8, 52);
+            this.listBoxReceivers.Location = new System.Drawing.Point(8, 40);
             this.listBoxReceivers.Name = "listBoxReceivers";
-            this.listBoxReceivers.Size = new System.Drawing.Size(189, 464);
+            this.listBoxReceivers.Size = new System.Drawing.Size(189, 484);
             this.listBoxReceivers.TabIndex = 12;
             this.listBoxReceivers.SelectedIndexChanged += new System.EventHandler(this.listBoxReceivers_SelectedIndexChanged);
             // 
@@ -129,7 +129,7 @@ namespace Super_Shop_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 594);
+            this.ClientSize = new System.Drawing.Size(671, 566);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Support";

@@ -14,12 +14,15 @@ namespace Super_Shop_Management
 {
     public partial class Login_page : Form
     {
-       // SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
+
 
         //Mrittika
         //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
 
-        SqlConnection conn = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+        ///SqlConnection conn = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+        
+        ///roman
+        SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
         public Login_page()
         {
             InitializeComponent();

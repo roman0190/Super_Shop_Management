@@ -102,17 +102,16 @@ namespace Super_Shop_Management
             
             try
             {
-                string q2 = "select Username, Address, Email from Registration_table ";
+                string q2 = "select Username, Address, Email,Active_Status from Registration_table ";
                 SqlDataAdapter sda = new SqlDataAdapter(q2, conn);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 dataGridView_cust.DataSource = dt;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Emp_custInfo empinfo = new Emp_custInfo();
-                empinfo.Show();
 
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
 
@@ -145,8 +144,7 @@ namespace Super_Shop_Management
             }
             catch (Exception ex)
             {
-                // Handle the exception here
-                
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
 
         }
@@ -171,11 +169,15 @@ namespace Super_Shop_Management
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO login_table (username, password) SELECT Username, Password FROM Registration_table WHERE Username = @Username", conn);
             cmd.Parameters.AddWithValue("@Username", textBox_custUname.Text);
+            SqlCommand cmd2 = new SqlCommand("UPDATE Registration_table SET Active_Status = 'Active' WHERE Username = @Username", conn);
+            cmd2.Parameters.AddWithValue("@Username", textBox_custUname.Text);
+
 
             try
             {
                 conn.Open();
                 int rowsAffected = cmd.ExecuteNonQuery();
+                int rowsAffected2 = cmd2.ExecuteNonQuery();
                 conn.Close();
                 if (rowsAffected > 0)
                 {
@@ -189,9 +191,14 @@ namespace Super_Shop_Management
             catch
             {
                 MessageBox.Show("User is already active.");
+                Emp_custInfo emp = new Emp_custInfo();
+                this.Hide();
+                emp.Show();
             }
 
-
+            Emp_custInfo emp1 = new Emp_custInfo();
+            this.Hide();
+            emp1.Show();
 
         }
 
