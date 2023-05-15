@@ -58,6 +58,10 @@ namespace Super_Shop_Management
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label_questionRF = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.textBox_petName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +81,7 @@ namespace Super_Shop_Management
             // 
             this.textBox_firstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_firstname.Location = new System.Drawing.Point(488, 128);
-            this.textBox_firstname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_firstname.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_firstname.Multiline = true;
             this.textBox_firstname.Name = "textBox_firstname";
             this.textBox_firstname.Size = new System.Drawing.Size(188, 25);
@@ -87,7 +91,7 @@ namespace Super_Shop_Management
             // 
             this.textBox_lastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_lastname.Location = new System.Drawing.Point(488, 190);
-            this.textBox_lastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_lastname.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_lastname.Multiline = true;
             this.textBox_lastname.Name = "textBox_lastname";
             this.textBox_lastname.Size = new System.Drawing.Size(188, 25);
@@ -133,7 +137,7 @@ namespace Super_Shop_Management
             // 
             this.textBox_confirmpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_confirmpassword.Location = new System.Drawing.Point(706, 318);
-            this.textBox_confirmpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_confirmpassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_confirmpassword.Multiline = true;
             this.textBox_confirmpassword.Name = "textBox_confirmpassword";
             this.textBox_confirmpassword.PasswordChar = '*';
@@ -155,7 +159,7 @@ namespace Super_Shop_Management
             // 
             this.textBox_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_password.Location = new System.Drawing.Point(706, 254);
-            this.textBox_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_password.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_password.Multiline = true;
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.PasswordChar = '*';
@@ -178,7 +182,7 @@ namespace Super_Shop_Management
             // 
             this.textBox_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_email.Location = new System.Drawing.Point(706, 190);
-            this.textBox_email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_email.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_email.Multiline = true;
             this.textBox_email.Name = "textBox_email";
             this.textBox_email.Size = new System.Drawing.Size(188, 25);
@@ -199,7 +203,7 @@ namespace Super_Shop_Management
             // 
             this.textBox_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_address.Location = new System.Drawing.Point(706, 128);
-            this.textBox_address.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_address.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_address.Multiline = true;
             this.textBox_address.Name = "textBox_address";
             this.textBox_address.Size = new System.Drawing.Size(188, 25);
@@ -225,7 +229,7 @@ namespace Super_Shop_Management
             "Male",
             "Female"});
             this.comboBox1.Location = new System.Drawing.Point(488, 318);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(188, 25);
             this.comboBox1.TabIndex = 18;
@@ -245,10 +249,13 @@ namespace Super_Shop_Management
             // 
             // button_singnup
             // 
-            this.button_singnup.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button_singnup.BackColor = System.Drawing.Color.SlateBlue;
+            this.button_singnup.FlatAppearance.BorderSize = 0;
+            this.button_singnup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_singnup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_singnup.Location = new System.Drawing.Point(814, 382);
-            this.button_singnup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_singnup.ForeColor = System.Drawing.Color.White;
+            this.button_singnup.Location = new System.Drawing.Point(488, 460);
+            this.button_singnup.Margin = new System.Windows.Forms.Padding(2);
             this.button_singnup.Name = "button_singnup";
             this.button_singnup.Size = new System.Drawing.Size(80, 37);
             this.button_singnup.TabIndex = 20;
@@ -258,10 +265,14 @@ namespace Super_Shop_Management
             // 
             // button_login
             // 
-            this.button_login.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button_login.BackColor = System.Drawing.Color.SlateBlue;
+            this.button_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_login.FlatAppearance.BorderSize = 0;
+            this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_login.Location = new System.Drawing.Point(488, 382);
-            this.button_login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_login.ForeColor = System.Drawing.Color.White;
+            this.button_login.Location = new System.Drawing.Point(814, 460);
+            this.button_login.Margin = new System.Windows.Forms.Padding(2);
             this.button_login.Name = "button_login";
             this.button_login.Size = new System.Drawing.Size(80, 37);
             this.button_login.TabIndex = 21;
@@ -273,7 +284,7 @@ namespace Super_Shop_Management
             // 
             this.textBox_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_username.Location = new System.Drawing.Point(488, 254);
-            this.textBox_username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_username.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_username.Multiline = true;
             this.textBox_username.Name = "textBox_username";
             this.textBox_username.Size = new System.Drawing.Size(188, 25);
@@ -379,19 +390,69 @@ namespace Super_Shop_Management
             // 
             this.pictureBox1.Image = global::Super_Shop_Management.Properties.Resources.MAAR_ket;
             this.pictureBox1.Location = new System.Drawing.Point(-4, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(443, 460);
+            this.pictureBox1.Size = new System.Drawing.Size(465, 516);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(755, 355);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(18, 24);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "*";
+            // 
+            // label_questionRF
+            // 
+            this.label_questionRF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_questionRF.ForeColor = System.Drawing.Color.White;
+            this.label_questionRF.Location = new System.Drawing.Point(485, 360);
+            this.label_questionRF.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_questionRF.Name = "label_questionRF";
+            this.label_questionRF.Size = new System.Drawing.Size(283, 17);
+            this.label_questionRF.TabIndex = 31;
+            this.label_questionRF.Text = "What was the name of your first pet?\r\n";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label.Location = new System.Drawing.Point(485, 377);
+            this.label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(307, 13);
+            this.label.TabIndex = 33;
+            this.label.Text = "(Required if you want to change your password later)";
+            // 
+            // textBox_petName
+            // 
+            this.textBox_petName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_petName.Location = new System.Drawing.Point(488, 402);
+            this.textBox_petName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_petName.Multiline = true;
+            this.textBox_petName.Name = "textBox_petName";
+            this.textBox_petName.Size = new System.Drawing.Size(188, 25);
+            this.textBox_petName.TabIndex = 34;
+            this.textBox_petName.TextChanged += new System.EventHandler(this.textBox_petName_TextChanged);
             // 
             // Registration_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(932, 449);
+            this.ClientSize = new System.Drawing.Size(909, 510);
+            this.Controls.Add(this.textBox_petName);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label_questionRF);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -422,7 +483,7 @@ namespace Super_Shop_Management
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Registration_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration Form";
@@ -463,6 +524,10 @@ namespace Super_Shop_Management
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label_questionRF;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.TextBox textBox_petName;
     }
 }
 

@@ -194,5 +194,10 @@ namespace Super_Shop_Management
 
 
         }
+
+        private void panel_custInfo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -482,6 +482,7 @@
             this.btn_goToCart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_goToCart.Font = new System.Drawing.Font("MS UI Gothic", 9.75F);
             this.btn_goToCart.ForeColor = System.Drawing.Color.White;
+            this.btn_goToCart.Location = new System.Drawing.Point(188, 16);
             this.btn_goToCart.Location = new System.Drawing.Point(181, 3);
             this.btn_goToCart.Name = "btn_goToCart";
             this.btn_goToCart.Size = new System.Drawing.Size(111, 30);
@@ -505,7 +506,9 @@
             this.button_goToDB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button_goToDB.Font = new System.Drawing.Font("MS UI Gothic", 9.75F);
             this.button_goToDB.ForeColor = System.Drawing.Color.White;
-            this.button_goToDB.Location = new System.Drawing.Point(14, 3);
+            this.button_goToDB.Location = new System.Drawing.Point(14, 16);
+            this.button_goToDB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_goToDB.Size = new System.Drawing.Size(143, 30);
             this.button_goToDB.Name = "button_goToDB";
             this.button_goToDB.Size = new System.Drawing.Size(143, 30);
             this.button_goToDB.TabIndex = 5;
@@ -528,9 +531,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.ClientSize = new System.Drawing.Size(795, 493);
             this.ClientSize = new System.Drawing.Size(795, 493);
             this.Controls.Add(this.button_support);
+            this.ClientSize = new System.Drawing.Size(795, 493);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
