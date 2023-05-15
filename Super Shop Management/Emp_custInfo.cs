@@ -108,9 +108,11 @@ namespace Super_Shop_Management
                 sda.Fill(dt);
                 dataGridView_cust.DataSource = dt;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                Emp_custInfo empinfo = new Emp_custInfo();
+                empinfo.Show();
+
             }
         }
 
@@ -125,19 +127,28 @@ namespace Super_Shop_Management
                 textBox_custAddress.Text = row.Cells["Address"].Value.ToString();
                 textBox_custEmail.Text = row.Cells["Email"].Value.ToString();
             }
-            foreach (DataGridViewRow row in dataGridView_cust.Rows)
+            try
             {
-                bool select1 = Convert.ToBoolean(row.Cells[0].Value);
-                if (select1)
+                foreach (DataGridViewRow row in dataGridView_cust.Rows)
                 {
-                    SqlCommand cmd = new SqlCommand("insert into login_table (Username, Password)values(@Username,@Password)", conn);
-                    cmd.Parameters.AddWithValue("Username", row.Cells["Username"].Value);
-                    cmd.Parameters.AddWithValue("Password", row.Cells["Password"].Value);
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
+                    bool select1 = Convert.ToBoolean(row.Cells[0].Value);
+                    if (select1)
+                    {
+                        SqlCommand cmd = new SqlCommand("insert into login_table (Username, Password)values(@Username,@Password)", conn);
+                        cmd.Parameters.AddWithValue("username", row.Cells["username"].Value);
+                        cmd.Parameters.AddWithValue("password", row.Cells["password"].Value);
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                // Handle the exception here
+                
+            }
+
         }
 
         private void button_custSearch_Click(object sender, EventArgs e)

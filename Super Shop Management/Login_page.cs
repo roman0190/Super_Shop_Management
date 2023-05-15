@@ -63,7 +63,11 @@ namespace Super_Shop_Management
        
         public void button1_login_Click(object sender, EventArgs e)
         {
+            //Pass the 
             cart.CartTextValue = textBox1_uname.Text;
+            Chat.SenderName= textBox1_uname.Text;
+            Support.ReceiverName= textBox1_uname.Text;
+            //Qurey for matching the role of user
             string q1 = "select role from login_table where username ='" + textBox1_uname.Text + "' and password = '" + textBox2_pass.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(q1, conn);
             DataTable dt = new DataTable();

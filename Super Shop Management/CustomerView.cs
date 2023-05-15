@@ -111,5 +111,12 @@ namespace Super_Shop_Management
             this.Hide(); ;
             categoryForm.Show();
         }
+
+        private void button_support_Click(object sender, EventArgs e)
+        {
+
+            Chat chat = new Chat();
+            chat.Show();
+        }
     }
 }

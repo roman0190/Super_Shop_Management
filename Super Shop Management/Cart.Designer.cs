@@ -39,9 +39,9 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Selected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Logined_customer = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Logined_Customer_Name = new System.Windows.Forms.Label();
             this.btnInv = new System.Windows.Forms.Button();
+            this.Logined_customer = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logined_customer)).BeginInit();
             this.SuspendLayout();
@@ -99,7 +99,6 @@
             this.label_taka.Size = new System.Drawing.Size(54, 26);
             this.label_taka.TabIndex = 1;
             this.label_taka.Text = "0.00";
-          
             // 
             // label4
             // 
@@ -193,19 +192,6 @@
             this.Qty.Name = "Qty";
             this.Qty.Width = 80;
             // 
-            // Logined_customer
-            // 
-            this.Logined_customer.Image = global::Super_Shop_Management.Properties.Resources.user_name1;
-            this.Logined_customer.ImageRotate = 0F;
-            this.Logined_customer.Location = new System.Drawing.Point(425, 8);
-            this.Logined_customer.Margin = new System.Windows.Forms.Padding(2);
-            this.Logined_customer.Name = "Logined_customer";
-            this.Logined_customer.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Logined_customer.Size = new System.Drawing.Size(49, 45);
-            this.Logined_customer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logined_customer.TabIndex = 5;
-            this.Logined_customer.TabStop = false;
-            // 
             // Logined_Customer_Name
             // 
             this.Logined_Customer_Name.AutoSize = true;
@@ -230,12 +216,25 @@
             this.btnInv.UseVisualStyleBackColor = false;
             this.btnInv.Click += new System.EventHandler(this.btnInv_Click);
             // 
+            // Logined_customer
+            // 
+            this.Logined_customer.Image = global::Super_Shop_Management.Properties.Resources.user_name1;
+            this.Logined_customer.ImageRotate = 0F;
+            this.Logined_customer.Location = new System.Drawing.Point(425, 8);
+            this.Logined_customer.Margin = new System.Windows.Forms.Padding(2);
+            this.Logined_customer.Name = "Logined_customer";
+            this.Logined_customer.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Logined_customer.Size = new System.Drawing.Size(49, 45);
+            this.Logined_customer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logined_customer.TabIndex = 5;
+            this.Logined_customer.TabStop = false;
+            // 
             // cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(968, 732);
+            this.ClientSize = new System.Drawing.Size(641, 446);
             this.Controls.Add(this.btnInv);
             this.Controls.Add(this.Logined_Customer_Name);
             this.Controls.Add(this.Logined_customer);

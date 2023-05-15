@@ -2,6 +2,8 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace Super_Shop_Management
 {
@@ -11,7 +13,7 @@ namespace Super_Shop_Management
 
         ///roman
         SqlConnection con = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
-
+        
 
         public static string CartTextValue { get; set; }
 
@@ -163,16 +165,7 @@ namespace Super_Shop_Management
                 }
             }
 
-
-            {
-                // create a new instance of the Invoice form and pass the dataGridView2 object
-                Invoice invoiceForm = new Invoice(dataGridView2);
-
-                // show the Invoice form
-                invoiceForm.Show();
-            }
-
-
+           
         }
 
     }
