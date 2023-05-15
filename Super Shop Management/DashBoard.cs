@@ -14,6 +14,9 @@ namespace Super_Shop_Management
     public partial class DashBoard : Form
     {
         SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+        ///roman
+       // SqlConnection con = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
+        public static string Custname { get; set; }
         public DashBoard()
         {
             InitializeComponent();
@@ -29,12 +32,14 @@ namespace Super_Shop_Management
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
-            string q10 = " select * from Selected";
+            cus_lbl.Text = Custname;
+
+            string q10 = " select * from Buyed Where [User]='"+cus_lbl.Text+"'";
             SqlDataAdapter ada = new SqlDataAdapter(q10, con);
             DataTable dt = new DataTable();
             ada.Fill(dt);
             Dashview1.DataSource = dt;
-
+           
         }
     }
 }

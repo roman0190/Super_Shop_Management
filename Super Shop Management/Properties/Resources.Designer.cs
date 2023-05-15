@@ -83,6 +83,16 @@ namespace Super_Shop_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Download {
+            get {
+                object obj = ResourceManager.GetObject("Download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap egg {
             get {
                 object obj = ResourceManager.GetObject("egg", resourceCulture);
@@ -226,6 +236,16 @@ namespace Super_Shop_Management.Properties {
         internal static System.Drawing.Bitmap user_name {
             get {
                 object obj = ResourceManager.GetObject("user_name", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_name1 {
+            get {
+                object obj = ResourceManager.GetObject("user_name1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

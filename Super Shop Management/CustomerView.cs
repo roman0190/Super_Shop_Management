@@ -13,7 +13,11 @@ namespace Super_Shop_Management
 {
     public partial class CustomerView : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+        private Login_page log = new Login_page();
+        ///SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+
+        ///roman
+        SqlConnection con = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
         public CustomerView()
         {
             InitializeComponent();
@@ -42,6 +46,7 @@ namespace Super_Shop_Management
             cart curt = new cart();
             this.Hide();
             curt.Show();
+           
         }
 
         private void ctgMeat_Click(object sender, EventArgs e)
@@ -55,7 +60,7 @@ namespace Super_Shop_Management
 
         private void CustomerView_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void ctgMilkBeverage_Click(object sender, EventArgs e)

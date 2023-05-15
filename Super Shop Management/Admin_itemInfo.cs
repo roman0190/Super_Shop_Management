@@ -13,9 +13,12 @@ namespace Super_Shop_Management
 {
     public partial class Admin_itemInfo : Form
     {
-        //SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
+        // SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
         //Mrittika
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
+
+        SqlConnection conn = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+
         public Admin_itemInfo()
         {
             InitializeComponent();
@@ -292,6 +295,11 @@ namespace Super_Shop_Management
             textBox_item_price.Text = row.Cells["price"].Value.ToString();
             textBox_item_quantity.Text = row.Cells["price"].Value.ToString();
             comboBox1.Text = row.Cells["Category"].Value.ToString();
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

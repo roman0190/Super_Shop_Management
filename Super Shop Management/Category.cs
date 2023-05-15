@@ -11,8 +11,11 @@ namespace Super_Shop_Management
     public partial class CategoryForm : Form
     {
         SqlConnection con = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
+        ///roman
+        //SqlConnection con = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
 
-        
+
+        public static string CusValue { get; set; }
 
         public CategoryForm(string selectedCategory)
         {
@@ -106,18 +109,50 @@ namespace Super_Shop_Management
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+           
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 bool select1 = Convert.ToBoolean(row.Cells["Add"].Value);
+               
                 if (select1)
                 {
-                    SqlCommand cmd = new SqlCommand("insert into Selected (ID,Product,Price,Quantity)values(@ID,@Product,@Price,@Quantity)",con);
-                    cmd.Parameters.AddWithValue("ID", row.Cells["ID"].Value);
-                    cmd.Parameters.AddWithValue("Product", row.Cells["Product"].Value);
-                    cmd.Parameters.AddWithValue("Price", row.Cells["Price"].Value);
-                    cmd.Parameters.AddWithValue("Quantity", row.Cells["Quantity"].Value);
-                    con.Open();
-                    cmd.ExecuteNonQuery();
+                   
+                    try
+                    {
+                        string User = Cus_Name.Text;
+
+                        using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Selected WHERE ID = @ID AND [User] = @User", con))
+                {
+                            cmd.Parameters.AddWithValue("@ID", row.Cells["ID"].Value);
+                            cmd.Parameters.AddWithValue("@User", User);
+                            con.Open();
+                            int count = (int)cmd.ExecuteScalar();
+                            con.Close();
+
+                            if (count > 0)
+                            {
+                                MessageBox.Show("This Product is Already Added to cart");
+                                continue;
+                            }
+                        }
+
+                        using (SqlCommand cmd = new SqlCommand("insert into Selected (ID,Product,Price,Quantity,[User])values(@ID,@Product,@Price,@Quantity,@User)", con))
+                        {
+                            cmd.Parameters.AddWithValue("ID", row.Cells["ID"].Value);
+                            cmd.Parameters.AddWithValue("Product", row.Cells["Product"].Value);
+                            cmd.Parameters.AddWithValue("Price", row.Cells["Price"].Value);
+                            cmd.Parameters.AddWithValue("Quantity", row.Cells["Quantity"].Value);
+                            cmd.Parameters.AddWithValue("@User", User);
+                            con.Open();
+                            cmd.ExecuteNonQuery();
+                        }
+                        MessageBox.Show("Product has been added to cart");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("This Product is Already Added to cart" + ex.Message);
+                    }
+
                     con.Close();
                 }
             }
@@ -125,7 +160,7 @@ namespace Super_Shop_Management
 
         private void CategoryForm_Load(object sender, EventArgs e)
         {
-
+            Cus_Name.Text = CusValue;
 
         }
     }

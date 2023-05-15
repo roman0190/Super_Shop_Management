@@ -14,18 +14,21 @@ namespace Super_Shop_Management
 {
     public partial class Login_page : Form
     {
-        //SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
+       // SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
 
         //Mrittika
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
+
+        SqlConnection conn = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
         public Login_page()
         {
             InitializeComponent();
+         
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void textBox1_lgin_TextChanged(object sender, EventArgs e)
@@ -58,18 +61,21 @@ namespace Super_Shop_Management
             button1_login.ForeColor = Color.White;
 
         }
-
-        private void button1_login_Click(object sender, EventArgs e)
+       
+        public void button1_login_Click(object sender, EventArgs e)
         {
-
-
+            cart.CartTextValue = textBox1_uname.Text;
+            DashBoard.Custname = textBox1_uname.Text;
+            Invoice.Cusname = textBox1_uname.Text;
+            CategoryForm.CusValue = textBox1_uname.Text;
             string q1 = "select role from login_table where username ='" + textBox1_uname.Text + "' and password = '" + textBox2_pass.Text + "'";
             SqlDataAdapter sda = new SqlDataAdapter(q1, conn);
-
             DataTable dt = new DataTable();
             sda.Fill(dt);
+             
             if (dt.Rows.Count == 1)
             {
+                
 
                 if (dt.Rows[0][0].ToString() == "admin") //admin
                 {
@@ -88,7 +94,10 @@ namespace Super_Shop_Management
                     CustomerView cus = new CustomerView();
                     cus.Show();
                     this.Hide();
+                    
+                  
                 }
+                
             }
             else
             {
@@ -99,6 +108,7 @@ namespace Super_Shop_Management
                 }
             }
         }
+       
 
         private void linkLabel_forgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

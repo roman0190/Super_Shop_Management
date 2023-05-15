@@ -35,7 +35,10 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Add = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Cus_Name = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -116,7 +119,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Add});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 77);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 107);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -130,12 +133,35 @@
             this.Add.Name = "Add";
             this.Add.Width = 150;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Super_Shop_Management.Properties.Resources.user_name;
+            this.pictureBox1.Location = new System.Drawing.Point(927, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Cus_Name
+            // 
+            this.Cus_Name.AutoSize = true;
+            this.Cus_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cus_Name.ForeColor = System.Drawing.Color.SlateBlue;
+            this.Cus_Name.Location = new System.Drawing.Point(1045, 25);
+            this.Cus_Name.Name = "Cus_Name";
+            this.Cus_Name.Size = new System.Drawing.Size(243, 29);
+            this.Cus_Name.TabIndex = 5;
+            this.Cus_Name.Text = "Customer Name here";
+            // 
             // CategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1310, 758);
+            this.Controls.Add(this.Cus_Name);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button3);
@@ -148,6 +174,7 @@
             this.Text = "Category";
             this.Load += new System.EventHandler(this.CategoryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +187,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Add;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label Cus_Name;
     }
 }

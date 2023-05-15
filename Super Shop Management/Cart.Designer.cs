@@ -39,14 +39,18 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Selected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Logined_customer = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.Logined_Customer_Name = new System.Windows.Forms.Label();
+            this.btnInv = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logined_customer)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(240, 38);
+            this.label1.Location = new System.Drawing.Point(326, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 37);
             this.label1.TabIndex = 1;
@@ -121,7 +125,7 @@
             this.btn_Cart_back.TabIndex = 2;
             this.btn_Cart_back.Text = "<=";
             this.btn_Cart_back.UseTransparentBackground = true;
-            this.btn_Cart_back.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.btn_Cart_back.Click += new System.EventHandler(this.btn_Cart_back_Click);
             // 
             // button_removeItem
             // 
@@ -151,7 +155,7 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Selected,
             this.Qty});
-            this.dataGridView2.Location = new System.Drawing.Point(30, 107);
+            this.dataGridView2.Location = new System.Drawing.Point(14, 145);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
@@ -182,12 +186,51 @@
             this.Qty.Name = "Qty";
             this.Qty.Width = 80;
             // 
+            // Logined_customer
+            // 
+            this.Logined_customer.Image = global::Super_Shop_Management.Properties.Resources.user_name1;
+            this.Logined_customer.ImageRotate = 0F;
+            this.Logined_customer.Location = new System.Drawing.Point(638, 12);
+            this.Logined_customer.Name = "Logined_customer";
+            this.Logined_customer.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Logined_customer.Size = new System.Drawing.Size(74, 69);
+            this.Logined_customer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logined_customer.TabIndex = 5;
+            this.Logined_customer.TabStop = false;
+            // 
+            // Logined_Customer_Name
+            // 
+            this.Logined_Customer_Name.AutoSize = true;
+            this.Logined_Customer_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logined_Customer_Name.Location = new System.Drawing.Point(705, 38);
+            this.Logined_Customer_Name.Name = "Logined_Customer_Name";
+            this.Logined_Customer_Name.Size = new System.Drawing.Size(238, 29);
+            this.Logined_Customer_Name.TabIndex = 6;
+            this.Logined_Customer_Name.Text = "Customer name here";
+            // 
+            // btnInv
+            // 
+            this.btnInv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.btnInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.btnInv.Location = new System.Drawing.Point(1178, 1051);
+            this.btnInv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnInv.Name = "btnInv";
+            this.btnInv.Size = new System.Drawing.Size(112, 35);
+            this.btnInv.TabIndex = 7;
+            this.btnInv.Text = "Jhon Cena";
+            this.btnInv.UseVisualStyleBackColor = false;
+            this.btnInv.Click += new System.EventHandler(this.btnInv_Click);
+            // 
             // cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(968, 732);
+            this.ClientSize = new System.Drawing.Size(1005, 692);
+            this.Controls.Add(this.btnInv);
+            this.Controls.Add(this.Logined_Customer_Name);
+            this.Controls.Add(this.Logined_customer);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.button_removeItem);
             this.Controls.Add(this.btn_Cart_back);
@@ -199,11 +242,14 @@
             this.ForeColor = System.Drawing.Color.SlateBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1027, 748);
+            this.MinimumSize = new System.Drawing.Size(1027, 748);
             this.Name = "cart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cart";
             this.Load += new System.EventHandler(this.cart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logined_customer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,8 +263,11 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button btn_Cart_back;
         private Guna.UI2.WinForms.Guna2Button button_removeItem;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Selected;
         private System.Windows.Forms.DataGridViewComboBoxColumn Qty;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox Logined_customer;
+        private System.Windows.Forms.Label Logined_Customer_Name;
+        private System.Windows.Forms.Button btnInv;
+        public System.Windows.Forms.DataGridView dataGridView2;
     }
 }
