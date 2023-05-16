@@ -285,6 +285,7 @@ namespace Super_Shop_Management
             sda.Fill(dt);
             dataGridView_item.DataSource = dt;
             conn.Close();
+            this.Refresh();
         }
 
         private void dataGridView_item_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -310,6 +311,11 @@ namespace Super_Shop_Management
             
             Support support = new Support();
             support.Show();
+        }
+
+        private void button_cusHistory_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

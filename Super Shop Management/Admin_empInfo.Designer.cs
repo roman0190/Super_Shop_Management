@@ -55,6 +55,7 @@ namespace Super_Shop_Management
             this.panel1 = new System.Windows.Forms.Panel();
             this.Employee = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button_cusHistory = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_emp)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -376,12 +377,28 @@ namespace Super_Shop_Management
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // button_cusHistory
+            // 
+            this.button_cusHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button_cusHistory.FlatAppearance.BorderSize = 0;
+            this.button_cusHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_cusHistory.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_cusHistory.ForeColor = System.Drawing.SystemColors.Control;
+            this.button_cusHistory.Location = new System.Drawing.Point(2, 411);
+            this.button_cusHistory.Name = "button_cusHistory";
+            this.button_cusHistory.Size = new System.Drawing.Size(307, 37);
+            this.button_cusHistory.TabIndex = 12;
+            this.button_cusHistory.Text = "Customer Purchase History";
+            this.button_cusHistory.UseVisualStyleBackColor = false;
+            this.button_cusHistory.Click += new System.EventHandler(this.button_cusHistory_Click);
+            // 
             // Admin_empInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.button_cusHistory);
             this.Controls.Add(this.button_ItemInfo);
             this.Controls.Add(this.button_empInfo);
             this.Controls.Add(this.button_logoutAdmin);
@@ -429,5 +446,6 @@ namespace Super_Shop_Management
         private System.Windows.Forms.TextBox textBox_emp_name;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_cusHistory;
     }
 }

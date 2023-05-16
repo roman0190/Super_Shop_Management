@@ -32,7 +32,6 @@ namespace Super_Shop_Management
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_itemInfo));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Employee = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_item_src = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -55,10 +54,11 @@ namespace Super_Shop_Management
             this.button_ItemInfo = new System.Windows.Forms.Button();
             this.button_logoutAdmin = new System.Windows.Forms.Button();
             this.button_chat = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_item)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,17 +80,6 @@ namespace Super_Shop_Management
             this.Employee.Size = new System.Drawing.Size(213, 23);
             this.Employee.TabIndex = 14;
             this.Employee.Text = "Admin Control Panel";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Super_Shop_Management.Properties.Resources.MAAR_ket2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 324);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -380,6 +369,8 @@ namespace Super_Shop_Management
             // button_chat
             // 
             this.button_chat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_chat.FlatAppearance.BorderSize = 0;
+            this.button_chat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_chat.ForeColor = System.Drawing.SystemColors.Control;
             this.button_chat.Location = new System.Drawing.Point(234, 533);
             this.button_chat.Name = "button_chat";
@@ -388,6 +379,17 @@ namespace Super_Shop_Management
             this.button_chat.Text = "CHAT";
             this.button_chat.UseVisualStyleBackColor = false;
             this.button_chat.Click += new System.EventHandler(this.button_chat_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Super_Shop_Management.Properties.Resources.MAAR_ket2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(297, 324);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Admin_itemInfo
             // 
@@ -408,10 +410,10 @@ namespace Super_Shop_Management
             this.Text = "Item Information";
             this.Load += new System.EventHandler(this.Admin_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_item)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -60,28 +60,35 @@ namespace Super_Shop_Management
 
             else if (textBox_password.Text == textBox_confirmpassword.Text)
             {
-                try
+                if (textBox_password.Text.Length >= 4)
                 {
-                    string query = "IF NOT EXISTS (SELECT * FROM login_table WHERE Username = '" + textBox_username.Text + "') BEGIN INSERT INTO Registration_table (Username, Password, First_name, Last_Name, Email, Gender, Address, PetName) VALUES('" + textBox_username.Text + "','" + textBox_password.Text + "','" + textBox_firstname.Text + "','" + textBox_lastname.Text + "','" + textBox_email.Text + "','" + comboBox1.Text + "','" + textBox_address.Text + "','" + textBox_petName.Text + "') END";
-
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    conn.Open();
-                    if (conn.State == ConnectionState.Open)
+                    try
                     {
-                        int rows = cmd.ExecuteNonQuery();
-                        if (rows > 0)
-                            MessageBox.Show("Congratulations, you have successfully registered!");
-                        else
-                            MessageBox.Show("Username already exists in the Database. Use another username");
+                        string query = "IF NOT EXISTS (SELECT * FROM login_table WHERE Username = '" + textBox_username.Text + "') BEGIN INSERT INTO Registration_table (Username, Password, First_name, Last_Name, Email, Gender, Address, PetName) VALUES('" + textBox_username.Text + "','" + textBox_password.Text + "','" + textBox_firstname.Text + "','" + textBox_lastname.Text + "','" + textBox_email.Text + "','" + comboBox1.Text + "','" + textBox_address.Text + "','" + textBox_petName.Text + "') END";
+
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        conn.Open();
+                        if (conn.State == ConnectionState.Open)
+                        {
+                            int rows = cmd.ExecuteNonQuery();
+                            if (rows > 0)
+                                MessageBox.Show("Congratulations, you have successfully registered! Within 24Houre Your Account will be Active");
+                            else
+                                MessageBox.Show("Username already exists in the Database. Use another username");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conn.Close();
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-                finally
-                {
-                    conn.Close();
+                    MessageBox.Show("Password must have a minimum length of 4 characters.");
                 }
             }
             else

@@ -17,8 +17,8 @@ namespace Super_Shop_Management
         public static string SenderName { get; set; }
 
         private string connectionString = "Data Source=RFEGRF\\SQL2022;Initial Catalog=shop_management;Integrated Security=True";
-        private string senderName = SenderName; // replace with actual sender name
-        private string receiverName = "MAAR-ket";// replace with actual receiver name
+        private string senderName = SenderName; // replace with login sender name
+        private string receiverName = "MAAR-ket";
         public Chat()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace Super_Shop_Management
         private void Chat_Load(object sender, EventArgs e)
         {
 
-            // start the timer to fetch messages every 2 seconds
+            // start the timer to fetch messages every 0.2 seconds
             Timer timer = new Timer();
             timer.Interval = 20;
             timer.Tick += new EventHandler(timer_Tick);

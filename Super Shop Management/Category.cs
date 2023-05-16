@@ -109,51 +109,58 @@ namespace Super_Shop_Management
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-           
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 bool select1 = Convert.ToBoolean(row.Cells["Add"].Value);
-               
+
                 if (select1)
                 {
-                   
                     try
                     {
                         string User = Cus_Name.Text;
+                        int quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
 
-                        using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Selected WHERE ID = @ID AND [User] = @User", con))
-                {
-                            cmd.Parameters.AddWithValue("@ID", row.Cells["ID"].Value);
-                            cmd.Parameters.AddWithValue("@User", User);
-                            con.Open();
-                            int count = (int)cmd.ExecuteScalar();
-                            con.Close();
+                        if (quantity == 0)
+                        {
+                            MessageBox.Show("This product is not available.", "Product Unavailable", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            continue;
+                        }
 
-                            if (count > 0)
+                        else
+                        {
+                            using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Selected WHERE ID = @ID AND [User] = @User", con))
                             {
-                                MessageBox.Show("This Product is Already Added to cart");
-                                continue;
+                                cmd.Parameters.AddWithValue("@ID", row.Cells["ID"].Value);
+                                cmd.Parameters.AddWithValue("@User", User);
+                                con.Open();
+                                int count = (int)cmd.ExecuteScalar();
+                                con.Close();
+
+                                if (count > 0)
+                                {
+                                    MessageBox.Show("This product is already added to the cart.", "Product Already Added", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    continue;
+                                }
+                            }
+
+                            using (SqlCommand cmd = new SqlCommand("INSERT INTO Selected (ID, Product, Price, Quantity, [User]) VALUES (@ID, @Product, @Price, @Quantity, @User)", con))
+                            {
+                                cmd.Parameters.AddWithValue("@ID", row.Cells["ID"].Value);
+                                cmd.Parameters.AddWithValue("@Product", row.Cells["Product"].Value);
+                                cmd.Parameters.AddWithValue("@Price", row.Cells["Price"].Value);
+                                cmd.Parameters.AddWithValue("@Quantity", row.Cells["Quantity"].Value);
+                                cmd.Parameters.AddWithValue("@User", User);
+                                con.Open();
+                                cmd.ExecuteNonQuery();
+                                con.Close();
                             }
                         }
-
-                        using (SqlCommand cmd = new SqlCommand("insert into Selected (ID,Product,Price,Quantity,[User])values(@ID,@Product,@Price,@Quantity,@User)", con))
-                        {
-                            cmd.Parameters.AddWithValue("ID", row.Cells["ID"].Value);
-                            cmd.Parameters.AddWithValue("Product", row.Cells["Product"].Value);
-                            cmd.Parameters.AddWithValue("Price", row.Cells["Price"].Value);
-                            cmd.Parameters.AddWithValue("Quantity", row.Cells["Quantity"].Value);
-                            cmd.Parameters.AddWithValue("@User", User);
-                            con.Open();
-                            cmd.ExecuteNonQuery();
-                        }
-                        MessageBox.Show("Product has been added to cart");
+                        MessageBox.Show("Product has been added to the cart.", "Product Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("This Product is Already Added to cart" + ex.Message);
+                        MessageBox.Show("An error occurred while adding the product to the cart: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-                    con.Close();
                 }
             }
         }

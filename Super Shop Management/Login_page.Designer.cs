@@ -210,6 +210,7 @@ namespace Super_Shop_Management
             // 
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.textBox2_pass);
+            this.panel9.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
@@ -232,6 +233,7 @@ namespace Super_Shop_Management
             this.textBox2_pass.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox2_pass.Location = new System.Drawing.Point(3, 11);
             this.textBox2_pass.Name = "textBox2_pass";
+            this.textBox2_pass.PasswordChar = '*';
             this.textBox2_pass.Size = new System.Drawing.Size(578, 23);
             this.textBox2_pass.TabIndex = 2;
             this.textBox2_pass.Click += new System.EventHandler(this.pass_click);

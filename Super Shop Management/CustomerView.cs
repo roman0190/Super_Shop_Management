@@ -118,5 +118,13 @@ namespace Super_Shop_Management
             Chat chat = new Chat();
             chat.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login_page login = new Login_page();
+            login.Show();
+            this.Hide();
+
+        }
     }
 }

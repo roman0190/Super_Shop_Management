@@ -63,6 +63,7 @@
             this.btn_goToCart = new Guna.UI2.WinForms.Guna2Button();
             this.button_goToDB = new Guna.UI2.WinForms.Guna2Button();
             this.button_support = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logopic)).BeginInit();
             this.panel2.SuspendLayout();
@@ -519,7 +520,7 @@
             this.button_support.FlatAppearance.BorderSize = 0;
             this.button_support.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_support.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_support.Location = new System.Drawing.Point(8, 458);
+            this.button_support.Location = new System.Drawing.Point(8, 429);
             this.button_support.Name = "button_support";
             this.button_support.Size = new System.Drawing.Size(75, 23);
             this.button_support.TabIndex = 6;
@@ -527,12 +528,29 @@
             this.button_support.UseVisualStyleBackColor = false;
             this.button_support.Click += new System.EventHandler(this.button_support_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(8, 467);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Logout";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CustomerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(795, 493);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button_support);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -616,5 +634,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_goToCart;
         private Guna.UI2.WinForms.Guna2Button button_goToDB;
         private System.Windows.Forms.Button button_support;
+        private System.Windows.Forms.Button button1;
     }
 }

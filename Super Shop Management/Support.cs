@@ -17,8 +17,8 @@ namespace Super_Shop_Management
         public static string ReceiverName { get; set; }
 
         private string connectionString = "Data Source=RFEGRF\\SQL2022;Initial Catalog=shop_management;Integrated Security=True";
-        private string senderName = "MAAR-ket"; // replace with actual sender name
-        private string receiverName = ReceiverName; // replace with actual receiver name
+        private string senderName = "MAAR-ket"; 
+        private string receiverName = ReceiverName; // replace with login name
 
         public Support()
         {
@@ -28,7 +28,7 @@ namespace Super_Shop_Management
 
         private void Support_Load(object sender, EventArgs e)
         {
-            // start the timer to fetch messages every 2 seconds
+            // start the timer to fetch messages every 0.2 seconds
             Timer timer = new Timer();
             timer.Interval = 20;
             timer.Tick += new EventHandler(timer_Tick);

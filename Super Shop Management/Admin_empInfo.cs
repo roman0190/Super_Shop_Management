@@ -250,5 +250,13 @@ namespace Super_Shop_Management
             comboBox_emp_role.Text = row.Cells["role"].Value.ToString();
             
         }
+
+        private void button_cusHistory_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Cus_History cusH = new Cus_History();
+            cusH.Show();
+
+        }
     }
 }
