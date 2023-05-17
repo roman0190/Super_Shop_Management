@@ -15,11 +15,6 @@ namespace Super_Shop_Management
     public partial class Login_page : Form
     {
 
-
-        //Mrittika
-        //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
-
-        ///SqlConnection conn = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
         
         ///roman
         SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
@@ -32,16 +27,6 @@ namespace Super_Shop_Management
         private void Form1_Load(object sender, EventArgs e)
         {
            
-        }
-
-        private void textBox1_lgin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_lgin_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void username_click(object sender, EventArgs e)
@@ -67,7 +52,7 @@ namespace Super_Shop_Management
        
         public void button1_login_Click(object sender, EventArgs e)
         {
-            //Pass the 
+            //Pass the value of text box
             cart.CartTextValue = textBox1_uname.Text;
             Chat.SenderName= textBox1_uname.Text;
             Support.ReceiverName= textBox1_uname.Text;

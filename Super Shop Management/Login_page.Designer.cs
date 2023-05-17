@@ -106,7 +106,6 @@ namespace Super_Shop_Management
             this.textBox1_uname.Size = new System.Drawing.Size(578, 23);
             this.textBox1_uname.TabIndex = 2;
             this.textBox1_uname.Click += new System.EventHandler(this.username_click);
-            this.textBox1_uname.TextChanged += new System.EventHandler(this.textBox1_lgin_TextChanged);
             // 
             // panel3
             // 
@@ -237,7 +236,6 @@ namespace Super_Shop_Management
             this.textBox2_pass.Size = new System.Drawing.Size(578, 23);
             this.textBox2_pass.TabIndex = 2;
             this.textBox2_pass.Click += new System.EventHandler(this.pass_click);
-            this.textBox2_pass.TextChanged += new System.EventHandler(this.textBox2_lgin_TextChanged);
             // 
             // button1_login
             // 

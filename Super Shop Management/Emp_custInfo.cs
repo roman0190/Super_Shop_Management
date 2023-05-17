@@ -13,8 +13,7 @@ namespace Super_Shop_Management
 {
     public partial class Emp_custInfo : Form
     {
-        //Mrittika
-        //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
+        
         //roman
         SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
         public Emp_custInfo()
@@ -142,9 +141,9 @@ namespace Super_Shop_Management
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                MessageBox.Show("This selecet Customer Alraedy Active or You can Active 1 Customer At a time");
             }
 
         }

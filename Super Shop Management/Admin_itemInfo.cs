@@ -15,11 +15,7 @@ namespace Super_Shop_Management
     {
         //roman
          SqlConnection conn = new SqlConnection("Data Source=RFEGRF\\SQL2022;Initial Catalog=Shop_Management;Integrated Security=True");
-        //Mrittika
-        //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-CGD8O08\\SQL2022;Initial Catalog=Dev;Integrated Security=True");
-
-        //SqlConnection conn = new SqlConnection("Data Source=ABD777;Initial Catalog=develop;Integrated Security=True");
-
+        
         public Admin_itemInfo()
         {
             InitializeComponent();
@@ -296,7 +292,7 @@ namespace Super_Shop_Management
             textBox_item_id.Text = row.Cells["id"].Value.ToString();
             textBox_item_name.Text = row.Cells["name"].Value.ToString();
             textBox_item_price.Text = row.Cells["price"].Value.ToString();
-            textBox_item_quantity.Text = row.Cells["price"].Value.ToString();
+            textBox_item_quantity.Text = row.Cells["quantity"].Value.ToString();
             comboBox1.Text = row.Cells["Category"].Value.ToString();
 
         }
